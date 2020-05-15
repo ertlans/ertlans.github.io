@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta property="og:title" content="Usage: Reverse Proxies - Docs"></meta>
+ 		
+		<meta property="og:description" content="" />
+		
+		<meta property="og:type" content="article"></meta>
+		<meta property="og:url" content="https://ertlans.github.io/en-us/reverse-proxies/"></meta>
+		<meta property="og:image" content="https://docs.gitea.io/images/gitea.png"></meta>
+		<meta name="generator" content="Hugo 0.69.2" />
+
+		<title>Usage: Reverse Proxies - Docs</title>
+
+		
+		
+
+		
+
+		<link rel="canonical" href="https://ertlans.github.io/en-us/reverse-proxies/">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://ertlans.github.io/styles/main.css">
+
+		<link rel="shortcut icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+		<link rel="icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+	</head>
+	<body>
+
+<nav class="navbar">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ertlans.github.io/">
+				<img src="https://ertlans.github.io/images/gitea.png" alt="Docs">
+			</a>
+			<span class="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+		</div>
+		<div class="navbar-menu" id="navMenu">
+			<div class="navbar-end">
+				<span class="navbar-item logo"><img src="https://ertlans.github.io/images/gitea.png" alt="Docs"></span>
+
+	<a class="navbar-item" href="https://gitea.io/en-us/">
+		<i class="fa fa-home"></i>&nbsp;
+		Website
+	</a>
+
+	<a class="navbar-item" href="/en-us/">
+		<i class="fa fa-question"></i>&nbsp;
+		Docs
+	</a>
+
+	<a class="navbar-item" href="https://blog.gitea.io/">
+		<i class="fa fa-rss"></i>&nbsp;
+		Blog
+	</a>
+
+	<a class="navbar-item" href="https://code.gitea.io/">
+		<i class="fa fa-code"></i>&nbsp;
+		Code
+	</a>
+
+	<a class="navbar-item" href="https://crowdin.com/project/gitea">
+		<i class="fa fa-language"></i>&nbsp;
+		Translation
+	</a>
+
+	<a class="navbar-item" href="https://try.gitea.io/api/swagger">
+		<i class="fa fa-plug"></i>&nbsp;
+		API
+	</a>
+
+	<a class="navbar-item" href="https://dl.gitea.io/">
+		<i class="fa fa-download"></i>&nbsp;
+		Downloads
+	</a>
+
+	<a class="navbar-item" href="https://github.com/go-gitea/">
+		<i class="fa fa-github"></i>&nbsp;
+		GitHub
+	</a>
+
+	<a class="navbar-item" href="https://discord.gg/Gitea">
+		<i class="fa fa-comment"></i>&nbsp;
+		Discord Chat
+	</a>
+
+	<a class="navbar-item" href="https://discourse.gitea.io/">
+		<i class="fa fa-group"></i>&nbsp;
+		Forum
+	</a>
+
+
+			</div>
+		</div>
+		<div class="navbar-background" id="navbar-background"></div>
+	</div>
+</nav>
+
+<section class="section">
+	<div class="container is-centered page">
+		<div class="columns">
+			<div class="column is-one-quarter">
+				<aside class="menu">
+	
+		
+			<p class="menu-label">
+				
+				Help
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/faq/" >
+							
+							FAQ
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/seek-help/" >
+							
+							Support Options
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Installation
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/install-with-docker/" >
+							
+							With Docker
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/database-prep/" >
+							
+							Database preparation
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-binary/" >
+							
+							From binary
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-package/" >
+							
+							From package
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/linux-service/" >
+							
+							Linux service
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-source/" >
+							
+							From source
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/windows-service/" >
+							
+							Windows Service
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Upgrade
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/upgrade-from-gogs/" >
+							
+							From Gogs
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Usage
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/command-line/" >
+							
+							Command Line
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/backup-and-restore/" >
+							
+							Backup and Restore
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/email-setup/" >
+							
+							Email setup
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/pull-request/" >
+							
+							Pull Request
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/automatically-linked-references/" >
+							
+							Automatically Linked References
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/issue-pull-request-templates/" >
+							
+							Issue and Pull Request templates
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/reverse-proxies/" class="is-active">
+							
+							Reverse Proxies
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Advanced
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/adding-legal-pages/" >
+							
+							Adding Legal Pages
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/customizing-gitea/" >
+							
+							Customizing Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/hacking-on-gitea/" >
+							
+							Hacking on Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/config-cheat-sheet/" >
+							
+							Config Cheat Sheet
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/signing/" >
+							
+							GPG Commit Signatures
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/specific-variables/" >
+							
+							Specific variables
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/make/" >
+							
+							Make
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/api-usage/" >
+							
+							API Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/ci-cd/" >
+							
+							CI/CD Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/cmd-embedded/" >
+							
+							Embedded data extraction tool
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/external-renderers/" >
+							
+							External renderers
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/repo-indexer/" >
+							
+							Repository indexer
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/third-party-tools/" >
+							
+							Third Party Tools
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/logging-configuration/" >
+							
+							Logging Configuration
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/migrations-interfaces/" >
+							
+							Migrations Interfaces
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/search-engines-indexation/" >
+							
+							Search Engines Indexation
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				features
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/comparison/" >
+							
+							Comparison
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/authentication/" >
+							
+							Authentication
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/localization/" >
+							
+							Localization
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/webhooks/" >
+							
+							Webhooks
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+	</ul>
+</aside>
+
+
+	
+
+
+
+			</div>
+			<div class="column is-three-quarters">
+				<div class="content">
+					<h2 id="using-nginx-as-a-reverse-proxy">Using Nginx as a reverse proxy</h2>
+<p>If you want Nginx to serve your Gitea instance, add the following <code>server</code> section to the <code>http</code> section of <code>nginx.conf</code>:</p>
+<pre><code>server {
+    listen 80;
+    server_name git.example.com;
+
+    location / {
+        proxy_pass http://localhost:3000;
+    }
+}
+</code></pre><h2 id="using-nginx-with-a-sub-path-as-a-reverse-proxy">Using Nginx with a sub-path as a reverse proxy</h2>
+<p>In case you already have a site, and you want Gitea to share the domain name, you can setup Nginx to serve Gitea under a sub-path by adding the following <code>server</code> section inside the <code>http</code> section of <code>nginx.conf</code>:</p>
+<pre><code>server {
+    listen 80;
+    server_name git.example.com;
+
+    location /git/ { # Note: Trailing slash
+        proxy_pass http://localhost:3000/; # Note: Trailing slash
+    }
+}
+</code></pre><p>Then set <code>[server] ROOT_URL = http://git.example.com/git/</code> in your configuration.</p>
+<h2 id="using-nginx-as-a-reverse-proxy-and-serve-static-resources-directly">Using Nginx as a reverse proxy and serve static resources directly</h2>
+<p>We can tune the performance in splitting requests into categories static and dynamic.</p>
+<p>CSS files, JavaScript files, images and web fonts are static content.
+The front page, a repository view or issue list is dynamic content.</p>
+<p>Nginx can serve static resources directly and proxy only the dynamic requests to gitea.
+Nginx is optimized for serving static content, while the proxying of large responses might be the opposite of that
+(see <a href="https://serverfault.com/q/587386)">https://serverfault.com/q/587386)</a>.</p>
+<p>Download a snapshot of the Gitea source repository to <code>/path/to/gitea/</code>.
+After this, run <code>make webpack</code> in the repository directory to generate the static resources. We are only interested in the <code>public/</code> directory for this task, so you can delete the rest.
+(You will need to have <a href="https://nodejs.org/en/download/">Node with npm</a> and <code>make</code> installed to generate the static resources)</p>
+<p>Depending on the scale of your user base, you might want to split the traffic to two distinct servers,
+or use a cdn for the static files.</p>
+<h3 id="using-a-single-node-and-a-single-domain">using a single node and a single domain</h3>
+<p>Set <code>[server] STATIC_URL_PREFIX = /_/static</code> in your configuration.</p>
+<pre><code>server {
+    listen 80;
+    server_name git.example.com;
+
+    location /_/static {
+        alias /path/to/gitea/public;
+    }
+
+    location / {
+        proxy_pass http://localhost:3000;
+    }
+}
+</code></pre><h3 id="using-two-nodes-and-two-domains">using two nodes and two domains</h3>
+<p>Set <code>[server] STATIC_URL_PREFIX = http://cdn.example.com/gitea</code> in your configuration.</p>
+<pre><code># application server running gitea
+server {
+    listen 80;
+    server_name git.example.com;
+
+    location / {
+        proxy_pass http://localhost:3000;
+    }
+}
+</code></pre><pre><code># static content delivery server
+server {
+    listen 80;
+    server_name cdn.example.com;
+
+    location /gitea {
+        alias /path/to/gitea/public;
+    }
+
+    location / {
+        return 404;
+    }
+}
+</code></pre><h2 id="using-apache-httpd-as-a-reverse-proxy">Using Apache HTTPD as a reverse proxy</h2>
+<p>If you want Apache HTTPD to serve your Gitea instance, you can add the following to your Apache HTTPD configuration (usually located at <code>/etc/apache2/httpd.conf</code> in Ubuntu):</p>
+<pre><code>&lt;VirtualHost *:80&gt;
+    ...
+    ProxyPreserveHost On
+    ProxyRequests off
+    AllowEncodedSlashes NoDecode
+    ProxyPass / http://localhost:3000/ nocanon
+    ProxyPassReverse / http://localhost:3000/
+&lt;/VirtualHost&gt;
+</code></pre><p>Note: The following Apache HTTPD mods must be enabled: <code>proxy</code>, <code>proxy_http</code></p>
+<p>If you wish to use Let&rsquo;s Encrypt with webroot validation, add the line <code>ProxyPass /.well-known !</code> before <code>ProxyPass</code> to disable proxying these requests to Gitea.</p>
+<h2 id="using-apache-httpd-with-a-sub-path-as-a-reverse-proxy">Using Apache HTTPD with a sub-path as a reverse proxy</h2>
+<p>In case you already have a site, and you want Gitea to share the domain name, you can setup Apache HTTPD to serve Gitea under a sub-path by adding the following to you Apache HTTPD configuration (usually located at <code>/etc/apache2/httpd.conf</code> in Ubuntu):</p>
+<pre><code>&lt;VirtualHost *:80&gt;
+    ...
+    &lt;Proxy *&gt;
+         Order allow,deny
+         Allow from all
+    &lt;/Proxy&gt;
+    AllowEncodedSlashes NoDecode
+    # Note: no trailing slash after either /git or port
+    ProxyPass /git http://localhost:3000 nocanon
+    ProxyPassReverse /git http://localhost:3000
+&lt;/VirtualHost&gt;
+</code></pre><p>Then set <code>[server] ROOT_URL = http://git.example.com/git/</code> in your configuration.</p>
+<p>Note: The following Apache HTTPD mods must be enabled: <code>proxy</code>, <code>proxy_http</code></p>
+<h2 id="using-caddy-as-a-reverse-proxy">Using Caddy as a reverse proxy</h2>
+<p>If you want Caddy to serve your Gitea instance, you can add the following server block to your Caddyfile:</p>
+<pre><code>git.example.com {
+    proxy / http://localhost:3000
+}
+</code></pre><h2 id="using-caddy-with-a-sub-path-as-a-reverse-proxy">Using Caddy with a sub-path as a reverse proxy</h2>
+<p>In case you already have a site, and you want Gitea to share the domain name, you can setup Caddy to serve Gitea under a sub-path by adding the following to your server block in your Caddyfile:</p>
+<pre><code>git.example.com {
+    proxy /git/ http://localhost:3000 # Note: Trailing Slash after /git/
+}
+</code></pre><p>Then set <code>[server] ROOT_URL = http://git.example.com/git/</code> in your configuration.</p>
+<h2 id="using-iis-as-a-reverse-proxy">Using IIS as a reverse proxy</h2>
+<p>If you wish to run Gitea with IIS. You will need to setup IIS with URL Rewrite as reverse proxy.</p>
+<ol>
+<li>Setup an empty website in IIS, named let&rsquo;s say, <code>Gitea Proxy</code>.</li>
+<li>Follow the first two steps in <a href="https://techcommunity.microsoft.com/t5/iis-support-blog/setup-iis-with-url-rewrite-as-a-reverse-proxy-for-real-world/ba-p/846222#M343">Microsoft&rsquo;s Technical Community Guide to Setup IIS with URL Rewrite</a>. That is:</li>
+</ol>
+<ul>
+<li>Install Application Request Routing (ARR for short) either by using the Microsoft Web Platform Installer 5.1 (WebPI) or downloading the extension from <a href="https://www.iis.net/downloads/microsoft/application-request-routing">IIS.net</a></li>
+<li>Once the module is installed in IIS, you will see a new Icon in the IIS Administration Console called URL Rewrite.</li>
+<li>Open the IIS Manager Console and click on the <code>Gitea Proxy</code> Website from the tree view on the left. Select and double click the URL Rewrite Icon from the middle pane to load the URL Rewrite interface.</li>
+<li>Choose the <code>Add Rule</code> action from the right pane of the management console and select the <code>Reverse Proxy Rule</code> from the <code>Inbound and Outbound Rules</code> category.</li>
+<li>In the Inbound Rules section, set the server name to be the host that Gitea is running on with its port. e.g. if you are running Gitea on the localhost with port 3000, the following should work: <code>127.0.0.1:3000</code></li>
+<li>Enable SSL Offloading</li>
+<li>In the Outbound Rules, ensure <code>Rewrite the domain names of the links in HTTP response</code> is set and set the <code>From:</code> field as above and the <code>To:</code> to your external hostname, say: <code>git.example.com</code></li>
+<li>Now edit the <code>web.config</code> for your website to match the following: (changing <code>127.0.0.1:3000</code> and <code>git.example.com</code> as appropriate)</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<span style="color:#f92672">&lt;configuration&gt;</span>
+    <span style="color:#f92672">&lt;system.webServer&gt;</span>
+        <span style="color:#f92672">&lt;rewrite&gt;</span>
+            <span style="color:#f92672">&lt;rules&gt;</span>
+                <span style="color:#f92672">&lt;rule</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;ReverseProxyInboundRule1&#34;</span> <span style="color:#a6e22e">stopProcessing=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">&gt;</span>
+                    <span style="color:#f92672">&lt;match</span> <span style="color:#a6e22e">url=</span><span style="color:#e6db74">&#34;(.*)&#34;</span> <span style="color:#f92672">/&gt;</span>
+                    <span style="color:#f92672">&lt;action</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;Rewrite&#34;</span> <span style="color:#a6e22e">url=</span><span style="color:#e6db74">&#34;http://127.0.0.1:3000/{R:1}&#34;</span> <span style="color:#f92672">/&gt;</span>
+                    <span style="color:#f92672">&lt;serverVariables&gt;</span>
+                        <span style="color:#f92672">&lt;set</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;HTTP_X_ORIGINAL_ACCEPT_ENCODING&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;HTTP_ACCEPT_ENCODING&#34;</span> <span style="color:#f92672">/&gt;</span>
+                        <span style="color:#f92672">&lt;set</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;HTTP_ACCEPT_ENCODING&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">/&gt;</span>
+                    <span style="color:#f92672">&lt;/serverVariables&gt;</span>
+                <span style="color:#f92672">&lt;/rule&gt;</span>
+            <span style="color:#f92672">&lt;/rules&gt;</span>
+            <span style="color:#f92672">&lt;outboundRules&gt;</span>
+                <span style="color:#f92672">&lt;rule</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;ReverseProxyOutboundRule1&#34;</span> <span style="color:#a6e22e">preCondition=</span><span style="color:#e6db74">&#34;ResponseIsHtml1&#34;</span><span style="color:#f92672">&gt;</span>
+                    <span style="color:#75715e">&lt;!-- set the pattern correctly here - if you only want to accept http or https --&gt;</span>
+                    <span style="color:#75715e">&lt;!-- change the pattern and the action value as appropriate --&gt;</span>
+                    <span style="color:#f92672">&lt;match</span> <span style="color:#a6e22e">filterByTags=</span><span style="color:#e6db74">&#34;A, Form, Img&#34;</span> <span style="color:#a6e22e">pattern=</span><span style="color:#e6db74">&#34;^http(s)?://127.0.0.1:3000/(.*)&#34;</span> <span style="color:#f92672">/&gt;</span>
+                    <span style="color:#f92672">&lt;action</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;Rewrite&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;http{R:1}://git.example.com/{R:2}&#34;</span> <span style="color:#f92672">/&gt;</span>
+                <span style="color:#f92672">&lt;/rule&gt;</span>
+                <span style="color:#f92672">&lt;rule</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;RestoreAcceptEncoding&#34;</span> <span style="color:#a6e22e">preCondition=</span><span style="color:#e6db74">&#34;NeedsRestoringAcceptEncoding&#34;</span><span style="color:#f92672">&gt;</span>
+                    <span style="color:#f92672">&lt;match</span> <span style="color:#a6e22e">serverVariable=</span><span style="color:#e6db74">&#34;HTTP_ACCEPT_ENCODING&#34;</span> <span style="color:#a6e22e">pattern=</span><span style="color:#e6db74">&#34;^(.*)&#34;</span> <span style="color:#f92672">/&gt;</span>
+                    <span style="color:#f92672">&lt;action</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;Rewrite&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;{HTTP_X_ORIGINAL_ACCEPT_ENCODING}&#34;</span> <span style="color:#f92672">/&gt;</span>
+                <span style="color:#f92672">&lt;/rule&gt;</span>
+                <span style="color:#f92672">&lt;preConditions&gt;</span>
+                    <span style="color:#f92672">&lt;preCondition</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;ResponseIsHtml1&#34;</span><span style="color:#f92672">&gt;</span>
+                        <span style="color:#f92672">&lt;add</span> <span style="color:#a6e22e">input=</span><span style="color:#e6db74">&#34;{RESPONSE_CONTENT_TYPE}&#34;</span> <span style="color:#a6e22e">pattern=</span><span style="color:#e6db74">&#34;^text/html&#34;</span> <span style="color:#f92672">/&gt;</span>
+                    <span style="color:#f92672">&lt;/preCondition&gt;</span>
+                    <span style="color:#f92672">&lt;preCondition</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;NeedsRestoringAcceptEncoding&#34;</span><span style="color:#f92672">&gt;</span>
+                        <span style="color:#f92672">&lt;add</span> <span style="color:#a6e22e">input=</span><span style="color:#e6db74">&#34;{HTTP_X_ORIGINAL_ACCEPT_ENCODING}&#34;</span> <span style="color:#a6e22e">pattern=</span><span style="color:#e6db74">&#34;.+&#34;</span> <span style="color:#f92672">/&gt;</span>
+                    <span style="color:#f92672">&lt;/preCondition&gt;</span>
+                <span style="color:#f92672">&lt;/preConditions&gt;</span>
+            <span style="color:#f92672">&lt;/outboundRules&gt;</span>
+        <span style="color:#f92672">&lt;/rewrite&gt;</span>
+        <span style="color:#f92672">&lt;urlCompression</span> <span style="color:#a6e22e">doDynamicCompression=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;/system.webServer&gt;</span>
+<span style="color:#f92672">&lt;/configuration&gt;</span>
+</code></pre></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="content has-text-centered">
+					<p>
+						Copyright &copy; 2020 <a href="https://docs.gitea.io">The Gitea Authors</a>. All rights reserved. Made with <i class="fa fa-heart" aria-hidden="true"></i> and <a href="https://gohugo.io">Hugo</a>.
+					</p>
+					<p>
+						 Sponsored by <a href="https://www.didiyun.com">DiDi Cloud</a>, <a href="http://inblockchain.com">INBlockchain</a>, <a href="https://www.packet.com">Packet</a>, <a href="https://digitalocean.com">DigitalOcean</a>, and all of our backers on <a href="https://opencollective.com/gitea">Open Collective</a>.
+					</p>
+					<p>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-cn" hreflang="zh-cn">中文(简体)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-tw" hreflang="zh-tw">中文(繁體)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/pt-br" hreflang="pt-br">Português Brasileiro</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/en-us" hreflang="en-us">English</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/nl-nl" hreflang="nl-nl">Nederlands</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/fr-fr" hreflang="fr-fr">Français</a>
+						
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+            document.addEventListener('DOMContentLoaded', function () {
+
+                
+                var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                
+                if ($navbarBurgers.length > 0) {
+
+                    
+                    $navbarBurgers.forEach(function ($el) {
+                        $el.addEventListener('click', function () {
+
+                            
+                            var target = $el.dataset.target;
+                            var $target = document.getElementById(target);
+
+                            
+                            $el.classList.toggle('is-active');
+                            $target.classList.toggle('is-active');
+
+
+                            document.getElementById('navbar-background').classList.toggle('is-active');
+
+
+                        });
+                    });
+                }
+
+				
+				
+				let svg = '  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor; vertical-align: middle" width="24" height="24" viewBox="0 0 32 32"><title>gitea</title><path d="M5.583 7.229c-2.464-0.005-5.755 1.557-5.573 5.479 0.281 6.125 6.557 6.693 9.068 6.745 0.271 1.146 3.224 5.109 5.411 5.318h9.573c5.74-0.38 10.036-17.365 6.854-17.427-5.271 0.25-8.396 0.375-11.073 0.396v5.297l-0.839-0.365-0.005-4.932c-3.073 0-5.781-0.141-10.917-0.396-0.646-0.005-1.542-0.115-2.5-0.115zM5.927 9.396h0.297c0.349 3.141 0.917 4.974 2.068 7.781-2.938-0.349-5.432-1.198-5.891-4.38-0.24-1.646 0.563-3.365 3.526-3.401zM17.339 12.479c0.198 0.005 0.406 0.042 0.594 0.13l1 0.432-0.714 1.302c-0.109 0-0.219 0.016-0.323 0.052-0.464 0.151-0.708 0.604-0.542 1.021 0.036 0.083 0.089 0.161 0.151 0.229l-1.234 2.25c-0.099 0-0.203 0.016-0.297 0.052-0.464 0.146-0.708 0.604-0.542 1.016 0.172 0.417 0.682 0.63 1.151 0.479 0.464-0.146 0.703-0.604 0.536-1.021-0.047-0.109-0.115-0.208-0.208-0.292l1.203-2.188c0.13 0.010 0.26 0 0.391-0.042 0.104-0.031 0.198-0.083 0.281-0.151 0.464 0.198 0.844 0.354 1.12 0.49 0.406 0.203 0.552 0.339 0.599 0.49 0.042 0.146-0.005 0.427-0.24 0.922-0.172 0.37-0.458 0.896-0.797 1.51-0.115 0-0.229 0.016-0.333 0.052-0.469 0.151-0.708 0.604-0.542 1.021 0.167 0.411 0.682 0.625 1.146 0.479 0.469-0.151 0.708-0.604 0.542-1.021-0.042-0.099-0.104-0.193-0.182-0.271 0.333-0.609 0.62-1.135 0.807-1.526 0.25-0.536 0.38-0.938 0.266-1.323s-0.469-0.635-0.932-0.865c-0.307-0.151-0.693-0.313-1.146-0.505 0.005-0.109-0.010-0.214-0.052-0.318s-0.109-0.198-0.193-0.281l0.703-1.281 3.901 1.682c0.703 0.307 0.995 1.057 0.651 1.682l-2.682 4.906c-0.339 0.625-1.182 0.885-1.885 0.578l-5.516-2.38c-0.703-0.307-0.995-1.057-0.656-1.682l2.682-4.906c0.234-0.432 0.708-0.688 1.208-0.708h0.083z"></path></svg>';
+				let contents = document.getElementsByClassName("content");
+				if (contents.length > 0) {
+					let content = contents[0];
+					for (let level = 1; level <= 4; level++) {
+						let elems = content.getElementsByTagName("h" + level);
+						for (let i = 0; i < elems.length; i++) {
+							let elem = elems[i];
+							if (elem.id !== "undefined" && elem.id !== "") {
+								let anchorId = elem.id + "-anchor";
+								elem.addEventListener("mouseover", () => {
+									document.getElementById(anchorId).style.display = "initial";
+								});
+								elem.addEventListener("mouseout", () => {
+									document.getElementById(anchorId).style.display = "none";
+								});
+								let anchor = document.createElement("a");
+								anchor.id = anchorId;
+								anchor.href = "#" + elem.id;
+								anchor.innerHTML = svg;
+								anchor.style.display = "none";
+								elem.appendChild(anchor);
+							}
+						}
+					}
+				}
+
+            });
+		</script>
+
+		</body>
+</html>
+

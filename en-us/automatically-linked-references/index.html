@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta property="og:title" content="Usage: Automatically Linked References - Docs"></meta>
+ 		
+		<meta property="og:description" content="" />
+		
+		<meta property="og:type" content="article"></meta>
+		<meta property="og:url" content="https://ertlans.github.io/en-us/automatically-linked-references/"></meta>
+		<meta property="og:image" content="https://docs.gitea.io/images/gitea.png"></meta>
+		<meta name="generator" content="Hugo 0.69.2" />
+
+		<title>Usage: Automatically Linked References - Docs</title>
+
+		
+		
+
+		
+
+		<link rel="canonical" href="https://ertlans.github.io/en-us/automatically-linked-references/">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://ertlans.github.io/styles/main.css">
+
+		<link rel="shortcut icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+		<link rel="icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+	</head>
+	<body>
+
+<nav class="navbar">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ertlans.github.io/">
+				<img src="https://ertlans.github.io/images/gitea.png" alt="Docs">
+			</a>
+			<span class="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+		</div>
+		<div class="navbar-menu" id="navMenu">
+			<div class="navbar-end">
+				<span class="navbar-item logo"><img src="https://ertlans.github.io/images/gitea.png" alt="Docs"></span>
+
+	<a class="navbar-item" href="https://gitea.io/en-us/">
+		<i class="fa fa-home"></i>&nbsp;
+		Website
+	</a>
+
+	<a class="navbar-item" href="/en-us/">
+		<i class="fa fa-question"></i>&nbsp;
+		Docs
+	</a>
+
+	<a class="navbar-item" href="https://blog.gitea.io/">
+		<i class="fa fa-rss"></i>&nbsp;
+		Blog
+	</a>
+
+	<a class="navbar-item" href="https://code.gitea.io/">
+		<i class="fa fa-code"></i>&nbsp;
+		Code
+	</a>
+
+	<a class="navbar-item" href="https://crowdin.com/project/gitea">
+		<i class="fa fa-language"></i>&nbsp;
+		Translation
+	</a>
+
+	<a class="navbar-item" href="https://try.gitea.io/api/swagger">
+		<i class="fa fa-plug"></i>&nbsp;
+		API
+	</a>
+
+	<a class="navbar-item" href="https://dl.gitea.io/">
+		<i class="fa fa-download"></i>&nbsp;
+		Downloads
+	</a>
+
+	<a class="navbar-item" href="https://github.com/go-gitea/">
+		<i class="fa fa-github"></i>&nbsp;
+		GitHub
+	</a>
+
+	<a class="navbar-item" href="https://discord.gg/Gitea">
+		<i class="fa fa-comment"></i>&nbsp;
+		Discord Chat
+	</a>
+
+	<a class="navbar-item" href="https://discourse.gitea.io/">
+		<i class="fa fa-group"></i>&nbsp;
+		Forum
+	</a>
+
+
+			</div>
+		</div>
+		<div class="navbar-background" id="navbar-background"></div>
+	</div>
+</nav>
+
+<section class="section">
+	<div class="container is-centered page">
+		<div class="columns">
+			<div class="column is-one-quarter">
+				<aside class="menu">
+	
+		
+			<p class="menu-label">
+				
+				Help
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/faq/" >
+							
+							FAQ
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/seek-help/" >
+							
+							Support Options
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Installation
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/install-with-docker/" >
+							
+							With Docker
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/database-prep/" >
+							
+							Database preparation
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-binary/" >
+							
+							From binary
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-package/" >
+							
+							From package
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/linux-service/" >
+							
+							Linux service
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-source/" >
+							
+							From source
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/windows-service/" >
+							
+							Windows Service
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Upgrade
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/upgrade-from-gogs/" >
+							
+							From Gogs
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Usage
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/command-line/" >
+							
+							Command Line
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/backup-and-restore/" >
+							
+							Backup and Restore
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/email-setup/" >
+							
+							Email setup
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/pull-request/" >
+							
+							Pull Request
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/automatically-linked-references/" class="is-active">
+							
+							Automatically Linked References
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/issue-pull-request-templates/" >
+							
+							Issue and Pull Request templates
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/reverse-proxies/" >
+							
+							Reverse Proxies
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Advanced
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/adding-legal-pages/" >
+							
+							Adding Legal Pages
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/customizing-gitea/" >
+							
+							Customizing Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/hacking-on-gitea/" >
+							
+							Hacking on Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/config-cheat-sheet/" >
+							
+							Config Cheat Sheet
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/signing/" >
+							
+							GPG Commit Signatures
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/specific-variables/" >
+							
+							Specific variables
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/make/" >
+							
+							Make
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/api-usage/" >
+							
+							API Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/ci-cd/" >
+							
+							CI/CD Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/cmd-embedded/" >
+							
+							Embedded data extraction tool
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/external-renderers/" >
+							
+							External renderers
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/repo-indexer/" >
+							
+							Repository indexer
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/third-party-tools/" >
+							
+							Third Party Tools
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/logging-configuration/" >
+							
+							Logging Configuration
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/migrations-interfaces/" >
+							
+							Migrations Interfaces
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/search-engines-indexation/" >
+							
+							Search Engines Indexation
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				features
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/comparison/" >
+							
+							Comparison
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/authentication/" >
+							
+							Authentication
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/localization/" >
+							
+							Localization
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/webhooks/" >
+							
+							Webhooks
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+	</ul>
+</aside>
+
+
+	
+
+
+
+			</div>
+			<div class="column is-three-quarters">
+				<div class="content">
+					<h1 id="automatically-linked-references-in-issues-pull-requests-and-commit-messages">Automatically Linked References in Issues, Pull Requests and Commit Messages</h1>
+<p>When an issue, pull request or comment is posted, the text description is parsed
+in search for references. These references will be shown as links in the Issue View
+and, in some cases, produce certain <em>actions</em>.</p>
+<p>Likewise, commit messages are parsed when they are listed, and <em>actions</em>
+are can be triggered when they are pushed to the main branch.</p>
+<p>To prevent the creation of unintended references, there are certain rules
+for them to be recognized. For example, they should not be included inside code
+text. They should also be reasonably cleared from their surrounding text
+(for example, using spaces).</p>
+<h2 id="user-team-and-organization-mentions">User, Team and Organization Mentions</h2>
+<p>When a text in the form <code>@username</code> is found and <code>username</code> matches the name
+of an existing user, a <em>mention</em> reference is created. This will be shown
+by changing the text into a link to said user&rsquo;s profile, and possibly create
+a notification for the mentioned user depending on whether they have
+the necessary permission to access the contents.</p>
+<p>Example:</p>
+<blockquote>
+<p><a href="#">@John</a>, can you give this a look?</p>
+</blockquote>
+<p>This is also valid for teams and organizations:</p>
+<blockquote>
+<p><a href="#">@Documenters</a>, we need to plan for this.</p>
+</blockquote>
+<blockquote>
+<p><a href="#">@CoolCompanyInc</a>, this issue concerns us all!</p>
+</blockquote>
+<p>Teams will receive mail notifications when appropriate, but whole organizations won&rsquo;t.</p>
+<p>Commit messages do not produce user notifications.</p>
+<h2 id="commits">Commits</h2>
+<p>Commits can be referenced using their SHA1 hash, or a portion of it of
+at least seven characters. They will be shown as a link to the corresponding
+commit.</p>
+<p>Example:</p>
+<blockquote>
+<p>This bug was introduced in <a href="#">e59ff077</a></p>
+</blockquote>
+<h2 id="issues-and-pull-requests">Issues and Pull Requests</h2>
+<p>A reference to another issue or pull request can be created using the simple
+notation <code>#1234</code>, where <em>1234</em> is the number of an issue or pull request
+in the same repository. These references will be shown as links to the
+referenced content.</p>
+<p>The effect of creating this type of reference is that a <em>notice</em> will be
+created in the referenced document, provided the creator of the reference
+has reading permissions on it.</p>
+<p>Example:</p>
+<blockquote>
+<p>This seems related to <a href="#">#1234</a></p>
+</blockquote>
+<p>Issues and pull requests in other repositories can be referred to as well
+using the form <code>owner/repository#1234</code>:</p>
+<blockquote>
+<p>This seems related to <a href="#">mike/compiler#1234</a></p>
+</blockquote>
+<p>Alternatively, the <code>!1234</code> notation can be used as well. Even when in Gitea
+a pull request is a form of issue, the <code>#1234</code> form will always link to
+an issue; if the linked entry happens to be a pull request instead, Gitea
+will redirect as appropriate. With the <code>!1234</code> notation, a pull request
+link will be created, which will be redirected to an issue if required.
+However, this distinction could be important if an external tracker is
+used, where links to issues and pull requests are not interchangeable.</p>
+<h2 id="actionable-references-in-pull-requests-and-commit-messages">Actionable References in Pull Requests and Commit Messages</h2>
+<p>Sometimes a commit or pull request may fix or bring back a problem documented
+in a particular issue. Gitea supports closing and reopening the referenced
+issues by preceding the reference with a particular <em>keyword</em>. Common keywords
+include &ldquo;closes&rdquo;, &ldquo;fixes&rdquo;, &ldquo;reopens&rdquo;, etc. This list can be
+<a href="https://ertlans.github.io/en-us/config-cheat-sheet/">customized</a> by the
+site administrator.</p>
+<p>Example:</p>
+<blockquote>
+<p>This PR <em>closes</em> <a href="#">#1234</a></p>
+</blockquote>
+<p>If the actionable reference is accepted, this will create a notice on the
+referenced issue announcing that it will be closed when the referencing PR
+is merged.</p>
+<p>For an actionable reference to be accepted, <em>at least one</em> of the following
+conditions must be met:</p>
+<ul>
+<li>The commenter has permissions to close or reopen the issue at the moment
+of creating the reference.</li>
+<li>The reference is inside a commit message.</li>
+<li>The reference is posted as part of the pull request description.</li>
+</ul>
+<p>In the last case, the issue will be closed or reopened only if the merger
+of the pull request has permissions to do so.</p>
+<p>Additionally, only pull requests and commit messages can create an action,
+and only issues can be closed or reopened this way.</p>
+<p>The default <em>keywords</em> are:</p>
+<ul>
+<li><strong>Closing</strong>: close, closes, closed, fix, fixes, fixed, resolve, resolves, resolved</li>
+<li><strong>Reopening</strong>: reopen, reopens, reopened</li>
+</ul>
+<h2 id="external-trackers">External Trackers</h2>
+<p>Gitea supports the use of external issue trackers, and references to issues
+hosted externally can be created in pull requests. However, if the external
+tracker uses numbers to identify issues, they will be indistinguishable from
+the pull requests hosted in Gitea. To address this, Gitea allows the use of
+the <code>!</code> marker to identify pull requests. For example:</p>
+<blockquote>
+<p>This is issue <a href="#">#1234</a>, and links to the external tracker.</p>
+</blockquote>
+<blockquote>
+<p>This is pull request <a href="#">!1234</a>, and links to a pull request in Gitea.</p>
+</blockquote>
+<p>The <code>!</code> and <code>#</code> can be used interchangeably for issues and pull request <em>except</em>
+for this case, where a distinction is required. If the repository uses external
+tracker, commit message for squash merge will use <code>!</code> as reference by default.</p>
+<h2 id="issues-and-pull-requests-references-summary">Issues and Pull Requests References Summary</h2>
+<p>This table illustrates the different kinds of cross-reference for issues and pull requests.
+In the examples, <code>User1/Repo1</code> refers to the repository where the reference is used, while
+<code>UserZ/RepoZ</code> indicates a different repository.</p>
+<table>
+<thead>
+<tr>
+<th>Reference in User1/Repo1</th>
+<th align="center">Repo1 issues are external</th>
+<th align="center">RepoZ issues are external</th>
+<th>Should render</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>#1234</code></td>
+<td align="center">no</td>
+<td align="center">N/A</td>
+<td>A link to issue/pull 1234 in <code>User1/Repo1</code></td>
+</tr>
+<tr>
+<td><code>!1234</code></td>
+<td align="center">no</td>
+<td align="center">N/A</td>
+<td>A link to issue/pull 1234 in <code>User1/Repo1</code></td>
+</tr>
+<tr>
+<td><code>#1234</code></td>
+<td align="center">yes</td>
+<td align="center">N/A</td>
+<td>A link to <em>external issue</em> 1234 for <code>User1/Repo1</code></td>
+</tr>
+<tr>
+<td><code>!1234</code></td>
+<td align="center">yes</td>
+<td align="center">N/A</td>
+<td>A link to <em>PR</em> 1234 for <code>User1/Repo1</code></td>
+</tr>
+<tr>
+<td><code>User1/Repo1#1234</code></td>
+<td align="center">no</td>
+<td align="center">N/A</td>
+<td>A link to issue/pull 1234 in <code>User1/Repo1</code></td>
+</tr>
+<tr>
+<td><code>User1/Repo1!1234</code></td>
+<td align="center">no</td>
+<td align="center">N/A</td>
+<td>A link to issue/pull 1234 in <code>User1/Repo1</code></td>
+</tr>
+<tr>
+<td><code>User1/Repo1#1234</code></td>
+<td align="center">yes</td>
+<td align="center">N/A</td>
+<td>A link to <em>external issue</em> 1234 for <code>User1/Repo1</code></td>
+</tr>
+<tr>
+<td><code>User1/Repo1!1234</code></td>
+<td align="center">yes</td>
+<td align="center">N/A</td>
+<td>A link to <em>PR</em> 1234 for <code>User1/Repo1</code></td>
+</tr>
+<tr>
+<td><code>UserZ/RepoZ#1234</code></td>
+<td align="center">N/A</td>
+<td align="center">no</td>
+<td>A link to issue/pull 1234 in <code>UserZ/RepoZ</code></td>
+</tr>
+<tr>
+<td><code>UserZ/RepoZ!1234</code></td>
+<td align="center">N/A</td>
+<td align="center">no</td>
+<td>A link to issue/pull 1234 in <code>UserZ/RepoZ</code></td>
+</tr>
+<tr>
+<td><code>UserZ/RepoZ#1234</code></td>
+<td align="center">N/A</td>
+<td align="center">yes</td>
+<td>A link to <em>external issue</em> 1234 for <code>UserZ/RepoZ</code></td>
+</tr>
+<tr>
+<td><code>UserZ/RepoZ!1234</code></td>
+<td align="center">N/A</td>
+<td align="center">yes</td>
+<td>A link to <em>PR</em> 1234 for <code>UserZ/RepoZ</code></td>
+</tr>
+<tr>
+<td><strong>Alphanumeric issue IDs:</strong></td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>AAA-1234</code></td>
+<td align="center">yes</td>
+<td align="center">N/A</td>
+<td>A link to <em>external issue</em> <code>AAA-1234</code> for <code>User1/Repo1</code></td>
+</tr>
+<tr>
+<td><code>!1234</code></td>
+<td align="center">yes</td>
+<td align="center">N/A</td>
+<td>A link to <em>PR</em> 1234 for <code>User1/Repo1</code></td>
+</tr>
+<tr>
+<td><code>User1/Repo1!1234</code></td>
+<td align="center">yes</td>
+<td align="center">N/A</td>
+<td>A link to <em>PR</em> 1234 for <code>User1/Repo1</code></td>
+</tr>
+<tr>
+<td><em>Not supported</em></td>
+<td align="center">N/A</td>
+<td align="center">yes</td>
+<td>A link to <em>external issue</em> <code>AAA-1234</code> for <code>UserZ/RepoZ</code></td>
+</tr>
+<tr>
+<td><code>UserZ/RepoZ!1234</code></td>
+<td align="center">N/A</td>
+<td align="center">yes</td>
+<td>A link to <em>PR</em> 1234 in <code>UserZ/RepoZ</code></td>
+</tr>
+</tbody>
+</table>
+<p><em>The last section is for repositories with external issue trackers that use alphanumeric format.</em></p>
+<p><em><strong>N/A</strong>: not applicable.</em></p>
+<p>Note: automatic references between repositories with different types of issues (external vs. internal) are not fully supported
+and may render invalid links.</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="content has-text-centered">
+					<p>
+						Copyright &copy; 2020 <a href="https://docs.gitea.io">The Gitea Authors</a>. All rights reserved. Made with <i class="fa fa-heart" aria-hidden="true"></i> and <a href="https://gohugo.io">Hugo</a>.
+					</p>
+					<p>
+						 Sponsored by <a href="https://www.didiyun.com">DiDi Cloud</a>, <a href="http://inblockchain.com">INBlockchain</a>, <a href="https://www.packet.com">Packet</a>, <a href="https://digitalocean.com">DigitalOcean</a>, and all of our backers on <a href="https://opencollective.com/gitea">Open Collective</a>.
+					</p>
+					<p>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-cn" hreflang="zh-cn">中文(简体)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-tw" hreflang="zh-tw">中文(繁體)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/pt-br" hreflang="pt-br">Português Brasileiro</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/en-us" hreflang="en-us">English</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/nl-nl" hreflang="nl-nl">Nederlands</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/fr-fr" hreflang="fr-fr">Français</a>
+						
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+            document.addEventListener('DOMContentLoaded', function () {
+
+                
+                var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                
+                if ($navbarBurgers.length > 0) {
+
+                    
+                    $navbarBurgers.forEach(function ($el) {
+                        $el.addEventListener('click', function () {
+
+                            
+                            var target = $el.dataset.target;
+                            var $target = document.getElementById(target);
+
+                            
+                            $el.classList.toggle('is-active');
+                            $target.classList.toggle('is-active');
+
+
+                            document.getElementById('navbar-background').classList.toggle('is-active');
+
+
+                        });
+                    });
+                }
+
+				
+				
+				let svg = '  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor; vertical-align: middle" width="24" height="24" viewBox="0 0 32 32"><title>gitea</title><path d="M5.583 7.229c-2.464-0.005-5.755 1.557-5.573 5.479 0.281 6.125 6.557 6.693 9.068 6.745 0.271 1.146 3.224 5.109 5.411 5.318h9.573c5.74-0.38 10.036-17.365 6.854-17.427-5.271 0.25-8.396 0.375-11.073 0.396v5.297l-0.839-0.365-0.005-4.932c-3.073 0-5.781-0.141-10.917-0.396-0.646-0.005-1.542-0.115-2.5-0.115zM5.927 9.396h0.297c0.349 3.141 0.917 4.974 2.068 7.781-2.938-0.349-5.432-1.198-5.891-4.38-0.24-1.646 0.563-3.365 3.526-3.401zM17.339 12.479c0.198 0.005 0.406 0.042 0.594 0.13l1 0.432-0.714 1.302c-0.109 0-0.219 0.016-0.323 0.052-0.464 0.151-0.708 0.604-0.542 1.021 0.036 0.083 0.089 0.161 0.151 0.229l-1.234 2.25c-0.099 0-0.203 0.016-0.297 0.052-0.464 0.146-0.708 0.604-0.542 1.016 0.172 0.417 0.682 0.63 1.151 0.479 0.464-0.146 0.703-0.604 0.536-1.021-0.047-0.109-0.115-0.208-0.208-0.292l1.203-2.188c0.13 0.010 0.26 0 0.391-0.042 0.104-0.031 0.198-0.083 0.281-0.151 0.464 0.198 0.844 0.354 1.12 0.49 0.406 0.203 0.552 0.339 0.599 0.49 0.042 0.146-0.005 0.427-0.24 0.922-0.172 0.37-0.458 0.896-0.797 1.51-0.115 0-0.229 0.016-0.333 0.052-0.469 0.151-0.708 0.604-0.542 1.021 0.167 0.411 0.682 0.625 1.146 0.479 0.469-0.151 0.708-0.604 0.542-1.021-0.042-0.099-0.104-0.193-0.182-0.271 0.333-0.609 0.62-1.135 0.807-1.526 0.25-0.536 0.38-0.938 0.266-1.323s-0.469-0.635-0.932-0.865c-0.307-0.151-0.693-0.313-1.146-0.505 0.005-0.109-0.010-0.214-0.052-0.318s-0.109-0.198-0.193-0.281l0.703-1.281 3.901 1.682c0.703 0.307 0.995 1.057 0.651 1.682l-2.682 4.906c-0.339 0.625-1.182 0.885-1.885 0.578l-5.516-2.38c-0.703-0.307-0.995-1.057-0.656-1.682l2.682-4.906c0.234-0.432 0.708-0.688 1.208-0.708h0.083z"></path></svg>';
+				let contents = document.getElementsByClassName("content");
+				if (contents.length > 0) {
+					let content = contents[0];
+					for (let level = 1; level <= 4; level++) {
+						let elems = content.getElementsByTagName("h" + level);
+						for (let i = 0; i < elems.length; i++) {
+							let elem = elems[i];
+							if (elem.id !== "undefined" && elem.id !== "") {
+								let anchorId = elem.id + "-anchor";
+								elem.addEventListener("mouseover", () => {
+									document.getElementById(anchorId).style.display = "initial";
+								});
+								elem.addEventListener("mouseout", () => {
+									document.getElementById(anchorId).style.display = "none";
+								});
+								let anchor = document.createElement("a");
+								anchor.id = anchorId;
+								anchor.href = "#" + elem.id;
+								anchor.innerHTML = svg;
+								anchor.style.display = "none";
+								elem.appendChild(anchor);
+							}
+						}
+					}
+				}
+
+            });
+		</script>
+
+		</body>
+</html>
+

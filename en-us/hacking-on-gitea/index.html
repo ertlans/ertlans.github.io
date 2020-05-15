@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta property="og:title" content="Hacking on Gitea - Docs"></meta>
+ 		
+		<meta property="og:description" content="" />
+		
+		<meta property="og:type" content="article"></meta>
+		<meta property="og:url" content="https://ertlans.github.io/en-us/hacking-on-gitea/"></meta>
+		<meta property="og:image" content="https://docs.gitea.io/images/gitea.png"></meta>
+		<meta name="generator" content="Hugo 0.69.2" />
+
+		<title>Hacking on Gitea - Docs</title>
+
+		
+		
+
+		
+
+		<link rel="canonical" href="https://ertlans.github.io/en-us/hacking-on-gitea/">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://ertlans.github.io/styles/main.css">
+
+		<link rel="shortcut icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+		<link rel="icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+	</head>
+	<body>
+
+<nav class="navbar">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ertlans.github.io/">
+				<img src="https://ertlans.github.io/images/gitea.png" alt="Docs">
+			</a>
+			<span class="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+		</div>
+		<div class="navbar-menu" id="navMenu">
+			<div class="navbar-end">
+				<span class="navbar-item logo"><img src="https://ertlans.github.io/images/gitea.png" alt="Docs"></span>
+
+	<a class="navbar-item" href="https://gitea.io/en-us/">
+		<i class="fa fa-home"></i>&nbsp;
+		Website
+	</a>
+
+	<a class="navbar-item" href="/en-us/">
+		<i class="fa fa-question"></i>&nbsp;
+		Docs
+	</a>
+
+	<a class="navbar-item" href="https://blog.gitea.io/">
+		<i class="fa fa-rss"></i>&nbsp;
+		Blog
+	</a>
+
+	<a class="navbar-item" href="https://code.gitea.io/">
+		<i class="fa fa-code"></i>&nbsp;
+		Code
+	</a>
+
+	<a class="navbar-item" href="https://crowdin.com/project/gitea">
+		<i class="fa fa-language"></i>&nbsp;
+		Translation
+	</a>
+
+	<a class="navbar-item" href="https://try.gitea.io/api/swagger">
+		<i class="fa fa-plug"></i>&nbsp;
+		API
+	</a>
+
+	<a class="navbar-item" href="https://dl.gitea.io/">
+		<i class="fa fa-download"></i>&nbsp;
+		Downloads
+	</a>
+
+	<a class="navbar-item" href="https://github.com/go-gitea/">
+		<i class="fa fa-github"></i>&nbsp;
+		GitHub
+	</a>
+
+	<a class="navbar-item" href="https://discord.gg/Gitea">
+		<i class="fa fa-comment"></i>&nbsp;
+		Discord Chat
+	</a>
+
+	<a class="navbar-item" href="https://discourse.gitea.io/">
+		<i class="fa fa-group"></i>&nbsp;
+		Forum
+	</a>
+
+
+			</div>
+		</div>
+		<div class="navbar-background" id="navbar-background"></div>
+	</div>
+</nav>
+
+<section class="section">
+	<div class="container is-centered page">
+		<div class="columns">
+			<div class="column is-one-quarter">
+				<aside class="menu">
+	
+		
+			<p class="menu-label">
+				
+				Help
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/faq/" >
+							
+							FAQ
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/seek-help/" >
+							
+							Support Options
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Installation
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/install-with-docker/" >
+							
+							With Docker
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/database-prep/" >
+							
+							Database preparation
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-binary/" >
+							
+							From binary
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-package/" >
+							
+							From package
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/linux-service/" >
+							
+							Linux service
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-source/" >
+							
+							From source
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/windows-service/" >
+							
+							Windows Service
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Upgrade
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/upgrade-from-gogs/" >
+							
+							From Gogs
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Usage
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/command-line/" >
+							
+							Command Line
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/backup-and-restore/" >
+							
+							Backup and Restore
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/email-setup/" >
+							
+							Email setup
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/pull-request/" >
+							
+							Pull Request
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/automatically-linked-references/" >
+							
+							Automatically Linked References
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/issue-pull-request-templates/" >
+							
+							Issue and Pull Request templates
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/reverse-proxies/" >
+							
+							Reverse Proxies
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Advanced
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/adding-legal-pages/" >
+							
+							Adding Legal Pages
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/customizing-gitea/" >
+							
+							Customizing Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/hacking-on-gitea/" class="is-active">
+							
+							Hacking on Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/config-cheat-sheet/" >
+							
+							Config Cheat Sheet
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/signing/" >
+							
+							GPG Commit Signatures
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/specific-variables/" >
+							
+							Specific variables
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/make/" >
+							
+							Make
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/api-usage/" >
+							
+							API Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/ci-cd/" >
+							
+							CI/CD Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/cmd-embedded/" >
+							
+							Embedded data extraction tool
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/external-renderers/" >
+							
+							External renderers
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/repo-indexer/" >
+							
+							Repository indexer
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/third-party-tools/" >
+							
+							Third Party Tools
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/logging-configuration/" >
+							
+							Logging Configuration
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/migrations-interfaces/" >
+							
+							Migrations Interfaces
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/search-engines-indexation/" >
+							
+							Search Engines Indexation
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				features
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/comparison/" >
+							
+							Comparison
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/authentication/" >
+							
+							Authentication
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/localization/" >
+							
+							Localization
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/webhooks/" >
+							
+							Webhooks
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+	</ul>
+</aside>
+
+
+
+
+			</div>
+			<div class="column is-three-quarters">
+				<div class="content">
+					<h1 id="hacking-on-gitea">Hacking on Gitea</h1>
+<h2 id="installing-go-and-setting-the-gopath">Installing go and setting the GOPATH</h2>
+<p>You should <a href="https://golang.org/doc/install">install go</a> and set up your go
+environment correctly. In particular, it is recommended to set the <code>$GOPATH</code>
+environment variable and to add the go bin directory or directories
+<code>${GOPATH//://bin:}/bin</code> to the <code>$PATH</code>. See the Go wiki entry for
+<a href="https://github.com/golang/go/wiki/GOPATH">GOPATH</a>.</p>
+<p>Next, <a href="https://nodejs.org/en/download/">install Node.js with npm</a> which is
+required to build the JavaScript and CSS files. The minimum supported Node.js
+version is 10
+ and the latest LTS version is recommended.</p>
+<p>You will also need make.
+<!-- raw HTML omitted -->(See here how to get Make)<!-- raw HTML omitted --></p>
+<p><strong>Note</strong>: When executing make tasks that require external tools, like
+<code>make misspell-check</code>, Gitea will automatically download and build these as
+necessary. To be able to use these you must have the <code>&quot;$GOPATH&quot;/bin</code> directory
+on the executable path. If you don&rsquo;t add the go bin directory to the
+executable path you will have to manage this yourself.</p>
+<p><strong>Note 2</strong>: Go version 1.12
+ or higher is required; however, it is important
+to note that our continuous integration will check that the formatting of the
+source code is not changed by <code>gofmt</code> using <code>make fmt-check</code>. Unfortunately,
+the results of <code>gofmt</code> can differ by the version of <code>go</code>. It is therefore
+recommended to install the version of Go that our continuous integration is
+running. As of last update, it should be Go version 1.14
+.</p>
+<h2 id="downloading-and-cloning-the-gitea-source-code">Downloading and cloning the Gitea source code</h2>
+<p>The recommended method of obtaining the source code is by using <code>git clone</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/go-gitea/gitea
+</code></pre></div><p>(Since the advent of go modules, it is no longer necessary to build go projects
+from within the <code>$GOPATH</code>, hence the <code>go get</code> approach is no longer recommended.)</p>
+<h2 id="forking-gitea">Forking Gitea</h2>
+<p>Download the master Gitea source code as above. Then, fork the
+<a href="https://github.com/go-gitea/gitea">Gitea repository</a> on GitHub,
+and either switch the git remote origin for your fork or add your fork as another remote:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Rename original Gitea origin to upstream</span>
+git remote rename origin upstream
+git remote add origin <span style="color:#e6db74">&#34;git@github.com:</span>$GITHUB_USERNAME<span style="color:#e6db74">/gitea.git&#34;</span>
+git fetch --all --prune
+</code></pre></div><p>or:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Add new remote for our fork</span>
+git remote add <span style="color:#e6db74">&#34;</span>$FORK_NAME<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;git@github.com:</span>$GITHUB_USERNAME<span style="color:#e6db74">/gitea.git&#34;</span>
+git fetch --all --prune
+</code></pre></div><p>To be able to create pull requests, the forked repository should be added as a remote
+to the Gitea sources. Otherwise, changes can&rsquo;t be pushed.</p>
+<h2 id="building-gitea-basic">Building Gitea (Basic)</h2>
+<p>Take a look at our
+<!-- raw HTML omitted -->instructions<!-- raw HTML omitted -->
+for <!-- raw HTML omitted -->building
+from source<!-- raw HTML omitted -->.</p>
+<p>The simplest recommended way to build from source is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">TAGS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bindata sqlite sqlite_unlock_notify&#34;</span> make build
+</code></pre></div><p>However, there are a number of additional make tasks you should be aware of.
+These are documented below but you can look at our
+<a href="https://github.com/go-gitea/gitea/blob/master/Makefile"><code>Makefile</code></a> for more,
+and look at our
+<a href="https://github.com/go-gitea/gitea/blob/master/.drone.yml"><code>.drone.yml</code></a> to see
+how our continuous integration works.</p>
+<h3 id="formatting-code-analysis-and-spell-check">Formatting, code analysis and spell check</h3>
+<p>Our continuous integration will reject PRs that are not properly formatted, fail
+code analysis or spell check.</p>
+<p>You should format your code with <code>go fmt</code> using:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make fmt
+</code></pre></div><p>and can test whether your changes would match the results with:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make fmt-check <span style="color:#75715e"># which runs make fmt internally</span>
+</code></pre></div><p><strong>Note</strong>: The results of <code>go fmt</code> are dependent on the version of <code>go</code> present.
+You should run the same version of go that is on the continuous integration
+server as mentioned above. <code>make fmt-check</code> will only check if your <code>go</code> would
+format differently - this may be different from the CI server version.</p>
+<p>You should run revive, vet and spell-check on the code with:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make revive vet misspell-check
+</code></pre></div><h3 id="working-on-js-and-css">Working on JS and CSS</h3>
+<p>For simple changes, edit files in <code>web_src</code>, run the build and start the server to test:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make build <span style="color:#f92672">&amp;&amp;</span> ./gitea
+</code></pre></div><p>For more involved changes use the <code>watch-frontend</code> task to continuously rebuild files when their sources change. The <code>bindata</code> tag must be absent to ensure the file system will be used for files in <code>public</code>. First, build and run the backend:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make backend <span style="color:#f92672">&amp;&amp;</span> ./gitea
+</code></pre></div><p>With the backend running, open another terminal and run:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make watch-frontend
+</code></pre></div><p>Before committing, make sure the linters pass:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make lint-frontend
+</code></pre></div><p>Note: When working on frontend code, it is advisable to set <code>USE_SERVICE_WORKER</code> to <code>false</code> in <code>app.ini</code> which will prevent undesirable caching of frontend assets.</p>
+<h3 id="building-images">Building Images</h3>
+<p>To build the images, ImageMagick, <code>inkscape</code> and <code>zopflipng</code> binaries must be available in
+your <code>PATH</code> to run <code>make generate-images</code>.</p>
+<h3 id="updating-the-api">Updating the API</h3>
+<p>When creating new API routes or modifying existing API routes, you <strong>MUST</strong>
+update and/or create <a href="https://swagger.io/docs/specification/2-0/what-is-swagger/">Swagger</a>
+documentation for these using <a href="https://goswagger.io/">go-swagger</a> comments.
+The structure of these comments is described in the <a href="https://goswagger.io/use/spec.html#annotation-syntax">specification</a>.
+If you want more information about the Swagger structure, you can look at the
+<a href="https://swagger.io/docs/specification/2-0/basic-structure/">Swagger 2.0 Documentation</a>
+or compare with a previous PR adding a new API endpoint, e.g. <a href="https://github.com/go-gitea/gitea/pull/5843/files#diff-2e0a7b644cf31e1c8ef7d76b444fe3aaR20">PR #5483</a></p>
+<p>You should be careful not to break the API for downstream users which depend
+on a stable API. In general, this means additions are acceptable, but deletions
+or fundamental changes to the API will be rejected.</p>
+<p>Once you have created or changed an API endpoint, please regenerate the Swagger
+documentation using:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make generate-swagger
+</code></pre></div><p>You should validate your generated Swagger file and spell-check it with:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make swagger-validate misspell-check
+</code></pre></div><p>You should commit the changed swagger JSON file. The continous integration
+server will check that this has been done using:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make swagger-check
+</code></pre></div><p><strong>Note</strong>: Please note you should use the Swagger 2.0 documentation, not the
+OpenAPI 3 documentation.</p>
+<h3 id="creating-new-configuration-options">Creating new configuration options</h3>
+<p>When creating new configuration options, it is not enough to add them to the
+<code>modules/setting</code> files. You should add information to <code>custom/conf/app.ini</code>
+and to the
+<!-- raw HTML omitted -->configuration cheat sheet<!-- raw HTML omitted -->
+found in <code>docs/content/doc/advanced/config-cheat-sheet.en-us.md</code></p>
+<h3 id="changing-the-logo">Changing the logo</h3>
+<p>When changing the Gitea logo SVG, you will need to run and commit the results
+of:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make generate-images
+</code></pre></div><p>This will create the necessary Gitea favicon and others.</p>
+<h3 id="database-migrations">Database Migrations</h3>
+<p>If you make breaking changes to any of the database persisted structs in the
+<code>models/</code> directory, you will need to make a new migration. These can be found
+in <code>models/migrations/</code>. You can ensure that your migrations work for the main
+database types using:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">make test-sqlite-migration <span style="color:#75715e"># with sqlite switched for the appropriate database</span>
+</code></pre></div><h2 id="testing">Testing</h2>
+<p>There are two types of test run by Gitea: Unit tests and Integration Tests.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">TAGS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bindata sqlite sqlite_unlock_notify&#34;</span> make test <span style="color:#75715e"># Runs the unit tests</span>
+</code></pre></div><p>Unit tests will not and cannot completely test Gitea alone. Therefore, we
+have written integration tests; however, these are database dependent.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">TAGS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bindata sqlite sqlite_unlock_notify&#34;</span> make build test-sqlite
+</code></pre></div><p>will run the integration tests in an sqlite environment. Integration tests
+require  <code>git lfs</code> to be installed. Other database tests are available but
+may need adjustment to the local environment.</p>
+<p>Look at
+<a href="https://github.com/go-gitea/gitea/blob/master/integrations/README.md"><code>integrations/README.md</code></a>
+for more information and how to run a single test.</p>
+<p>Our continuous integration will test the code passes its unit tests and that
+all supported databases will pass integration test in a Docker environment.
+Migration from several recent versions of Gitea will also be tested.</p>
+<p>Please submit your PR with additional tests and integration tests as
+appropriate.</p>
+<h2 id="documentation-for-the-website">Documentation for the website</h2>
+<p>Documentation for the website is found in <code>docs/</code>. If you change this you
+can test your changes to ensure that they pass continuous integration using:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># from the docs directory within Gitea</span>
+make trans-copy clean build
+</code></pre></div><p>You will require a copy of <a href="https://gohugo.io/">Hugo</a> to run this task. Please
+note: this may generate a number of untracked git objects, which will need to
+be cleaned up.</p>
+<h2 id="visual-studio-code">Visual Studio Code</h2>
+<p>A <code>launch.json</code> and <code>tasks.json</code> are provided within <code>contrib/ide/vscode</code> for
+Visual Studio Code. Look at
+<a href="https://github.com/go-gitea/gitea/blob/master/contrib/ide/README.md"><code>contrib/ide/README.md</code></a>
+for more information.</p>
+<h2 id="submitting-prs">Submitting PRs</h2>
+<p>Once you&rsquo;re happy with your changes, push them up and open a pull request. It
+is recommended that you allow Gitea Managers and Owners to modify your PR
+branches as we will need to update it to master before merging and/or may be
+able to help fix issues directly.</p>
+<p>Any PR requires two approvals from the Gitea maintainers and needs to pass the
+continous integration. Take a look at our
+<a href="https://github.com/go-gitea/gitea/blob/master/CONTRIBUTING.md"><code>CONTRIBUTING.md</code></a>
+document.</p>
+<p>If you need more help pop on to <a href="https://discord.gg/gitea">Discord</a> #Develop
+and chat there.</p>
+<p>That&rsquo;s it! You are ready to hack on Gitea.</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="content has-text-centered">
+					<p>
+						Copyright &copy; 2020 <a href="https://docs.gitea.io">The Gitea Authors</a>. All rights reserved. Made with <i class="fa fa-heart" aria-hidden="true"></i> and <a href="https://gohugo.io">Hugo</a>.
+					</p>
+					<p>
+						 Sponsored by <a href="https://www.didiyun.com">DiDi Cloud</a>, <a href="http://inblockchain.com">INBlockchain</a>, <a href="https://www.packet.com">Packet</a>, <a href="https://digitalocean.com">DigitalOcean</a>, and all of our backers on <a href="https://opencollective.com/gitea">Open Collective</a>.
+					</p>
+					<p>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-cn" hreflang="zh-cn">中文(简体)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-tw" hreflang="zh-tw">中文(繁體)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/pt-br" hreflang="pt-br">Português Brasileiro</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/en-us" hreflang="en-us">English</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/nl-nl" hreflang="nl-nl">Nederlands</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/fr-fr" hreflang="fr-fr">Français</a>
+						
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+            document.addEventListener('DOMContentLoaded', function () {
+
+                
+                var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                
+                if ($navbarBurgers.length > 0) {
+
+                    
+                    $navbarBurgers.forEach(function ($el) {
+                        $el.addEventListener('click', function () {
+
+                            
+                            var target = $el.dataset.target;
+                            var $target = document.getElementById(target);
+
+                            
+                            $el.classList.toggle('is-active');
+                            $target.classList.toggle('is-active');
+
+
+                            document.getElementById('navbar-background').classList.toggle('is-active');
+
+
+                        });
+                    });
+                }
+
+				
+				
+				let svg = '  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor; vertical-align: middle" width="24" height="24" viewBox="0 0 32 32"><title>gitea</title><path d="M5.583 7.229c-2.464-0.005-5.755 1.557-5.573 5.479 0.281 6.125 6.557 6.693 9.068 6.745 0.271 1.146 3.224 5.109 5.411 5.318h9.573c5.74-0.38 10.036-17.365 6.854-17.427-5.271 0.25-8.396 0.375-11.073 0.396v5.297l-0.839-0.365-0.005-4.932c-3.073 0-5.781-0.141-10.917-0.396-0.646-0.005-1.542-0.115-2.5-0.115zM5.927 9.396h0.297c0.349 3.141 0.917 4.974 2.068 7.781-2.938-0.349-5.432-1.198-5.891-4.38-0.24-1.646 0.563-3.365 3.526-3.401zM17.339 12.479c0.198 0.005 0.406 0.042 0.594 0.13l1 0.432-0.714 1.302c-0.109 0-0.219 0.016-0.323 0.052-0.464 0.151-0.708 0.604-0.542 1.021 0.036 0.083 0.089 0.161 0.151 0.229l-1.234 2.25c-0.099 0-0.203 0.016-0.297 0.052-0.464 0.146-0.708 0.604-0.542 1.016 0.172 0.417 0.682 0.63 1.151 0.479 0.464-0.146 0.703-0.604 0.536-1.021-0.047-0.109-0.115-0.208-0.208-0.292l1.203-2.188c0.13 0.010 0.26 0 0.391-0.042 0.104-0.031 0.198-0.083 0.281-0.151 0.464 0.198 0.844 0.354 1.12 0.49 0.406 0.203 0.552 0.339 0.599 0.49 0.042 0.146-0.005 0.427-0.24 0.922-0.172 0.37-0.458 0.896-0.797 1.51-0.115 0-0.229 0.016-0.333 0.052-0.469 0.151-0.708 0.604-0.542 1.021 0.167 0.411 0.682 0.625 1.146 0.479 0.469-0.151 0.708-0.604 0.542-1.021-0.042-0.099-0.104-0.193-0.182-0.271 0.333-0.609 0.62-1.135 0.807-1.526 0.25-0.536 0.38-0.938 0.266-1.323s-0.469-0.635-0.932-0.865c-0.307-0.151-0.693-0.313-1.146-0.505 0.005-0.109-0.010-0.214-0.052-0.318s-0.109-0.198-0.193-0.281l0.703-1.281 3.901 1.682c0.703 0.307 0.995 1.057 0.651 1.682l-2.682 4.906c-0.339 0.625-1.182 0.885-1.885 0.578l-5.516-2.38c-0.703-0.307-0.995-1.057-0.656-1.682l2.682-4.906c0.234-0.432 0.708-0.688 1.208-0.708h0.083z"></path></svg>';
+				let contents = document.getElementsByClassName("content");
+				if (contents.length > 0) {
+					let content = contents[0];
+					for (let level = 1; level <= 4; level++) {
+						let elems = content.getElementsByTagName("h" + level);
+						for (let i = 0; i < elems.length; i++) {
+							let elem = elems[i];
+							if (elem.id !== "undefined" && elem.id !== "") {
+								let anchorId = elem.id + "-anchor";
+								elem.addEventListener("mouseover", () => {
+									document.getElementById(anchorId).style.display = "initial";
+								});
+								elem.addEventListener("mouseout", () => {
+									document.getElementById(anchorId).style.display = "none";
+								});
+								let anchor = document.createElement("a");
+								anchor.id = anchorId;
+								anchor.href = "#" + elem.id;
+								anchor.innerHTML = svg;
+								anchor.style.display = "none";
+								elem.appendChild(anchor);
+							}
+						}
+					}
+				}
+
+            });
+		</script>
+
+		</body>
+</html>
+

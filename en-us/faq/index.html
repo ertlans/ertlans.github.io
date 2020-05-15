@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta property="og:title" content="FAQ - Docs"></meta>
+ 		
+		<meta property="og:description" content="" />
+		
+		<meta property="og:type" content="article"></meta>
+		<meta property="og:url" content="https://ertlans.github.io/en-us/faq/"></meta>
+		<meta property="og:image" content="https://docs.gitea.io/images/gitea.png"></meta>
+		<meta name="generator" content="Hugo 0.69.2" />
+
+		<title>FAQ - Docs</title>
+
+		
+		
+
+		
+
+		<link rel="canonical" href="https://ertlans.github.io/en-us/faq/">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://ertlans.github.io/styles/main.css">
+
+		<link rel="shortcut icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+		<link rel="icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+	</head>
+	<body>
+
+<nav class="navbar">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ertlans.github.io/">
+				<img src="https://ertlans.github.io/images/gitea.png" alt="Docs">
+			</a>
+			<span class="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+		</div>
+		<div class="navbar-menu" id="navMenu">
+			<div class="navbar-end">
+				<span class="navbar-item logo"><img src="https://ertlans.github.io/images/gitea.png" alt="Docs"></span>
+
+	<a class="navbar-item" href="https://gitea.io/en-us/">
+		<i class="fa fa-home"></i>&nbsp;
+		Website
+	</a>
+
+	<a class="navbar-item" href="/en-us/">
+		<i class="fa fa-question"></i>&nbsp;
+		Docs
+	</a>
+
+	<a class="navbar-item" href="https://blog.gitea.io/">
+		<i class="fa fa-rss"></i>&nbsp;
+		Blog
+	</a>
+
+	<a class="navbar-item" href="https://code.gitea.io/">
+		<i class="fa fa-code"></i>&nbsp;
+		Code
+	</a>
+
+	<a class="navbar-item" href="https://crowdin.com/project/gitea">
+		<i class="fa fa-language"></i>&nbsp;
+		Translation
+	</a>
+
+	<a class="navbar-item" href="https://try.gitea.io/api/swagger">
+		<i class="fa fa-plug"></i>&nbsp;
+		API
+	</a>
+
+	<a class="navbar-item" href="https://dl.gitea.io/">
+		<i class="fa fa-download"></i>&nbsp;
+		Downloads
+	</a>
+
+	<a class="navbar-item" href="https://github.com/go-gitea/">
+		<i class="fa fa-github"></i>&nbsp;
+		GitHub
+	</a>
+
+	<a class="navbar-item" href="https://discord.gg/Gitea">
+		<i class="fa fa-comment"></i>&nbsp;
+		Discord Chat
+	</a>
+
+	<a class="navbar-item" href="https://discourse.gitea.io/">
+		<i class="fa fa-group"></i>&nbsp;
+		Forum
+	</a>
+
+
+			</div>
+		</div>
+		<div class="navbar-background" id="navbar-background"></div>
+	</div>
+</nav>
+
+<section class="section">
+	<div class="container is-centered page">
+		<div class="columns">
+			<div class="column is-one-quarter">
+				<aside class="menu">
+	
+		
+			<p class="menu-label">
+				
+				Help
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/faq/" class="is-active">
+							
+							FAQ
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/seek-help/" >
+							
+							Support Options
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Installation
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/install-with-docker/" >
+							
+							With Docker
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/database-prep/" >
+							
+							Database preparation
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-binary/" >
+							
+							From binary
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-package/" >
+							
+							From package
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/linux-service/" >
+							
+							Linux service
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-source/" >
+							
+							From source
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/windows-service/" >
+							
+							Windows Service
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Upgrade
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/upgrade-from-gogs/" >
+							
+							From Gogs
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Usage
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/command-line/" >
+							
+							Command Line
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/backup-and-restore/" >
+							
+							Backup and Restore
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/email-setup/" >
+							
+							Email setup
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/pull-request/" >
+							
+							Pull Request
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/automatically-linked-references/" >
+							
+							Automatically Linked References
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/issue-pull-request-templates/" >
+							
+							Issue and Pull Request templates
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/reverse-proxies/" >
+							
+							Reverse Proxies
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Advanced
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/adding-legal-pages/" >
+							
+							Adding Legal Pages
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/customizing-gitea/" >
+							
+							Customizing Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/hacking-on-gitea/" >
+							
+							Hacking on Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/config-cheat-sheet/" >
+							
+							Config Cheat Sheet
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/signing/" >
+							
+							GPG Commit Signatures
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/specific-variables/" >
+							
+							Specific variables
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/make/" >
+							
+							Make
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/api-usage/" >
+							
+							API Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/ci-cd/" >
+							
+							CI/CD Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/cmd-embedded/" >
+							
+							Embedded data extraction tool
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/external-renderers/" >
+							
+							External renderers
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/repo-indexer/" >
+							
+							Repository indexer
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/third-party-tools/" >
+							
+							Third Party Tools
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/logging-configuration/" >
+							
+							Logging Configuration
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/migrations-interfaces/" >
+							
+							Migrations Interfaces
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/search-engines-indexation/" >
+							
+							Search Engines Indexation
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				features
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/comparison/" >
+							
+							Comparison
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/authentication/" >
+							
+							Authentication
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/localization/" >
+							
+							Localization
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/webhooks/" >
+							
+							Webhooks
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+	</ul>
+</aside>
+
+
+	
+
+
+
+			</div>
+			<div class="column is-three-quarters">
+				<div class="content">
+					<h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+<p>This page contains some common questions and answers.<br>
+Also see <a href="/en-us/seek-help/">Support Options</a></p>
+<ul>
+<li><a href="#difference-between-1-x-and-1-x-x-downloads">Difference between 1.x and 1.x.x downloads</a></li>
+<li><a href="#how-to-migrate-from-gogs-github-etc-to-gitea">How to migrate from Gogs/GitHub/etc. to Gitea</a></li>
+<li><a href="#where-does-gitea-store-x-file">Where does Gitea store &ldquo;x&rdquo; file</a></li>
+<li><a href="#not-seeing-a-clone-url-or-the-clone-url-being-incorrect">Not seeing a clone URL or the clone URL being incorrect</a></li>
+<li><a href="#custom-templates-not-loading-or-working-incorrectly">Custom Templates not loading or working incorrectly</a></li>
+<li><a href="#active-user-vs-login-prohibited-user">Active user vs login prohibited user</a></li>
+<li><a href="#setting-up-logging">Setting up logging</a></li>
+<li><a href="#what-is-swagger">What is Swagger?</a></li>
+<li><a href="#adjusting-your-server-for-public-private-use">Adjusting your server for public/private use</a>
+<ul>
+<li><a href="#preventing-spammers">Preventing spammers</a></li>
+<li><a href="#only-allow-certain-email-domains">Only allow certain email domains</a></li>
+<li><a href="#only-allow-block-certain-openid-providers">Only allow/block certain OpenID providers</a></li>
+<li><a href="#issue-only-users">Issue only users</a></li>
+<li><a href="#restricted-users">Restricted users</a></li>
+<li><a href="#enable-fail2ban">Enable Fail2ban</a></li>
+</ul>
+</li>
+<li><a href="#how-to-add-use-custom-themes">Adding custom themes</a></li>
+<li><a href="#sshd-vs-built-in-ssh">SSHD vs built-in SSH</a></li>
+<li><a href="#gitea-is-running-slow">Gitea is running slow</a></li>
+<li><a href="#cant-create-repositories-files">Can&rsquo;t create repositories/files</a></li>
+<li><a href="#translation-is-incorrect-how-to-add-more-translations">Translation is incorrect/how to add more translations</a></li>
+<li><a href="#hooks-aren-t-running">Hooks aren&rsquo;t running</a></li>
+<li><a href="#ssh-issues">SSH Issues</a>
+<ul>
+<li><a href="#ssh-common-errors">SSH Common Errors</a></li>
+</ul>
+</li>
+<li><a href="#missing-releases-after-migrating-repository-with-tags">Missing releases after migration repository with tags</a></li>
+<li><a href="#lfs-issues">LFS Issues</a></li>
+<li><a href="#how-can-i-create-users-before-starting-gitea">How can I create users before starting Gitea</a></li>
+<li><a href="#how-can-i-enable-password-reset">How can I enable password reset</a></li>
+<li><a href="#how-can-a-user-s-password-be-changed">How can a user&rsquo;s password be changed</a></li>
+<li><a href="#why-is-my-markdown-broken">Why is my markdown broken</a></li>
+</ul>
+<h2 id="difference-between-1x-and-1xx-downloads">Difference between 1.x and 1.x.x downloads</h2>
+<p>Version 1.7.x will be used for this example.<br>
+<strong>NOTE:</strong> this example applies to Docker images as well!</p>
+<p>On our <a href="https://dl.gitea.io/gitea/">downloads page</a> you will see a 1.7 directory, as well as directories for 1.7.0, 1.7.1, 1.7.2, 1.7.3, 1.7.4, 1.7.5, and 1.7.6.<br>
+The 1.7 and 1.7.0 directories are <strong>not</strong> the same. The 1.7 directory is built on each merged commit to the <a href="https://github.com/go-gitea/gitea/tree/release/v1.7"><code>release/v1.7</code></a> branch.<br>
+The 1.7.0 directory, however, is a build that was created when the <a href="https://github.com/go-gitea/gitea/releases/tag/v1.7.0"><code>v1.7.0</code></a> tag was created.</p>
+<p>This means that 1.x downloads will change as commits are merged to their respective branch (think of it as a separate &ldquo;master&rdquo; branch for each release).<br>
+On the other hand, 1.x.x downloads should never change.</p>
+<h2 id="how-to-migrate-from-gogsgithubetc-to-gitea">How to migrate from Gogs/GitHub/etc. to Gitea</h2>
+<p>To migrate from Gogs to Gitea:</p>
+<ul>
+<li><a href="/en-us/upgrade-from-gogs/">Gogs version 0.9.146 or less</a></li>
+<li><a href="https://github.com/go-gitea/gitea/issues/4286">Gogs version 0.11.46.0418</a></li>
+</ul>
+<p>To migrate from GitHub to Gitea, you can use Gitea&rsquo;s built-in migration form.<br>
+In order to migrate items such as issues, pull requests, etc. you will need to input at least your username.<br>
+<a href="https://try.gitea.io/repo/migrate">Example (requires login)</a></p>
+<p>To migrate from Gitlab to Gitea, you can use this non-affiliated tool:<br>
+<a href="https://github.com/loganinak/MigrateGitlabToGogs">https://github.com/loganinak/MigrateGitlabToGogs</a></p>
+<h2 id="where-does-gitea-store-x-file">Where does Gitea store &ldquo;x&rdquo; file</h2>
+<ul>
+<li>WorkPath
+<ul>
+<li>Environment variable <code>GITEA_WORK_DIR</code></li>
+<li>Else binary location</li>
+</ul>
+</li>
+<li>AppDataPath (default for database, indexers, etc.)
+<ul>
+<li><code>APP_DATA_PATH</code> from <code>app.ini</code></li>
+<li>Else <code>%(WorkPath)/data</code></li>
+</ul>
+</li>
+<li>CustomPath (custom templates)
+<ul>
+<li>Environment variable <code>GITEA_CUSTOM</code></li>
+<li>Else <code>%(WorkPath)/custom</code></li>
+</ul>
+</li>
+<li>HomeDir
+<ul>
+<li>Unix: Environment variable <code>HOME</code></li>
+<li>Windows: Environment variable <code>USERPROFILE</code>, else environment variables <code>HOMEDRIVE</code>+<code>HOMEPATH</code></li>
+</ul>
+</li>
+<li>RepoRootPath
+<ul>
+<li><code>ROOT</code> in <code>app.ini</code></li>
+<li>Else <code>%(HomeDir)/gitea-repositories</code></li>
+</ul>
+</li>
+<li>INI (config file)
+<ul>
+<li><code>-c</code> flag</li>
+<li>Else <code>%(CustomPath)/conf/app.ini</code></li>
+</ul>
+</li>
+<li>SQLite Database
+<ul>
+<li><code>PATH</code> in <code>database</code> section of <code>app.ini</code></li>
+<li>Else <code>%(AppDataPath)/gitea.db</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="not-seeing-a-clone-url-or-the-clone-url-being-incorrect">Not seeing a clone URL or the clone URL being incorrect</h2>
+<p>There are a few places that could make this show incorrectly.</p>
+<ol>
+<li>If using a reverse proxy, make sure you have followed the correction directions in the <a href="/en-us/reverse-proxies/">reverse proxy guide</a></li>
+<li>Make sure you have correctly set <code>ROOT_URL</code> in the <code>server</code> section of your <code>app.ini</code></li>
+</ol>
+<p>If certain clone options aren&rsquo;t showing up (HTTP/S or SSH), the following options can be checked in your <code>app.ini</code></p>
+<p><code>DISABLE_HTTP_GIT</code>: if set to true, there will be no HTTP/HTTPS link<br>
+<code>DISABLE_SSH</code>: if set to true, there will be no SSH link<br>
+<code>SSH_EXPOSE_ANONYMOUS</code>: if set to false, SSH links will be hidden for anonymous users</p>
+<h2 id="custom-templates-not-loading-or-working-incorrectly">Custom Templates not loading or working incorrectly</h2>
+<p>Gitea&rsquo;s custom templates must be added to the correct location or Gitea will not find and use them.<br>
+The correct path for the template(s) will be relative to the <code>CustomPath</code></p>
+<ol>
+<li>To find <code>CustomPath</code>, look for Custom File Root Path in Site Administration -&gt; Configuration</li>
+</ol>
+<ul>
+<li>If that doesn&rsquo;t exist, you can try <code>echo $GITEA_CUSTOM</code></li>
+</ul>
+<ol start="2">
+<li>If you are still unable to find a path, the default can be <a href="#where-does-gitea-store-x-file">calculated above</a></li>
+<li>Once you have figured out the correct custom path, you can refer to the <a href="/en-us/customizing-gitea/">customizing Gitea</a> page to add your template to the correct location.</li>
+</ol>
+<h2 id="active-user-vs-login-prohibited-user">Active user vs login prohibited user</h2>
+<p>In Gitea, an &ldquo;active&rdquo; user refers to a user that has activated their account via email.<br>
+A &ldquo;login prohibited&rdquo; user is a user that is not allowed to log in to Gitea anymore</p>
+<h2 id="setting-up-logging">Setting up logging</h2>
+<ul>
+<li><a href="/en-us/logging-configuration/">Official Docs</a></li>
+</ul>
+<h2 id="what-is-swagger">What is Swagger?</h2>
+<p><a href="https://swagger.io/">Swagger</a> is what Gitea uses for its API.<br>
+All Gitea instances have the built-in API, though it can be disabled by setting <code>ENABLE_SWAGGER</code> to <code>false</code> in the <code>api</code> section of your <code>app.ini</code><br>
+For more information, refer to Gitea&rsquo;s <a href="/en-us/api-usage/">API docs</a></p>
+<p><a href="https://try.gitea.io/api/swagger">Swagger Example</a></p>
+<h2 id="adjusting-your-server-for-publicprivate-use">Adjusting your server for public/private use</h2>
+<h3 id="preventing-spammers">Preventing spammers</h3>
+<p>There are multiple things you can combine to prevent spammers.</p>
+<ol>
+<li>By only whitelisting certain domains with OpenID (see below)</li>
+<li>Setting <code>ENABLE_CAPTCHA</code> to <code>true</code> in your <code>app.ini</code> and properly configuring <code>RECAPTCHA_SECRET</code> and <code>RECAPTCHA_SITEKEY</code></li>
+<li>Settings <code>DISABLE_REGISTRATION</code> to <code>true</code> and creating new users via the <a href="/en-us/command-line/">CLI</a>, <a href="/en-us/api-usage/">API</a>, or Gitea&rsquo;s Admin UI</li>
+</ol>
+<h3 id="only-allow-certain-email-domains">Only allow certain email domains</h3>
+<p>You can configure <code>EMAIL_DOMAIN_WHITELIST</code> in your app.ini under <code>[service]</code></p>
+<h3 id="only-allowblock-certain-openid-providers">Only allow/block certain OpenID providers</h3>
+<p>You can configure <code>WHITELISTED_URIS</code> or <code>BLACKLISTED_URIS</code> under <code>[openid]</code> in your <code>app.ini</code><br>
+<strong>NOTE:</strong> whitelisted takes precedence, so if it is non-blank then blacklisted is ignored</p>
+<h3 id="issue-only-users">Issue only users</h3>
+<p>The current way to achieve this is to create/modify a user with a max repo creation limit of 0.</p>
+<h3 id="restricted-users">Restricted users</h3>
+<p>Restricted users are limited to a subset of the content based on their organization/team memberships and collaborations, ignoring the public flag on organizations/repos etc.__</p>
+<p>Example use case: A company runs a Gitea instance that requires login. Most repos are public (accessible/browseable by all co-workers).</p>
+<p>At some point, a customer or third party needs access to a specific repo and only that repo. Making such a customer account restricted and granting any needed access using team membership(s) and/or collaboration(s) is a simple way to achieve that without the need to make everything private.</p>
+<h3 id="enable-fail2ban">Enable Fail2ban</h3>
+<p>Use [Fail2Ban]({{ relref &ldquo;doc/usage/fail2ban-setup.md&rdquo; &gt;}}) to monitor and stop automated login attempts or other malicious behavior based on log patterns</p>
+<h2 id="how-to-adduse-custom-themes">How to add/use custom themes</h2>
+<p>Gitea supports two official themes right now, <code>gitea</code> and <code>arc-green</code> (<code>light</code> and <code>dark</code> respectively)<br>
+To add your own theme, currently the only way is to provide a complete theme (not just color overrides)</p>
+<p>As an example, let&rsquo;s say our theme is <code>arc-blue</code> (this is a real theme, and can be found <a href="https://github.com/go-gitea/gitea/issues/6011">in this issue</a>)<br>
+Name the <code>.css</code> file <code>theme-arc-blue.css</code> and add it to your custom folder in <code>custom/pulic/css</code><br>
+Allow users to use it by adding <code>arc-blue</code> to the list of <code>THEMES</code> in your <code>app.ini</code></p>
+<h2 id="sshd-vs-built-in-ssh">SSHD vs built-in SSH</h2>
+<p>SSHD is the built-in SSH server on most Unix systems.<br>
+Gitea also provides its own SSH server, for usage when SSHD is not available.</p>
+<h2 id="gitea-is-running-slow">Gitea is running slow</h2>
+<p>The most common culprit for this is loading federated avatars.<br>
+This can be turned off by setting <code>ENABLE_FEDERATED_AVATAR</code> to <code>false</code> in your <code>app.ini</code><br>
+Another option that may need to be changed is setting <code>DISABLE_GRAVATAR</code> to <code>true</code> in your <code>app.ini</code></p>
+<h2 id="cant-create-repositoriesfiles">Can&rsquo;t create repositories/files</h2>
+<p>Make sure that Gitea has sufficient permissions to write to its home directory and data directory.<br>
+See <a href="#where-does-gitea-store-x-file">AppDataPath and RepoRootPath</a></p>
+<p><strong>Note for Arch users:</strong> At the time of writing this, there is an issue with the Arch package&rsquo;s systemd file including this line:
+<code>ReadWritePaths=/etc/gitea/app.ini</code><br>
+Which makes all other paths non-writeable to Gitea.</p>
+<h2 id="translation-is-incorrecthow-to-add-more-translations">Translation is incorrect/how to add more translations</h2>
+<p>Our translations are currently crowd-sourced on our <a href="https://crowdin.com/project/gitea">Crowdin project</a><br>
+Whether you want to change a translation or add a new one, it will need to be there as all translations are overwritten in our CI via the Crowdin integration.</p>
+<h2 id="hooks-arent-running">Hooks aren&rsquo;t running</h2>
+<p>If Gitea is not running hooks, a common cause is incorrect setup of SSH keys.<br>
+See <a href="#ssh-issues">SSH Issues</a> for more information.</p>
+<p>You can also try logging into the administration panel and running the <code>Resynchronize pre-receive, update and post-receive hooks of all repositories.</code> option.</p>
+<h2 id="ssh-issues">SSH issues</h2>
+<p>If you cannot reach repositories over <code>ssh</code>, but <code>https</code> works fine, consider looking into the following.</p>
+<p>First, make sure you can access Gitea via SSH.<br>
+<code>ssh git@myremote.example</code></p>
+<p>If the connection is successful, you should receive an error message like the following:</p>
+<pre><code>Hi there, You've successfully authenticated, but Gitea does not provide shell access.
+If this is unexpected, please log in with password and setup Gitea under another user.
+</code></pre><p>If you do not get the above message but still connect, it means your SSH key is <strong>not</strong> being managed by Gitea. This means hooks won&rsquo;t run, among other potential problems.</p>
+<p>If you cannot connect at all, your SSH key may not be configured correctly locally.
+This is specific to SSH and not Gitea, so will not be covered here.</p>
+<h3 id="ssh-common-errors">SSH Common Errors</h3>
+<pre><code>Permission denied (publickey).
+fatal: Could not read from remote repository.
+</code></pre><p>This error signifies that the server rejected a log in attempt, check the
+following things:</p>
+<ul>
+<li>On the client:
+<ul>
+<li>Ensure the public and private ssh keys are added to the correct Gitea user.</li>
+<li>Make sure there are no issues in the remote url. In particular, ensure the name of the
+git user (before the <code>@</code>) is spelled correctly.</li>
+<li>Ensure public and private ssh keys are correct on client machine.</li>
+</ul>
+</li>
+<li>On the server:
+<ul>
+<li>Make sure the repository exists and is correctly named.</li>
+<li>Check the permissions of the <code>.ssh</code> directory in the system user&rsquo;s home directory.</li>
+<li>Verify that the correct public keys are added to <code>.ssh/authorized_keys</code>.<br>
+Try to run <code>Rewrite '.ssh/authorized_keys' file (for Gitea SSH keys)</code> on the
+Gitea admin panel.</li>
+<li>Read Gitea logs.</li>
+<li>Read /var/log/auth (or similar).</li>
+<li>Check permissions of repositories.</li>
+</ul>
+</li>
+</ul>
+<p>The following is an example of a missing public SSH key where authentication
+succeeded, but some other setting is preventing SSH from reaching the correct
+repository.</p>
+<pre><code>fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+</code></pre><p>In this case, look into the following settings:</p>
+<ul>
+<li>On the server:
+<ul>
+<li>Make sure that the <code>git</code> system user has a usable shell set
+<ul>
+<li>Verify this with <code>getent passwd git | cut -d: -f7</code></li>
+<li><code>usermod</code> or <code>chsh</code> can be used to modify this.</li>
+</ul>
+</li>
+<li>Ensure that the <code>gitea serv</code> command in <code>.ssh/authorized_keys</code> uses the
+correct configuration file.</li>
+</ul>
+</li>
+</ul>
+<h2 id="missing-releases-after-migrating-repository-with-tags">Missing releases after migrating repository with tags</h2>
+<p>To migrate an repository <em>with</em> all tags, you need to do two things:</p>
+<ul>
+<li>Push tags to the repository:</li>
+</ul>
+<pre><code> git push --tags
+</code></pre><ul>
+<li>(Re-)sync tags of all repositories within Gitea:</li>
+</ul>
+<pre><code>gitea admin repo-sync-releases
+</code></pre><h2 id="lfs-issues">LFS Issues</h2>
+<p>For issues concerning LFS data upload</p>
+<pre><code>batch response: Authentication required: Authorization error: &lt;GITEA_LFS_URL&gt;/info/lfs/objects/batch                                                                                                              
+Check that you have proper access to the repository
+error: failed to push some refs to '&lt;GIT_REPO_URL&gt;'
+</code></pre><p>Check the value of <code>LFS_HTTP_AUTH_EXPIRY</code> in your <code>app.ini</code> file.<br>
+By default, your LFS token will expire after 20 minutes. If you have a slow connection or a large file (or both), it may not finish uploading within the time limit.</p>
+<p>You may want to set this value to <code>60m</code> or <code>120m</code>.</p>
+<h2 id="how-can-i-create-users-before-starting-gitea">How can I create users before starting Gitea</h2>
+<p>Gitea provides a sub-command <code>gitea migrate</code> to initialize the database, after which you can use the <a href="/en-us/command-line/#admin">admin CLI commands</a> to add users like normal.</p>
+<h2 id="how-can-i-enable-password-reset">How can I enable password reset</h2>
+<p>There is no setting for password resets. It is enabled when a <a href="/en-us/email-setup/">mail service</a> is configured, and disabled otherwise.</p>
+<h2 id="how-can-a-users-password-be-changed">How can a user&rsquo;s password be changed</h2>
+<ul>
+<li>As an <strong>admin</strong>, you can change any user&rsquo;s password (and optionally force them to change it on next login)&hellip;
+<ul>
+<li>By navigating to your <code>Site Administration -&gt; User Accounts</code> page and editing a user.</li>
+<li>By using the <a href="/en-us/command-line/#admin">admin CLI commands</a>.<br>
+Keep in mind most commands will also need a <a href="/en-us/command-line/#global-options">global flag</a> to point the CLI at the correct configuration.</li>
+</ul>
+</li>
+<li>As a <strong>user</strong> you can change it&hellip;
+<ul>
+<li>In your account <code>Settings -&gt; Account</code> page (this method <strong>requires</strong> you to know your current password).</li>
+<li>By using the <code>Forgot Password</code> link.<br>
+If the <code>Forgot Password/Account Recovery</code> page is disabled, please contact your administrator to configure a <a href="/en-us/email-setup/">mail service</a>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="why-is-my-markdown-broken">Why is my markdown broken</h2>
+<p>In Gitea version <code>1.11</code> we moved to <a href="https://github.com/yuin/goldmark">goldmark</a> for markdown rendering, which is <a href="https://commonmark.org/">CommonMark</a> compliant.<br>
+If you have markdown that worked as you expected prior to version <code>1.11</code> and after upgrading it&rsquo;s not working anymore, please look through the CommonMark spec to see whether the problem is due to a bug or non-compliant syntax.<br>
+If it is the latter, <em>usually</em> there is a compliant alternative listed in the spec.</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="content has-text-centered">
+					<p>
+						Copyright &copy; 2020 <a href="https://docs.gitea.io">The Gitea Authors</a>. All rights reserved. Made with <i class="fa fa-heart" aria-hidden="true"></i> and <a href="https://gohugo.io">Hugo</a>.
+					</p>
+					<p>
+						 Sponsored by <a href="https://www.didiyun.com">DiDi Cloud</a>, <a href="http://inblockchain.com">INBlockchain</a>, <a href="https://www.packet.com">Packet</a>, <a href="https://digitalocean.com">DigitalOcean</a>, and all of our backers on <a href="https://opencollective.com/gitea">Open Collective</a>.
+					</p>
+					<p>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-cn" hreflang="zh-cn">中文(简体)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-tw" hreflang="zh-tw">中文(繁體)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/pt-br" hreflang="pt-br">Português Brasileiro</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/en-us" hreflang="en-us">English</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/nl-nl" hreflang="nl-nl">Nederlands</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/fr-fr" hreflang="fr-fr">Français</a>
+						
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+            document.addEventListener('DOMContentLoaded', function () {
+
+                
+                var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                
+                if ($navbarBurgers.length > 0) {
+
+                    
+                    $navbarBurgers.forEach(function ($el) {
+                        $el.addEventListener('click', function () {
+
+                            
+                            var target = $el.dataset.target;
+                            var $target = document.getElementById(target);
+
+                            
+                            $el.classList.toggle('is-active');
+                            $target.classList.toggle('is-active');
+
+
+                            document.getElementById('navbar-background').classList.toggle('is-active');
+
+
+                        });
+                    });
+                }
+
+				
+				
+				let svg = '  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor; vertical-align: middle" width="24" height="24" viewBox="0 0 32 32"><title>gitea</title><path d="M5.583 7.229c-2.464-0.005-5.755 1.557-5.573 5.479 0.281 6.125 6.557 6.693 9.068 6.745 0.271 1.146 3.224 5.109 5.411 5.318h9.573c5.74-0.38 10.036-17.365 6.854-17.427-5.271 0.25-8.396 0.375-11.073 0.396v5.297l-0.839-0.365-0.005-4.932c-3.073 0-5.781-0.141-10.917-0.396-0.646-0.005-1.542-0.115-2.5-0.115zM5.927 9.396h0.297c0.349 3.141 0.917 4.974 2.068 7.781-2.938-0.349-5.432-1.198-5.891-4.38-0.24-1.646 0.563-3.365 3.526-3.401zM17.339 12.479c0.198 0.005 0.406 0.042 0.594 0.13l1 0.432-0.714 1.302c-0.109 0-0.219 0.016-0.323 0.052-0.464 0.151-0.708 0.604-0.542 1.021 0.036 0.083 0.089 0.161 0.151 0.229l-1.234 2.25c-0.099 0-0.203 0.016-0.297 0.052-0.464 0.146-0.708 0.604-0.542 1.016 0.172 0.417 0.682 0.63 1.151 0.479 0.464-0.146 0.703-0.604 0.536-1.021-0.047-0.109-0.115-0.208-0.208-0.292l1.203-2.188c0.13 0.010 0.26 0 0.391-0.042 0.104-0.031 0.198-0.083 0.281-0.151 0.464 0.198 0.844 0.354 1.12 0.49 0.406 0.203 0.552 0.339 0.599 0.49 0.042 0.146-0.005 0.427-0.24 0.922-0.172 0.37-0.458 0.896-0.797 1.51-0.115 0-0.229 0.016-0.333 0.052-0.469 0.151-0.708 0.604-0.542 1.021 0.167 0.411 0.682 0.625 1.146 0.479 0.469-0.151 0.708-0.604 0.542-1.021-0.042-0.099-0.104-0.193-0.182-0.271 0.333-0.609 0.62-1.135 0.807-1.526 0.25-0.536 0.38-0.938 0.266-1.323s-0.469-0.635-0.932-0.865c-0.307-0.151-0.693-0.313-1.146-0.505 0.005-0.109-0.010-0.214-0.052-0.318s-0.109-0.198-0.193-0.281l0.703-1.281 3.901 1.682c0.703 0.307 0.995 1.057 0.651 1.682l-2.682 4.906c-0.339 0.625-1.182 0.885-1.885 0.578l-5.516-2.38c-0.703-0.307-0.995-1.057-0.656-1.682l2.682-4.906c0.234-0.432 0.708-0.688 1.208-0.708h0.083z"></path></svg>';
+				let contents = document.getElementsByClassName("content");
+				if (contents.length > 0) {
+					let content = contents[0];
+					for (let level = 1; level <= 4; level++) {
+						let elems = content.getElementsByTagName("h" + level);
+						for (let i = 0; i < elems.length; i++) {
+							let elem = elems[i];
+							if (elem.id !== "undefined" && elem.id !== "") {
+								let anchorId = elem.id + "-anchor";
+								elem.addEventListener("mouseover", () => {
+									document.getElementById(anchorId).style.display = "initial";
+								});
+								elem.addEventListener("mouseout", () => {
+									document.getElementById(anchorId).style.display = "none";
+								});
+								let anchor = document.createElement("a");
+								anchor.id = anchorId;
+								anchor.href = "#" + elem.id;
+								anchor.innerHTML = svg;
+								anchor.style.display = "none";
+								elem.appendChild(anchor);
+							}
+						}
+					}
+				}
+
+            });
+		</script>
+
+		</body>
+</html>
+

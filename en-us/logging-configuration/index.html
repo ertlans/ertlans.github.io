@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta property="og:title" content="Advanced: Logging Configuration - Docs"></meta>
+ 		
+		<meta property="og:description" content="" />
+		
+		<meta property="og:type" content="article"></meta>
+		<meta property="og:url" content="https://ertlans.github.io/en-us/logging-configuration/"></meta>
+		<meta property="og:image" content="https://docs.gitea.io/images/gitea.png"></meta>
+		<meta name="generator" content="Hugo 0.69.2" />
+
+		<title>Advanced: Logging Configuration - Docs</title>
+
+		
+		
+
+		
+
+		<link rel="canonical" href="https://ertlans.github.io/en-us/logging-configuration/">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://ertlans.github.io/styles/main.css">
+
+		<link rel="shortcut icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+		<link rel="icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+	</head>
+	<body>
+
+<nav class="navbar">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ertlans.github.io/">
+				<img src="https://ertlans.github.io/images/gitea.png" alt="Docs">
+			</a>
+			<span class="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+		</div>
+		<div class="navbar-menu" id="navMenu">
+			<div class="navbar-end">
+				<span class="navbar-item logo"><img src="https://ertlans.github.io/images/gitea.png" alt="Docs"></span>
+
+	<a class="navbar-item" href="https://gitea.io/en-us/">
+		<i class="fa fa-home"></i>&nbsp;
+		Website
+	</a>
+
+	<a class="navbar-item" href="/en-us/">
+		<i class="fa fa-question"></i>&nbsp;
+		Docs
+	</a>
+
+	<a class="navbar-item" href="https://blog.gitea.io/">
+		<i class="fa fa-rss"></i>&nbsp;
+		Blog
+	</a>
+
+	<a class="navbar-item" href="https://code.gitea.io/">
+		<i class="fa fa-code"></i>&nbsp;
+		Code
+	</a>
+
+	<a class="navbar-item" href="https://crowdin.com/project/gitea">
+		<i class="fa fa-language"></i>&nbsp;
+		Translation
+	</a>
+
+	<a class="navbar-item" href="https://try.gitea.io/api/swagger">
+		<i class="fa fa-plug"></i>&nbsp;
+		API
+	</a>
+
+	<a class="navbar-item" href="https://dl.gitea.io/">
+		<i class="fa fa-download"></i>&nbsp;
+		Downloads
+	</a>
+
+	<a class="navbar-item" href="https://github.com/go-gitea/">
+		<i class="fa fa-github"></i>&nbsp;
+		GitHub
+	</a>
+
+	<a class="navbar-item" href="https://discord.gg/Gitea">
+		<i class="fa fa-comment"></i>&nbsp;
+		Discord Chat
+	</a>
+
+	<a class="navbar-item" href="https://discourse.gitea.io/">
+		<i class="fa fa-group"></i>&nbsp;
+		Forum
+	</a>
+
+
+			</div>
+		</div>
+		<div class="navbar-background" id="navbar-background"></div>
+	</div>
+</nav>
+
+<section class="section">
+	<div class="container is-centered page">
+		<div class="columns">
+			<div class="column is-one-quarter">
+				<aside class="menu">
+	
+		
+			<p class="menu-label">
+				
+				Help
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/faq/" >
+							
+							FAQ
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/seek-help/" >
+							
+							Support Options
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Installation
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/install-with-docker/" >
+							
+							With Docker
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/database-prep/" >
+							
+							Database preparation
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-binary/" >
+							
+							From binary
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-package/" >
+							
+							From package
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/linux-service/" >
+							
+							Linux service
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-source/" >
+							
+							From source
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/windows-service/" >
+							
+							Windows Service
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Upgrade
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/upgrade-from-gogs/" >
+							
+							From Gogs
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Usage
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/command-line/" >
+							
+							Command Line
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/backup-and-restore/" >
+							
+							Backup and Restore
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/email-setup/" >
+							
+							Email setup
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/pull-request/" >
+							
+							Pull Request
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/automatically-linked-references/" >
+							
+							Automatically Linked References
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/issue-pull-request-templates/" >
+							
+							Issue and Pull Request templates
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/reverse-proxies/" >
+							
+							Reverse Proxies
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Advanced
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/adding-legal-pages/" >
+							
+							Adding Legal Pages
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/customizing-gitea/" >
+							
+							Customizing Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/hacking-on-gitea/" >
+							
+							Hacking on Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/config-cheat-sheet/" >
+							
+							Config Cheat Sheet
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/signing/" >
+							
+							GPG Commit Signatures
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/specific-variables/" >
+							
+							Specific variables
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/make/" >
+							
+							Make
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/api-usage/" >
+							
+							API Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/ci-cd/" >
+							
+							CI/CD Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/cmd-embedded/" >
+							
+							Embedded data extraction tool
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/external-renderers/" >
+							
+							External renderers
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/repo-indexer/" >
+							
+							Repository indexer
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/third-party-tools/" >
+							
+							Third Party Tools
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/logging-configuration/" class="is-active">
+							
+							Logging Configuration
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/migrations-interfaces/" >
+							
+							Migrations Interfaces
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/search-engines-indexation/" >
+							
+							Search Engines Indexation
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				features
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/comparison/" >
+							
+							Comparison
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/authentication/" >
+							
+							Authentication
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/localization/" >
+							
+							Localization
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/webhooks/" >
+							
+							Webhooks
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+	</ul>
+</aside>
+
+
+	
+
+
+
+			</div>
+			<div class="column is-three-quarters">
+				<div class="content">
+					<h1 id="logging-configuration">Logging Configuration</h1>
+<p>The logging framework has been revamped in Gitea 1.9.0.</p>
+<h2 id="log-groups">Log Groups</h2>
+<p>The fundamental thing to be aware of in Gitea is that there are several
+log groups:</p>
+<ul>
+<li>The &ldquo;Default&rdquo; logger</li>
+<li>The Macaron logger</li>
+<li>The Router logger</li>
+<li>The Access logger</li>
+<li>The XORM logger</li>
+</ul>
+<p>There is also the go log logger.</p>
+<h3 id="the-go-log-logger">The go log logger</h3>
+<p>Go provides its own extremely basic logger in the <code>log</code> package,
+however, this is not sufficient for our purposes as it does not provide
+a way of logging at multiple levels, nor does it provide a good way of
+controlling where these logs are logged except through setting of a
+writer.</p>
+<p>We have therefore redirected this logger to our Default logger, and we
+will log anything that is logged using the go logger at the INFO level.</p>
+<h3 id="the-default-logger">The &ldquo;Default&rdquo; logger</h3>
+<p>Calls to <code>log.Info</code>, <code>log.Debug</code>, <code>log.Error</code> etc. from the <code>code.gitea.io/gitea/modules/log</code> package will log to this logger.</p>
+<p>You can configure the outputs of this logger by setting the <code>MODE</code>
+value in the <code>[log]</code> section of the configuration.</p>
+<p>Each output sublogger is configured in a separate <code>[log.sublogger]</code>
+section, but there are certain default values. These will not be inherited from the <code>[log]</code> section:</p>
+<ul>
+<li><code>FLAGS</code> is <code>stdflags</code> (Equal to
+<code>date,time,medfile,shortfuncname,levelinitial</code>)</li>
+<li><code>FILE_NAME</code> will default to <code>%(ROOT_PATH)/gitea.log</code></li>
+<li><code>EXPRESSION</code> will default to <code>&quot;&quot;</code></li>
+<li><code>PREFIX</code> will default to <code>&quot;&quot;</code></li>
+</ul>
+<p>The provider type of the sublogger can be set using the <code>MODE</code> value in
+its subsection, but will default to the name. This allows you to have
+multiple subloggers that will log to files.</p>
+<h3 id="the-macaron-logger">The &ldquo;Macaron&rdquo; logger</h3>
+<p>By default Macaron will log to its own go <code>log</code> instance. This writes
+to <code>os.Stdout</code>. You can redirect this log to a Gitea configurable logger
+through setting the <code>REDIRECT_MACARON_LOG</code> setting in the <code>[log]</code>
+section which you can configure the outputs of by setting the <code>MACARON</code>
+value in the <code>[log]</code> section of the configuration. <code>MACARON</code> defaults
+to <code>file</code> if unset.</p>
+<p>Each output sublogger for this logger is configured in
+<code>[log.sublogger.macaron]</code> sections. There are certain default values
+which will not be inherited from the <code>[log]</code> or relevant
+<code>[log.sublogger]</code> sections:</p>
+<ul>
+<li><code>FLAGS</code> is <code>stdflags</code> (Equal to
+<code>date,time,medfile,shortfuncname,levelinitial</code>)</li>
+<li><code>FILE_NAME</code> will default to <code>%(ROOT_PATH)/macaron.log</code></li>
+<li><code>EXPRESSION</code> will default to <code>&quot;&quot;</code></li>
+<li><code>PREFIX</code> will default to <code>&quot;&quot;</code></li>
+</ul>
+<p>NB: You can redirect the macaron logger to send its events to the gitea
+log using the value: <code>MACARON = ,</code></p>
+<h3 id="the-router-logger">The &ldquo;Router&rdquo; logger</h3>
+<p>There are two types of Router log. By default Macaron send its own
+router log which will be directed to Macaron&rsquo;s go <code>log</code>, however if you
+<code>REDIRECT_MACARON_LOG</code> you will enable Gitea&rsquo;s router log. You can
+disable both types of Router log by setting <code>DISABLE_ROUTER_LOG</code>.</p>
+<p>If you enable the redirect, you can configure the outputs of this
+router log by setting the <code>ROUTER</code> value in the <code>[log]</code> section of the
+configuration. <code>ROUTER</code> will default to <code>console</code> if unset. The Gitea
+Router logs the same data as the Macaron log but has slightly different
+coloring. It logs at the <code>Info</code> level by default, but this can be
+changed if desired by setting the <code>ROUTER_LOG_LEVEL</code> value.</p>
+<p>Each output sublogger for this logger is configured in
+<code>[log.sublogger.router]</code> sections. There are certain default values
+which will not be inherited from the <code>[log]</code> or relevant
+<code>[log.sublogger]</code> sections:</p>
+<ul>
+<li><code>FILE_NAME</code> will default to <code>%(ROOT_PATH)/router.log</code></li>
+<li><code>FLAGS</code> defaults to <code>date,time</code></li>
+<li><code>EXPRESSION</code> will default to <code>&quot;&quot;</code></li>
+<li><code>PREFIX</code> will default to <code>&quot;&quot;</code></li>
+</ul>
+<p>NB: You can redirect the router logger to send its events to the Gitea
+log using the value: <code>ROUTER = ,</code></p>
+<h3 id="the-access-logger">The &ldquo;Access&rdquo; logger</h3>
+<p>The Access logger is a new logger for version 1.9. It provides a NCSA
+Common Log compliant log format. It&rsquo;s highly configurable but caution
+should be taken when changing its template. The main benefit of this
+logger is that Gitea can now log accesses in a standard log format so
+standard tools may be used.</p>
+<p>You can enable this logger using <code>ENABLE_ACCESS_LOG</code>. Its outputs are
+configured by setting the <code>ACCESS</code> value in the <code>[log]</code> section of the
+configuration. <code>ACCESS</code> defaults to <code>file</code> if unset.</p>
+<p>Each output sublogger for this logger is configured in
+<code>[log.sublogger.access]</code> sections. There are certain default values
+which will not be inherited from the <code>[log]</code> or relevant
+<code>[log.sublogger]</code> sections:</p>
+<ul>
+<li><code>FILE_NAME</code> will default to <code>%(ROOT_PATH)/access.log</code></li>
+<li><code>FLAGS</code> defaults to `` or None</li>
+<li><code>EXPRESSION</code> will default to <code>&quot;&quot;</code></li>
+<li><code>PREFIX</code> will default to <code>&quot;&quot;</code></li>
+</ul>
+<p>If desired the format of the Access logger can be changed by changing
+the value of the <code>ACCESS_LOG_TEMPLATE</code>.</p>
+<p>NB: You can redirect the access logger to send its events to the Gitea
+log using the value: <code>ACCESS = ,</code></p>
+<h4 id="the-access_log_template">The ACCESS_LOG_TEMPLATE</h4>
+<p>This value represent a go template. It&rsquo;s default value is:</p>
+<p><code>{{.Ctx.RemoteAddr}} - {{.Identity}} {{.Start.Format &quot;[02/Jan/2006:15:04:05 -0700]&quot; }} &quot;{{.Ctx.Req.Method}} {{.Ctx.Req.URL.RequestURI}} {{.Ctx.Req.Proto}}&quot; {{.ResponseWriter.Status}} {{.ResponseWriter.Size}} &quot;{{.Ctx.Req.Referer}}\&quot; \&quot;{{.Ctx.Req.UserAgent}}&quot;</code></p>
+<p>The template is passed following options:</p>
+<ul>
+<li><code>Ctx</code> is the <code>macaron.Context</code></li>
+<li><code>Identity</code> is the <code>SignedUserName</code> or <code>&quot;-&quot;</code> if the user is not logged
+in</li>
+<li><code>Start</code> is the start time of the request</li>
+<li><code>ResponseWriter</code> is the <code>macaron.ResponseWriter</code></li>
+</ul>
+<p>Caution must be taken when changing this template as it runs outside of
+the standard panic recovery trap. The template should also be as simple
+as it runs for every request.</p>
+<h3 id="the-xorm-logger">The &ldquo;XORM&rdquo; logger</h3>
+<p>The XORM logger is a long-standing logger that exists to collect XORM
+log events. It is enabled by default but can be switched off by setting
+<code>ENABLE_XORM_LOG</code> to <code>false</code> in the <code>[log]</code> section. Its outputs are
+configured by setting the <code>XORM</code> value in the <code>[log]</code> section of the
+configuration. <code>XORM</code> defaults to <code>,</code> if unset, meaning it is redirected
+to the main Gitea log.</p>
+<p>XORM will log SQL events by default. This can be changed by setting
+the <code>LOG_SQL</code> value to <code>false</code> in the <code>[database]</code> section.</p>
+<p>Each output sublogger for this logger is configured in
+<code>[log.sublogger.xorm]</code> sections. There are certain default values
+which will not be inherited from the <code>[log]</code> or relevant
+<code>[log.sublogger]</code> sections:</p>
+<ul>
+<li><code>FILE_NAME</code> will default to <code>%(ROOT_PATH)/xorm.log</code></li>
+<li><code>FLAGS</code> defaults to <code>date,time</code></li>
+<li><code>EXPRESSION</code> will default to <code>&quot;&quot;</code></li>
+<li><code>PREFIX</code> will default to <code>&quot;&quot;</code></li>
+</ul>
+<h2 id="log-outputs">Log outputs</h2>
+<p>Gitea provides 4 possible log outputs:</p>
+<ul>
+<li><code>console</code> - Log to <code>os.Stdout</code> or <code>os.Stderr</code></li>
+<li><code>file</code> - Log to a file</li>
+<li><code>conn</code> - Log to a keep-alive TCP connection</li>
+<li><code>smtp</code> - Log via email</li>
+</ul>
+<p>Certain configuration is common to all modes of log output:</p>
+<ul>
+<li><code>LEVEL</code> is the lowest level that this output will log. This value
+is inherited from <code>[log]</code> and in the case of the non-default loggers
+from <code>[log.sublogger]</code>.</li>
+<li><code>STACKTRACE_LEVEL</code> is the lowest level that this output will print
+a stacktrace. This value is inherited.</li>
+<li><code>MODE</code> is the mode of the log output. It will default to the sublogger
+name. Thus <code>[log.console.macaron]</code> will default to <code>MODE = console</code>.</li>
+<li><code>COLORIZE</code> will default to <code>true</code> for <code>console</code> as
+described, otherwise it will default to <code>false</code>.</li>
+</ul>
+<h3 id="non-inherited-default-values">Non-inherited default values</h3>
+<p>There are several values which are not inherited as described above but
+rather default to those specific to type of logger, these are:
+<code>EXPRESSION</code>, <code>FLAGS</code>, <code>PREFIX</code> and <code>FILE_NAME</code>.</p>
+<h4 id="expression"><code>EXPRESSION</code></h4>
+<p><code>EXPRESSION</code> represents a regular expression that log events must match to be logged by the sublogger. Either the log message, (with colors removed), must match or the <code>longfilename:linenumber:functionname</code> must match. NB: the whole message or string doesn&rsquo;t need to completely match.</p>
+<p>Please note this expression will be run in the sublogger&rsquo;s goroutine
+not the logging event subroutine. Therefore it can be complicated.</p>
+<h4 id="flags"><code>FLAGS</code></h4>
+<p><code>FLAGS</code> represents the preceding logging context information that is
+printed before each message. It is a comma-separated string set. The order of values does not matter.</p>
+<p>Possible values are:</p>
+<ul>
+<li><code>none</code> or <code>,</code> - No flags.</li>
+<li><code>date</code> - the date in the local time zone: <code>2009/01/23</code>.</li>
+<li><code>time</code> - the time in the local time zone: <code>01:23:23</code>.</li>
+<li><code>microseconds</code> - microsecond resolution: <code>01:23:23.123123</code>. Assumes
+time.</li>
+<li><code>longfile</code> - full file name and line number: <code>/a/b/c/d.go:23</code>.</li>
+<li><code>shortfile</code> - final file name element and line number: <code>d.go:23</code>.</li>
+<li><code>funcname</code> - function name of the caller: <code>runtime.Caller()</code>.</li>
+<li><code>shortfuncname</code> - last part of the function name. Overrides
+<code>funcname</code>.</li>
+<li><code>utc</code> - if date or time is set, use UTC rather than the local time
+zone.</li>
+<li><code>levelinitial</code> - Initial character of the provided level in brackets eg. <code>[I]</code> for info.</li>
+<li><code>level</code> - Provided level in brackets <code>[INFO]</code></li>
+<li><code>medfile</code> - Last 20 characters of the filename - equivalent to
+<code>shortfile,longfile</code>.</li>
+<li><code>stdflags</code> - Equivalent to <code>date,time,medfile,shortfuncname,levelinitial</code></li>
+</ul>
+<h3 id="console-mode">Console mode</h3>
+<p>For loggers in console mode, <code>COLORIZE</code> will default to <code>true</code> if not
+on windows, or the windows terminal can be set into ANSI mode or is a
+cygwin or Msys pipe.</p>
+<p>If <code>STDERR</code> is set to <code>true</code> the logger will use <code>os.Stderr</code> instead of
+<code>os.Stdout</code>.</p>
+<h3 id="file-mode">File mode</h3>
+<p>The <code>FILE_NAME</code> defaults as described above. If set it will be relative
+to the provided <code>ROOT_PATH</code> in the master <code>[log]</code> section.</p>
+<p>Other values:</p>
+<ul>
+<li><code>LOG_ROTATE</code>: <strong>true</strong>: Rotate the log files.</li>
+<li><code>MAX_SIZE_SHIFT</code>: <strong>28</strong>: Maximum size shift of a single file, 28 represents 256Mb.</li>
+<li><code>DAILY_ROTATE</code>: <strong>true</strong>: Rotate logs daily.</li>
+<li><code>MAX_DAYS</code>: <strong>7</strong>: Delete the log file after n days</li>
+<li><code>COMPRESS</code>: <strong>true</strong>: Compress old log files by default with gzip</li>
+<li><code>COMPRESSION_LEVEL</code>: <strong>-1</strong>: Compression level</li>
+</ul>
+<h3 id="conn-mode">Conn mode</h3>
+<ul>
+<li><code>RECONNECT_ON_MSG</code>: <strong>false</strong>: Reconnect host for every single message.</li>
+<li><code>RECONNECT</code>: <strong>false</strong>: Try to reconnect when connection is lost.</li>
+<li><code>PROTOCOL</code>: <strong>tcp</strong>: Set the protocol, either &ldquo;tcp&rdquo;, &ldquo;unix&rdquo; or &ldquo;udp&rdquo;.</li>
+<li><code>ADDR</code>: <strong>:7020</strong>: Sets the address to connect to.</li>
+</ul>
+<h3 id="smtp-mode">SMTP mode</h3>
+<p>It is not recommended to use this logger to send general logging
+messages. However, you could perhaps set this logger to work on <code>FATAL</code>.</p>
+<ul>
+<li><code>USER</code>: User email address to send from.</li>
+<li><code>PASSWD</code>: Password for the smtp server.</li>
+<li><code>HOST</code>: <strong>127.0.0.1:25</strong>: The SMTP host to connect to.</li>
+<li><code>RECEIVERS</code>: Email addresses to send to.</li>
+<li><code>SUBJECT</code>: <strong>Diagnostic message from Gitea</strong></li>
+</ul>
+<h2 id="default-configuration">Default Configuration</h2>
+<p>The default empty configuration is equivalent to:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[log]</span>
+<span style="color:#a6e22e">ROOT_PATH</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">%(GITEA_WORK_DIR)/log</span>
+<span style="color:#a6e22e">MODE</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">console</span>
+<span style="color:#a6e22e">LEVEL</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">Info</span>
+<span style="color:#a6e22e">STACKTRACE_LEVEL</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">None</span>
+<span style="color:#a6e22e">REDIRECT_MACARON_LOG</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">false</span>
+<span style="color:#a6e22e">ENABLE_ACCESS_LOG</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">false</span>
+<span style="color:#a6e22e">ENABLE_XORM_LOG</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">true</span>
+<span style="color:#a6e22e">XORM</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">,</span>
+
+<span style="color:#66d9ef">[log.console]</span>
+<span style="color:#a6e22e">MODE</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">console</span>
+<span style="color:#a6e22e">LEVEL</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">%(LEVEL)</span>
+<span style="color:#a6e22e">STACKTRACE_LEVEL</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">%(STACKTRACE_LEVEL)</span>
+<span style="color:#a6e22e">FLAGS</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">stdflags</span>
+<span style="color:#a6e22e">PREFIX</span> <span style="color:#f92672">=</span>
+<span style="color:#a6e22e">COLORIZE</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">true # Or false if your windows terminal cannot color</span>
+</code></pre></div><p>This is equivalent to sending all logs to the console, with default go log being sent to the console log too.</p>
+<h2 id="log-colorization">Log colorization</h2>
+<p>Logs to the console will be colorized by default when not running on
+Windows. Terminal sniffing will occur on Windows and if it is
+determined that we are running on a terminal capable of color we will
+colorize.</p>
+<p>Further, on *nix it is becoming common to have file logs that are
+colored by default. Therefore file logs will be colorised by default
+when not running on Windows.</p>
+<p>You can switch on or off colorization by using the <code>COLORIZE</code> value.</p>
+<p>From a development point of view. If you write
+<code>log.Info(&quot;A %s string&quot;, &quot;formatted&quot;)</code> the <code>formatted</code> part of the log
+message will be Bolded on colorized logs.</p>
+<p>You can change this by either rendering the formatted string yourself.
+Or you can wrap the value in a <code>log.ColoredValue</code> struct.</p>
+<p>The <code>log.ColoredValue</code> struct contains a pointer to value, a pointer to
+string of bytes which should represent a color and second set of reset
+bytes. Pointers were chosen to prevent copying of large numbers of
+values. There are several helper methods:</p>
+<ul>
+<li><code>log.NewColoredValue</code> takes a value and 0 or more color attributes
+that represent the color. If 0 are provided it will default to a cached
+bold. Note, it is recommended that color bytes constructed from
+attributes should be cached if this is a commonly used log message.</li>
+<li><code>log.NewColoredValuePointer</code> takes a pointer to a value, and
+0 or more color attributes that represent the color.</li>
+<li><code>log.NewColoredValueBytes</code> takes a value and a pointer to an array
+of bytes representing the color.</li>
+</ul>
+<p>These functions will not double wrap a <code>log.ColoredValue</code>. They will
+also set the <code>resetBytes</code> to the cached <code>resetBytes</code>.</p>
+<p>The <code>colorBytes</code> and <code>resetBytes</code> are not exported to prevent
+accidental overwriting of internal values.</p>
+<h2 id="colorformat--colorformatted">ColorFormat &amp; ColorFormatted</h2>
+<p>Structs may implement the <code>log.ColorFormatted</code> interface by implementing the <code>ColorFormat(fmt.State)</code> function.</p>
+<p>If a <code>log.ColorFormatted</code> struct is logged with <code>%-v</code> format, its <code>ColorFormat</code> will be used instead of the usual <code>%v</code>. The full <code>fmt.State</code> will be passed to allow implementers to look at additional flags.</p>
+<p>In order to help implementers provide <code>ColorFormat</code> methods. There is a
+<code>log.ColorFprintf(...)</code> function in the log module that will wrap values in <code>log.ColoredValue</code> and recognise <code>%-v</code>.</p>
+<p>In general it is recommended not to make the results of this function too verbose to help increase its versatility. Usually this should simply be an <code>ID</code>:<code>Name</code>. If you wish to make a more verbose result, it is recommended to use <code>%-+v</code> as your marker.</p>
+<h2 id="log-spoofing-protection">Log Spoofing protection</h2>
+<p>In order to protect the logs from being spoofed with cleverly
+constructed messages. Newlines are now prefixed with a tab and control
+characters except those used in an ANSI CSI are escaped with a
+preceding <code>\</code> and their octal value.</p>
+<h2 id="creating-a-new-named-logger-group">Creating a new named logger group</h2>
+<p>Should a developer wish to create a new named logger, <code>NEWONE</code>. It is
+recommended to add an <code>ENABLE_NEWONE_LOG</code> value to the <code>[log]</code>
+section, and to add a new <code>NEWONE</code> value for the modes.</p>
+<p>A function like <code>func newNewOneLogService()</code> is recommended to manage
+construction of the named logger. e.g.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">newNewoneLogService</span>() {
+	<span style="color:#a6e22e">EnableNewoneLog</span> = <span style="color:#a6e22e">Cfg</span>.<span style="color:#a6e22e">Section</span>(<span style="color:#e6db74">&#34;log&#34;</span>).<span style="color:#a6e22e">Key</span>(<span style="color:#e6db74">&#34;ENABLE_NEWONE_LOG&#34;</span>).<span style="color:#a6e22e">MustBool</span>(<span style="color:#66d9ef">false</span>)
+	<span style="color:#a6e22e">Cfg</span>.<span style="color:#a6e22e">Section</span>(<span style="color:#e6db74">&#34;log&#34;</span>).<span style="color:#a6e22e">Key</span>(<span style="color:#e6db74">&#34;NEWONE&#34;</span>).<span style="color:#a6e22e">MustString</span>(<span style="color:#e6db74">&#34;file&#34;</span>) <span style="color:#75715e">// or console? or &#34;,&#34; if you want to send this to default logger by default
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">EnableNewoneLog</span> {
+		<span style="color:#a6e22e">options</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">newDefaultLogOptions</span>()
+		<span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">filename</span> = <span style="color:#a6e22e">filepath</span>.<span style="color:#a6e22e">Join</span>(<span style="color:#a6e22e">LogRootPath</span>, <span style="color:#e6db74">&#34;newone.log&#34;</span>)
+		<span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">flags</span> = <span style="color:#e6db74">&#34;stdflags&#34;</span>
+		<span style="color:#a6e22e">options</span>.<span style="color:#a6e22e">bufferLength</span> = <span style="color:#a6e22e">Cfg</span>.<span style="color:#a6e22e">Section</span>(<span style="color:#e6db74">&#34;log&#34;</span>).<span style="color:#a6e22e">Key</span>(<span style="color:#e6db74">&#34;BUFFER_LEN&#34;</span>).<span style="color:#a6e22e">MustInt64</span>(<span style="color:#ae81ff">10000</span>)
+		<span style="color:#a6e22e">generateNamedLogger</span>(<span style="color:#e6db74">&#34;newone&#34;</span>, <span style="color:#a6e22e">options</span>)
+	}
+}
+</code></pre></div><p>You should then add <code>newOneLogService</code> to <code>NewServices()</code> in
+<code>modules/setting/setting.go</code></p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="content has-text-centered">
+					<p>
+						Copyright &copy; 2020 <a href="https://docs.gitea.io">The Gitea Authors</a>. All rights reserved. Made with <i class="fa fa-heart" aria-hidden="true"></i> and <a href="https://gohugo.io">Hugo</a>.
+					</p>
+					<p>
+						 Sponsored by <a href="https://www.didiyun.com">DiDi Cloud</a>, <a href="http://inblockchain.com">INBlockchain</a>, <a href="https://www.packet.com">Packet</a>, <a href="https://digitalocean.com">DigitalOcean</a>, and all of our backers on <a href="https://opencollective.com/gitea">Open Collective</a>.
+					</p>
+					<p>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-cn" hreflang="zh-cn">中文(简体)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-tw" hreflang="zh-tw">中文(繁體)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/pt-br" hreflang="pt-br">Português Brasileiro</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/en-us" hreflang="en-us">English</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/nl-nl" hreflang="nl-nl">Nederlands</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/fr-fr" hreflang="fr-fr">Français</a>
+						
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+            document.addEventListener('DOMContentLoaded', function () {
+
+                
+                var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                
+                if ($navbarBurgers.length > 0) {
+
+                    
+                    $navbarBurgers.forEach(function ($el) {
+                        $el.addEventListener('click', function () {
+
+                            
+                            var target = $el.dataset.target;
+                            var $target = document.getElementById(target);
+
+                            
+                            $el.classList.toggle('is-active');
+                            $target.classList.toggle('is-active');
+
+
+                            document.getElementById('navbar-background').classList.toggle('is-active');
+
+
+                        });
+                    });
+                }
+
+				
+				
+				let svg = '  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor; vertical-align: middle" width="24" height="24" viewBox="0 0 32 32"><title>gitea</title><path d="M5.583 7.229c-2.464-0.005-5.755 1.557-5.573 5.479 0.281 6.125 6.557 6.693 9.068 6.745 0.271 1.146 3.224 5.109 5.411 5.318h9.573c5.74-0.38 10.036-17.365 6.854-17.427-5.271 0.25-8.396 0.375-11.073 0.396v5.297l-0.839-0.365-0.005-4.932c-3.073 0-5.781-0.141-10.917-0.396-0.646-0.005-1.542-0.115-2.5-0.115zM5.927 9.396h0.297c0.349 3.141 0.917 4.974 2.068 7.781-2.938-0.349-5.432-1.198-5.891-4.38-0.24-1.646 0.563-3.365 3.526-3.401zM17.339 12.479c0.198 0.005 0.406 0.042 0.594 0.13l1 0.432-0.714 1.302c-0.109 0-0.219 0.016-0.323 0.052-0.464 0.151-0.708 0.604-0.542 1.021 0.036 0.083 0.089 0.161 0.151 0.229l-1.234 2.25c-0.099 0-0.203 0.016-0.297 0.052-0.464 0.146-0.708 0.604-0.542 1.016 0.172 0.417 0.682 0.63 1.151 0.479 0.464-0.146 0.703-0.604 0.536-1.021-0.047-0.109-0.115-0.208-0.208-0.292l1.203-2.188c0.13 0.010 0.26 0 0.391-0.042 0.104-0.031 0.198-0.083 0.281-0.151 0.464 0.198 0.844 0.354 1.12 0.49 0.406 0.203 0.552 0.339 0.599 0.49 0.042 0.146-0.005 0.427-0.24 0.922-0.172 0.37-0.458 0.896-0.797 1.51-0.115 0-0.229 0.016-0.333 0.052-0.469 0.151-0.708 0.604-0.542 1.021 0.167 0.411 0.682 0.625 1.146 0.479 0.469-0.151 0.708-0.604 0.542-1.021-0.042-0.099-0.104-0.193-0.182-0.271 0.333-0.609 0.62-1.135 0.807-1.526 0.25-0.536 0.38-0.938 0.266-1.323s-0.469-0.635-0.932-0.865c-0.307-0.151-0.693-0.313-1.146-0.505 0.005-0.109-0.010-0.214-0.052-0.318s-0.109-0.198-0.193-0.281l0.703-1.281 3.901 1.682c0.703 0.307 0.995 1.057 0.651 1.682l-2.682 4.906c-0.339 0.625-1.182 0.885-1.885 0.578l-5.516-2.38c-0.703-0.307-0.995-1.057-0.656-1.682l2.682-4.906c0.234-0.432 0.708-0.688 1.208-0.708h0.083z"></path></svg>';
+				let contents = document.getElementsByClassName("content");
+				if (contents.length > 0) {
+					let content = contents[0];
+					for (let level = 1; level <= 4; level++) {
+						let elems = content.getElementsByTagName("h" + level);
+						for (let i = 0; i < elems.length; i++) {
+							let elem = elems[i];
+							if (elem.id !== "undefined" && elem.id !== "") {
+								let anchorId = elem.id + "-anchor";
+								elem.addEventListener("mouseover", () => {
+									document.getElementById(anchorId).style.display = "initial";
+								});
+								elem.addEventListener("mouseout", () => {
+									document.getElementById(anchorId).style.display = "none";
+								});
+								let anchor = document.createElement("a");
+								anchor.id = anchorId;
+								anchor.href = "#" + elem.id;
+								anchor.innerHTML = svg;
+								anchor.style.display = "none";
+								elem.appendChild(anchor);
+							}
+						}
+					}
+				}
+
+            });
+		</script>
+
+		</body>
+</html>
+

@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta property="og:title" content="Customizing Gitea - Docs"></meta>
+ 		
+		<meta property="og:description" content="" />
+		
+		<meta property="og:type" content="article"></meta>
+		<meta property="og:url" content="https://ertlans.github.io/en-us/customizing-gitea/"></meta>
+		<meta property="og:image" content="https://docs.gitea.io/images/gitea.png"></meta>
+		<meta name="generator" content="Hugo 0.69.2" />
+
+		<title>Customizing Gitea - Docs</title>
+
+		
+		
+
+		
+
+		<link rel="canonical" href="https://ertlans.github.io/en-us/customizing-gitea/">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://ertlans.github.io/styles/main.css">
+
+		<link rel="shortcut icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+		<link rel="icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+	</head>
+	<body>
+
+<nav class="navbar">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ertlans.github.io/">
+				<img src="https://ertlans.github.io/images/gitea.png" alt="Docs">
+			</a>
+			<span class="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+		</div>
+		<div class="navbar-menu" id="navMenu">
+			<div class="navbar-end">
+				<span class="navbar-item logo"><img src="https://ertlans.github.io/images/gitea.png" alt="Docs"></span>
+
+	<a class="navbar-item" href="https://gitea.io/en-us/">
+		<i class="fa fa-home"></i>&nbsp;
+		Website
+	</a>
+
+	<a class="navbar-item" href="/en-us/">
+		<i class="fa fa-question"></i>&nbsp;
+		Docs
+	</a>
+
+	<a class="navbar-item" href="https://blog.gitea.io/">
+		<i class="fa fa-rss"></i>&nbsp;
+		Blog
+	</a>
+
+	<a class="navbar-item" href="https://code.gitea.io/">
+		<i class="fa fa-code"></i>&nbsp;
+		Code
+	</a>
+
+	<a class="navbar-item" href="https://crowdin.com/project/gitea">
+		<i class="fa fa-language"></i>&nbsp;
+		Translation
+	</a>
+
+	<a class="navbar-item" href="https://try.gitea.io/api/swagger">
+		<i class="fa fa-plug"></i>&nbsp;
+		API
+	</a>
+
+	<a class="navbar-item" href="https://dl.gitea.io/">
+		<i class="fa fa-download"></i>&nbsp;
+		Downloads
+	</a>
+
+	<a class="navbar-item" href="https://github.com/go-gitea/">
+		<i class="fa fa-github"></i>&nbsp;
+		GitHub
+	</a>
+
+	<a class="navbar-item" href="https://discord.gg/Gitea">
+		<i class="fa fa-comment"></i>&nbsp;
+		Discord Chat
+	</a>
+
+	<a class="navbar-item" href="https://discourse.gitea.io/">
+		<i class="fa fa-group"></i>&nbsp;
+		Forum
+	</a>
+
+
+			</div>
+		</div>
+		<div class="navbar-background" id="navbar-background"></div>
+	</div>
+</nav>
+
+<section class="section">
+	<div class="container is-centered page">
+		<div class="columns">
+			<div class="column is-one-quarter">
+				<aside class="menu">
+	
+		
+			<p class="menu-label">
+				
+				Help
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/faq/" >
+							
+							FAQ
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/seek-help/" >
+							
+							Support Options
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Installation
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/install-with-docker/" >
+							
+							With Docker
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/database-prep/" >
+							
+							Database preparation
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-binary/" >
+							
+							From binary
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-package/" >
+							
+							From package
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/linux-service/" >
+							
+							Linux service
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-source/" >
+							
+							From source
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/windows-service/" >
+							
+							Windows Service
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Upgrade
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/upgrade-from-gogs/" >
+							
+							From Gogs
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Usage
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/command-line/" >
+							
+							Command Line
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/backup-and-restore/" >
+							
+							Backup and Restore
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/email-setup/" >
+							
+							Email setup
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/pull-request/" >
+							
+							Pull Request
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/automatically-linked-references/" >
+							
+							Automatically Linked References
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/issue-pull-request-templates/" >
+							
+							Issue and Pull Request templates
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/reverse-proxies/" >
+							
+							Reverse Proxies
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Advanced
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/adding-legal-pages/" >
+							
+							Adding Legal Pages
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/customizing-gitea/" class="is-active">
+							
+							Customizing Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/hacking-on-gitea/" >
+							
+							Hacking on Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/config-cheat-sheet/" >
+							
+							Config Cheat Sheet
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/signing/" >
+							
+							GPG Commit Signatures
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/specific-variables/" >
+							
+							Specific variables
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/make/" >
+							
+							Make
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/api-usage/" >
+							
+							API Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/ci-cd/" >
+							
+							CI/CD Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/cmd-embedded/" >
+							
+							Embedded data extraction tool
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/external-renderers/" >
+							
+							External renderers
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/repo-indexer/" >
+							
+							Repository indexer
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/third-party-tools/" >
+							
+							Third Party Tools
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/logging-configuration/" >
+							
+							Logging Configuration
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/migrations-interfaces/" >
+							
+							Migrations Interfaces
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/search-engines-indexation/" >
+							
+							Search Engines Indexation
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				features
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/comparison/" >
+							
+							Comparison
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/authentication/" >
+							
+							Authentication
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/localization/" >
+							
+							Localization
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/webhooks/" >
+							
+							Webhooks
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+	</ul>
+</aside>
+
+
+
+
+			</div>
+			<div class="column is-three-quarters">
+				<div class="content">
+					<h1 id="customizing-gitea">Customizing Gitea</h1>
+<p>Customizing Gitea is typically done using the <code>CustomPath</code> folder - by default this is
+the <code>custom</code> folder from the running directory, but may be different if your build has
+set this differently. This is the central place to override configuration settings,
+templates, etc. You can check the <code>CustomPath</code> using <code>gitea help</code>. You can also find
+the path on the <em>Configuration</em> tab in the <em>Site Administration</em> page. You can override
+the <code>CustomPath</code> by setting either the <code>GITEA_CUSTOM</code> environment variable or by
+using the <code>--custom-path</code> option on the <code>gitea</code> binary. (The option will override the
+environment variable.)</p>
+<p>If Gitea is deployed from binary, all default paths will be relative to the Gitea
+binary. If installed from a distribution, these paths will likely be modified to
+the Linux Filesystem Standard. Gitea will attempt to create required folders, including
+<code>custom/</code>. Distributions may provide a symlink for <code>custom</code> using <code>/etc/gitea/</code>.</p>
+<p>Application settings can be found in file <code>CustomConf</code> which is by default,
+<code>CustomPath/conf/app.ini</code> but may be different if your build has set this differently.
+Again <code>gitea help</code> will allow you review this variable and you can override it using the
+<code>--config</code> option on the <code>gitea</code> binary.</p>
+<ul>
+<li><a href="https://docs.gitea.io/en-us/config-cheat-sheet/">Quick Cheat Sheet</a></li>
+<li><a href="https://github.com/go-gitea/gitea/blob/master/custom/conf/app.ini.sample">Complete List</a></li>
+</ul>
+<p>If the <code>CustomPath</code> folder can&rsquo;t be found despite checking <code>gitea help</code>, check the <code>GITEA_CUSTOM</code>
+environment variable; this can be used to override the default path to something else.
+<code>GITEA_CUSTOM</code> might, for example, be set by an init script.</p>
+<ul>
+<li><a href="https://docs.gitea.io/en-us/specific-variables/">List of Environment Variables</a></li>
+</ul>
+<p><strong>Note:</strong> Gitea must perform a full restart to see configuration changes.</p>
+<h2 id="serving-custom-public-files">Serving custom public files</h2>
+<p>To make Gitea serve custom public files (like pages and images), use the folder
+<code>custom/public/</code> as the webroot. Symbolic links will be followed.</p>
+<p>For example, a file <code>image.png</code> stored in <code>custom/public/</code>, can be accessed with
+the url <code>http://gitea.domain.tld/image.png</code>.</p>
+<h2 id="changing-the-default-avatar">Changing the default avatar</h2>
+<p>Place the png image at the following path: <code>custom/public/img/avatar_default.png</code></p>
+<h2 id="customizing-gitea-pages-and-resources">Customizing Gitea pages and resources</h2>
+<p>Gitea&rsquo;s executable contains all the resources required to run: templates, images, style-sheets
+and translations. Any of them can be overridden by placing a replacement in a matching path
+inside the <code>custom</code> directory. For example, to replace the default <code>.gitignore</code> provided
+for C++ repositories, we want to replace <code>options/gitignore/C++</code>. To do this, a replacement
+must be placed in <code>custom/options/gitignore/C++</code> (see about the location of the <code>custom</code>
+directory at the top of this document).</p>
+<p>Every single page of Gitea can be changed. Dynamic content is generated using <a href="https://golang.org/pkg/html/template/">go templates</a>,
+which can be modified by placing replacements below the <code>custom/templates</code> directory.</p>
+<p>To obtain any embedded file (including templates), the <a href="/en-us/cmd-embedded/"><code>gitea embedded</code> tool</a> can be used. Alternatively, they can be found in the <a href="https://github.com/go-gitea/gitea/tree/master/templates"><code>templates</code></a> directory of Gitea source (Note: the example link is from the <code>master</code> branch. Make sure to use templates compatible with the release you are using).</p>
+<p>Be aware that any statement contained inside <code>{{</code> and <code>}}</code> are Gitea&rsquo;s template syntax and
+shouldn&rsquo;t be touched without fully understanding these components.</p>
+<h3 id="customizing-startpage--homepage">Customizing startpage / homepage</h3>
+<p>Copy <a href="https://github.com/go-gitea/gitea/blob/master/templates/home.tmpl"><code>home.tmpl</code></a> for your version of Gitea from <code>templates</code> to <code>custom/templates</code>.
+Edit as you wish.
+Dont forget to restart your gitea to apply the changes.</p>
+<h3 id="adding-links-and-tabs">Adding links and tabs</h3>
+<p>If all you want is to add extra links to the top navigation bar or footer, or extra tabs to the repository view, you can put them in <code>extra_links.tmpl</code> (links added to the navbar), <code>extra_links_footer.tmpl</code> (links added to the left side of footer), and <code>extra_tabs.tmpl</code> inside your <code>custom/templates/custom/</code> directory.</p>
+<p>For instance, let&rsquo;s say you are in Germany and must add the famously legally-required &ldquo;Impressum&rdquo;/about page, listing who is responsible for the site&rsquo;s content:
+just place it under your &ldquo;custom/public/&rdquo; directory (for instance <code>custom/public/impressum.html</code>) and put a link to it in either <code>custom/templates/custom/extra_links.tmpl</code> or <code>custom/templates/custom/extra_links_footer.tmpl</code>.</p>
+<p>To match the current style, the link should have the class name &ldquo;item&rdquo;, and you can use <code>{{AppSubUrl}}</code> to get the base URL:
+<code>&lt;a class=&quot;item&quot; href=&quot;{{AppSubUrl}}/impressum.html&quot;&gt;Impressum&lt;/a&gt;</code></p>
+<p>For more information, see <a href="https://docs.gitea.io/en-us/adding-legal-pages">Adding Legal Pages</a>.</p>
+<p>You can add new tabs in the same way, putting them in <code>extra_tabs.tmpl</code>.
+The exact HTML needed to match the style of other tabs is in the file
+<code>templates/repo/header.tmpl</code>
+(<a href="https://github.com/go-gitea/gitea/blob/master/templates/repo/header.tmpl">source in GitHub</a>)</p>
+<h3 id="other-additions-to-the-page">Other additions to the page</h3>
+<p>Apart from <code>extra_links.tmpl</code> and <code>extra_tabs.tmpl</code>, there are other useful templates you can put in your <code>custom/templates/custom/</code> directory:</p>
+<ul>
+<li><code>header.tmpl</code>, just before the end of the <code>&lt;head&gt;</code> tag where you can add custom CSS files for instance.</li>
+<li><code>body_outer_pre.tmpl</code>, right after the start of <code>&lt;body&gt;</code>.</li>
+<li><code>body_inner_pre.tmpl</code>, before the top navigation bar, but already inside the main container <code>&lt;div class=&quot;full height&quot;&gt;</code>.</li>
+<li><code>body_inner_post.tmpl</code>, before the end of the main container.</li>
+<li><code>body_outer_post.tmpl</code>, before the bottom <code>&lt;footer&gt;</code> element.</li>
+<li><code>footer.tmpl</code>, right before the end of the <code>&lt;body&gt;</code> tag, a good place for additional Javascript.</li>
+</ul>
+<h4 id="example-mermaidjs">Example: Mermaid.js</h4>
+<p>If you would like to add <a href="https://mermaid-js.github.io/mermaid">mermaid.js</a> support to Gitea&rsquo;s markdown you simply add:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{if .RequireHighlightJS}}
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://unpkg.com/mermaid@8.4.5/dist/mermaid.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+<span style="color:#75715e">&lt;!-- or wherever you have placed it --&gt;</span>
+&lt;<span style="color:#f92672">script</span>&gt;<span style="color:#a6e22e">mermaid</span>.<span style="color:#a6e22e">init</span>(<span style="color:#e6db74">&#34;.language-mermaid&#34;</span>)&lt;/<span style="color:#f92672">script</span>&gt;
+{{end}}
+</code></pre></div><p>to <code>custom/footer.tmpl</code>. You then can add blocks
+like below to your markdown:</p>
+<pre><code>```mermaid
+    stateDiagram
+    [*] --&gt; Active
+
+    state Active {
+        [*] --&gt; NumLockOff
+        NumLockOff --&gt; NumLockOn : EvNumLockPressed
+        NumLockOn --&gt; NumLockOff : EvNumLockPressed
+        --
+        [*] --&gt; CapsLockOff
+        CapsLockOff --&gt; CapsLockOn : EvCapsLockPressed
+        CapsLockOn --&gt; CapsLockOff : EvCapsLockPressed
+        --
+        [*] --&gt; ScrollLockOff
+        ScrollLockOff --&gt; ScrollLockOn : EvCapsLockPressed
+        ScrollLockOn --&gt; ScrollLockOff : EvCapsLockPressed
+    }
+```
+</code></pre>
+<p>If you want to use Mermaid.js outside of markdown, e.g. in other templates or HTML files,
+you would need to remove <code>{{if .RequireHighlightJS}}</code> and <code>{{end}}</code>.</p>
+<p>Mermaid will detect and use tags with <code>class=&quot;language-mermaid&quot;</code>.</p>
+<h4 id="example-plantuml">Example: PlantUML</h4>
+<p>You can add <a href="https://plantuml.com/">PlantUML</a> support to Gitea&rsquo;s markdown by using a PlantUML server.
+The data is encoded and sent to the PlantUML server which generates the picture. There is an online
+demo server at <a href="http://www.plantuml.com/plantuml,">http://www.plantuml.com/plantuml,</a> but if you (or your users) have sensitive data you
+can set up your own <a href="https://plantuml.com/server">PlantUML server</a> instead. To set up PlantUML rendering,
+copy javascript files from <a href="https://gitea.com/davidsvantesson/plantuml-code-highlight">https://gitea.com/davidsvantesson/plantuml-code-highlight</a> and put them in your
+<code>custom/public</code> folder. Then add the following to <code>custom/footer.tmpl</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{if .RequireHighlightJS}}
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://your-server.com/deflate.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://your-server.com/encode.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://your-server.com/plantuml_codeblock_parse.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#75715e">&lt;!--</span> <span style="color:#a6e22e">Replace</span> <span style="color:#a6e22e">call</span> <span style="color:#66d9ef">with</span> <span style="color:#a6e22e">address</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">your</span> <span style="color:#a6e22e">plantuml</span> <span style="color:#a6e22e">server</span><span style="color:#f92672">--&gt;</span>
+<span style="color:#a6e22e">parsePlantumlCodeBlocks</span>(<span style="color:#e6db74">&#34;http://www.plantuml..com/plantuml&#34;</span>)
+&lt;/<span style="color:#f92672">script</span>&gt;
+{{end}}
+</code></pre></div><p>You can then add blocks like the following to your markdown:</p>
+<pre><code>```plantuml
+    Alice -&gt; Bob: Authentication Request
+    Bob --&gt; Alice: Authentication Response
+
+    Alice -&gt; Bob: Another authentication Request
+    Alice &lt;-- Bob: Another authentication Response
+```
+</code></pre>
+<p>The script will detect tags with <code>class=&quot;language-plantuml&quot;</code>, but you can change this by providing a second argument to <code>parsePlantumlCodeBlocks</code>.</p>
+<h4 id="example-stl-preview">Example: STL Preview</h4>
+<p>You can display STL file directly in Gitea by adding:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">lS</span>(<span style="color:#a6e22e">src</span>){
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;script&#39;</span>)
+    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">src</span>
+    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;load&#39;</span>, () =&gt; {
+      <span style="color:#a6e22e">resolve</span>()
+    })
+    document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">s</span>)
+  });
+}
+
+<span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;.view-raw&gt;a[href$=&#34;.stl&#34; i]&#39;</span>).<span style="color:#a6e22e">length</span>){
+  <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;body&#39;</span>).<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#39;&lt;link href=&#34;/Madeleine.js/src/css/Madeleine.css&#34; rel=&#34;stylesheet&#34;&gt;&#39;</span>);
+  Promise.<span style="color:#a6e22e">all</span>([<span style="color:#a6e22e">lS</span>(<span style="color:#e6db74">&#34;/Madeleine.js/src/lib/stats.js&#34;</span>),<span style="color:#a6e22e">lS</span>(<span style="color:#e6db74">&#34;/Madeleine.js/src/lib/detector.js&#34;</span>), <span style="color:#a6e22e">lS</span>(<span style="color:#e6db74">&#34;/Madeleine.js/src/lib/three.min.js&#34;</span>), <span style="color:#a6e22e">lS</span>(<span style="color:#e6db74">&#34;/Madeleine.js/src/Madeleine.js&#34;</span>)]).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>() {
+    <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;.view-raw&#39;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;id&#39;</span>, <span style="color:#e6db74">&#39;view-raw&#39;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;style&#39;</span>, <span style="color:#e6db74">&#39;padding: 0;margin-bottom: -10px;&#39;</span>);
+    <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Madeleine</span>({
+      <span style="color:#a6e22e">target</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;view-raw&#39;</span>,
+      <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;.view-raw&gt;a[href$=&#34;.stl&#34; i]&#39;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;href&#39;</span>),
+      <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/Madeleine.js/src&#39;</span>
+    });
+    <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;.view-raw&gt;a[href$=&#34;.stl&#34;]&#39;</span>).<span style="color:#a6e22e">remove</span>()
+  });
+}
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>to the file <code>templates/custom/footer.tmpl</code></p>
+<p>You also need to download the content of the library <a href="https://jinjunho.github.io/Madeleine.js/">Madeleine.js</a> and place it under <code>custom/public/</code> folder.</p>
+<p>You should end-up with a folder structucture similar to:</p>
+<pre><code>custom/templates
+-- custom
+    `-- footer.tmpl
+custom/public
+-- Madeleine.js
+   |-- LICENSE
+   |-- README.md
+   |-- css
+   |   |-- pygment_trac.css
+   |   `-- stylesheet.css
+   |-- examples
+   |   |-- ajax.html
+   |   |-- index.html
+   |   `-- upload.html
+   |-- images
+   |   |-- bg_hr.png
+   |   |-- blacktocat.png
+   |   |-- icon_download.png
+   |   `-- sprite_download.png
+   |-- models
+   |   |-- dino2.stl
+   |   |-- ducati.stl
+   |   |-- gallardo.stl
+   |   |-- lamp.stl
+   |   |-- octocat.stl
+   |   |-- skull.stl
+   |   `-- treefrog.stl
+   `-- src
+       |-- Madeleine.js
+       |-- css
+       |   `-- Madeleine.css
+       |-- icons
+       |   |-- logo.png
+       |   |-- madeleine.eot
+       |   |-- madeleine.svg
+       |   |-- madeleine.ttf
+       |   `-- madeleine.woff
+       `-- lib
+           |-- MadeleineConverter.js
+           |-- MadeleineLoader.js
+           |-- detector.js
+           |-- stats.js
+           `-- three.min.js
+</code></pre><p>Then restart gitea and open a STL file on your gitea instance.</p>
+<h2 id="customizing-gitea-mails">Customizing Gitea mails</h2>
+<p>The <code>custom/templates/mail</code> folder allows changing the body of every mail of Gitea.
+Templates to override can be found in the
+<a href="https://github.com/go-gitea/gitea/tree/master/templates/mail"><code>templates/mail</code></a>
+directory of Gitea source.
+Override by making a copy of the file under <code>custom/templates/mail</code> using a
+full path structure matching source.</p>
+<p>Any statement contained inside <code>{{</code> and <code>}}</code> are Gitea&rsquo;s template
+syntax and shouldn&rsquo;t be touched without fully understanding these components.</p>
+<h2 id="adding-analytics-to-gitea">Adding Analytics to Gitea</h2>
+<p>Google Analytics, Matomo (previously Piwik), and other analytics services can be added to Gitea. To add the tracking code, refer to the <code>Other additions to the page</code> section of this document, and add the JavaScript to the <code>custom/templates/custom/header.tmpl</code> file.</p>
+<h2 id="customizing-gitignores-labels-licenses-locales-and-readmes">Customizing gitignores, labels, licenses, locales, and readmes.</h2>
+<p>Place custom files in corresponding sub-folder under <code>custom/options</code>.</p>
+<p><strong>NOTE:</strong> The files should not have a file extension, e.g. <code>Labels</code> rather than <code>Labels.txt</code></p>
+<h3 id="gitignores">gitignores</h3>
+<p>To add custom .gitignore, add a file with existing <a href="https://git-scm.com/docs/gitignore">.gitignore rules</a> in it to <code>custom/options/gitignore</code></p>
+<h3 id="labels">Labels</h3>
+<p>To add a custom label set, add a file that follows the <a href="https://github.com/go-gitea/gitea/blob/master/options/label/Default">label format</a> to <code>custom/options/label</code><br>
+<code>#hex-color label name ; label description</code></p>
+<h3 id="licenses">Licenses</h3>
+<p>To add a custom license, add a file with the license text to <code>custom/options/license</code></p>
+<h3 id="locales">Locales</h3>
+<p>Locales are managed via our <a href="https://crowdin.com/project/gitea">crowdin</a>.<br>
+You can override a locale by placing an altered locale file in <code>custom/options/locale</code>.<br>
+Gitea&rsquo;s default locale files can be found in  the <a href="https://github.com/go-gitea/gitea/tree/master/options/locale"><code>options/locale</code></a> source folder and these should be used as examples for your changes.</p>
+<p>To add a completely new locale, as well as placing the file in the above location, you will need to add the new lang and name to the <code>[i18n]</code> section in your <code>app.ini</code>. Keep in mind that Gitea will use those settings as <strong>overrides</strong>, so if you want to keep the other languages as well you will need to copy/paste the default values and add your own to them.</p>
+<pre><code>[i18n]
+LANGS = en-US,foo-BAR
+NAMES = English,FooBar
+</code></pre><p>Locales may change between versions, so keeping track of your customized locales is highly encouraged.</p>
+<h3 id="readmes">Readmes</h3>
+<p>To add a custom Readme, add a markdown formatted file (without an <code>.md</code> extension) to <code>custom/options/readme</code></p>
+<p><strong>NOTE:</strong> readme templates support <strong>variable expansion</strong>.<br>
+currently there are <code>{Name}</code> (name of repository), <code>{Description}</code>, <code>{CloneURL.SSH}</code>, <code>{CloneURL.HTTPS}</code> and <code>{OwnerName}</code></p>
+<h3 id="reactions">Reactions</h3>
+<p>To change reaction emoji&rsquo;s you can set allowed reactions at app.ini</p>
+<pre><code>[ui]
+REACTIONS = +1, -1, laugh, confused, heart, hooray, eyes
+</code></pre><p>A full list of supported emoji&rsquo;s is at <a href="https://gitea.com/gitea/gitea.com/issues/8">emoji list</a></p>
+<h2 id="customizing-the-look-of-gitea">Customizing the look of Gitea</h2>
+<p>As of version 1.6.0 Gitea has built-in themes. The two built-in themes are, the default theme <code>gitea</code>, and a dark theme <code>arc-green</code>. To change the look of your Gitea install change the value of <code>DEFAULT_THEME</code> in the <a href="https://docs.gitea.io/en-us/config-cheat-sheet/#ui-ui">ui</a> section of <code>app.ini</code> to another one of the available options.<br>
+As of version 1.8.0 Gitea also has per-user themes. The list of themes a user can choose from can be configured with the <code>THEMES</code> value in the <a href="https://docs.gitea.io/en-us/config-cheat-sheet/#ui-ui">ui</a> section of <code>app.ini</code> (defaults to <code>gitea</code> and <code>arc-green</code>, light and dark respectively)</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="content has-text-centered">
+					<p>
+						Copyright &copy; 2020 <a href="https://docs.gitea.io">The Gitea Authors</a>. All rights reserved. Made with <i class="fa fa-heart" aria-hidden="true"></i> and <a href="https://gohugo.io">Hugo</a>.
+					</p>
+					<p>
+						 Sponsored by <a href="https://www.didiyun.com">DiDi Cloud</a>, <a href="http://inblockchain.com">INBlockchain</a>, <a href="https://www.packet.com">Packet</a>, <a href="https://digitalocean.com">DigitalOcean</a>, and all of our backers on <a href="https://opencollective.com/gitea">Open Collective</a>.
+					</p>
+					<p>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-cn" hreflang="zh-cn">中文(简体)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-tw" hreflang="zh-tw">中文(繁體)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/pt-br" hreflang="pt-br">Português Brasileiro</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/en-us" hreflang="en-us">English</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/nl-nl" hreflang="nl-nl">Nederlands</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/fr-fr" hreflang="fr-fr">Français</a>
+						
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+            document.addEventListener('DOMContentLoaded', function () {
+
+                
+                var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                
+                if ($navbarBurgers.length > 0) {
+
+                    
+                    $navbarBurgers.forEach(function ($el) {
+                        $el.addEventListener('click', function () {
+
+                            
+                            var target = $el.dataset.target;
+                            var $target = document.getElementById(target);
+
+                            
+                            $el.classList.toggle('is-active');
+                            $target.classList.toggle('is-active');
+
+
+                            document.getElementById('navbar-background').classList.toggle('is-active');
+
+
+                        });
+                    });
+                }
+
+				
+				
+				let svg = '  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor; vertical-align: middle" width="24" height="24" viewBox="0 0 32 32"><title>gitea</title><path d="M5.583 7.229c-2.464-0.005-5.755 1.557-5.573 5.479 0.281 6.125 6.557 6.693 9.068 6.745 0.271 1.146 3.224 5.109 5.411 5.318h9.573c5.74-0.38 10.036-17.365 6.854-17.427-5.271 0.25-8.396 0.375-11.073 0.396v5.297l-0.839-0.365-0.005-4.932c-3.073 0-5.781-0.141-10.917-0.396-0.646-0.005-1.542-0.115-2.5-0.115zM5.927 9.396h0.297c0.349 3.141 0.917 4.974 2.068 7.781-2.938-0.349-5.432-1.198-5.891-4.38-0.24-1.646 0.563-3.365 3.526-3.401zM17.339 12.479c0.198 0.005 0.406 0.042 0.594 0.13l1 0.432-0.714 1.302c-0.109 0-0.219 0.016-0.323 0.052-0.464 0.151-0.708 0.604-0.542 1.021 0.036 0.083 0.089 0.161 0.151 0.229l-1.234 2.25c-0.099 0-0.203 0.016-0.297 0.052-0.464 0.146-0.708 0.604-0.542 1.016 0.172 0.417 0.682 0.63 1.151 0.479 0.464-0.146 0.703-0.604 0.536-1.021-0.047-0.109-0.115-0.208-0.208-0.292l1.203-2.188c0.13 0.010 0.26 0 0.391-0.042 0.104-0.031 0.198-0.083 0.281-0.151 0.464 0.198 0.844 0.354 1.12 0.49 0.406 0.203 0.552 0.339 0.599 0.49 0.042 0.146-0.005 0.427-0.24 0.922-0.172 0.37-0.458 0.896-0.797 1.51-0.115 0-0.229 0.016-0.333 0.052-0.469 0.151-0.708 0.604-0.542 1.021 0.167 0.411 0.682 0.625 1.146 0.479 0.469-0.151 0.708-0.604 0.542-1.021-0.042-0.099-0.104-0.193-0.182-0.271 0.333-0.609 0.62-1.135 0.807-1.526 0.25-0.536 0.38-0.938 0.266-1.323s-0.469-0.635-0.932-0.865c-0.307-0.151-0.693-0.313-1.146-0.505 0.005-0.109-0.010-0.214-0.052-0.318s-0.109-0.198-0.193-0.281l0.703-1.281 3.901 1.682c0.703 0.307 0.995 1.057 0.651 1.682l-2.682 4.906c-0.339 0.625-1.182 0.885-1.885 0.578l-5.516-2.38c-0.703-0.307-0.995-1.057-0.656-1.682l2.682-4.906c0.234-0.432 0.708-0.688 1.208-0.708h0.083z"></path></svg>';
+				let contents = document.getElementsByClassName("content");
+				if (contents.length > 0) {
+					let content = contents[0];
+					for (let level = 1; level <= 4; level++) {
+						let elems = content.getElementsByTagName("h" + level);
+						for (let i = 0; i < elems.length; i++) {
+							let elem = elems[i];
+							if (elem.id !== "undefined" && elem.id !== "") {
+								let anchorId = elem.id + "-anchor";
+								elem.addEventListener("mouseover", () => {
+									document.getElementById(anchorId).style.display = "initial";
+								});
+								elem.addEventListener("mouseout", () => {
+									document.getElementById(anchorId).style.display = "none";
+								});
+								let anchor = document.createElement("a");
+								anchor.id = anchorId;
+								anchor.href = "#" + elem.id;
+								anchor.innerHTML = svg;
+								anchor.style.display = "none";
+								elem.appendChild(anchor);
+							}
+						}
+					}
+				}
+
+            });
+		</script>
+
+		</body>
+</html>
+

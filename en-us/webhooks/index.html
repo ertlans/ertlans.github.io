@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta property="og:title" content="Webhooks - Docs"></meta>
+ 		
+		<meta property="og:description" content="" />
+		
+		<meta property="og:type" content="article"></meta>
+		<meta property="og:url" content="https://ertlans.github.io/en-us/webhooks/"></meta>
+		<meta property="og:image" content="https://docs.gitea.io/images/gitea.png"></meta>
+		<meta name="generator" content="Hugo 0.69.2" />
+
+		<title>Webhooks - Docs</title>
+
+		
+		
+
+		
+
+		<link rel="canonical" href="https://ertlans.github.io/en-us/webhooks/">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://ertlans.github.io/styles/main.css">
+
+		<link rel="shortcut icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+		<link rel="icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+	</head>
+	<body>
+
+<nav class="navbar">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ertlans.github.io/">
+				<img src="https://ertlans.github.io/images/gitea.png" alt="Docs">
+			</a>
+			<span class="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+		</div>
+		<div class="navbar-menu" id="navMenu">
+			<div class="navbar-end">
+				<span class="navbar-item logo"><img src="https://ertlans.github.io/images/gitea.png" alt="Docs"></span>
+
+	<a class="navbar-item" href="https://gitea.io/en-us/">
+		<i class="fa fa-home"></i>&nbsp;
+		Website
+	</a>
+
+	<a class="navbar-item" href="/en-us/">
+		<i class="fa fa-question"></i>&nbsp;
+		Docs
+	</a>
+
+	<a class="navbar-item" href="https://blog.gitea.io/">
+		<i class="fa fa-rss"></i>&nbsp;
+		Blog
+	</a>
+
+	<a class="navbar-item" href="https://code.gitea.io/">
+		<i class="fa fa-code"></i>&nbsp;
+		Code
+	</a>
+
+	<a class="navbar-item" href="https://crowdin.com/project/gitea">
+		<i class="fa fa-language"></i>&nbsp;
+		Translation
+	</a>
+
+	<a class="navbar-item" href="https://try.gitea.io/api/swagger">
+		<i class="fa fa-plug"></i>&nbsp;
+		API
+	</a>
+
+	<a class="navbar-item" href="https://dl.gitea.io/">
+		<i class="fa fa-download"></i>&nbsp;
+		Downloads
+	</a>
+
+	<a class="navbar-item" href="https://github.com/go-gitea/">
+		<i class="fa fa-github"></i>&nbsp;
+		GitHub
+	</a>
+
+	<a class="navbar-item" href="https://discord.gg/Gitea">
+		<i class="fa fa-comment"></i>&nbsp;
+		Discord Chat
+	</a>
+
+	<a class="navbar-item" href="https://discourse.gitea.io/">
+		<i class="fa fa-group"></i>&nbsp;
+		Forum
+	</a>
+
+
+			</div>
+		</div>
+		<div class="navbar-background" id="navbar-background"></div>
+	</div>
+</nav>
+
+<section class="section">
+	<div class="container is-centered page">
+		<div class="columns">
+			<div class="column is-one-quarter">
+				<aside class="menu">
+	
+		
+			<p class="menu-label">
+				
+				Help
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/faq/" >
+							
+							FAQ
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/seek-help/" >
+							
+							Support Options
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Installation
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/install-with-docker/" >
+							
+							With Docker
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/database-prep/" >
+							
+							Database preparation
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-binary/" >
+							
+							From binary
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-package/" >
+							
+							From package
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/linux-service/" >
+							
+							Linux service
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-source/" >
+							
+							From source
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/windows-service/" >
+							
+							Windows Service
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Upgrade
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/upgrade-from-gogs/" >
+							
+							From Gogs
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Usage
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/command-line/" >
+							
+							Command Line
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/backup-and-restore/" >
+							
+							Backup and Restore
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/email-setup/" >
+							
+							Email setup
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/pull-request/" >
+							
+							Pull Request
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/automatically-linked-references/" >
+							
+							Automatically Linked References
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/issue-pull-request-templates/" >
+							
+							Issue and Pull Request templates
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/reverse-proxies/" >
+							
+							Reverse Proxies
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Advanced
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/adding-legal-pages/" >
+							
+							Adding Legal Pages
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/customizing-gitea/" >
+							
+							Customizing Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/hacking-on-gitea/" >
+							
+							Hacking on Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/config-cheat-sheet/" >
+							
+							Config Cheat Sheet
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/signing/" >
+							
+							GPG Commit Signatures
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/specific-variables/" >
+							
+							Specific variables
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/make/" >
+							
+							Make
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/api-usage/" >
+							
+							API Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/ci-cd/" >
+							
+							CI/CD Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/cmd-embedded/" >
+							
+							Embedded data extraction tool
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/external-renderers/" >
+							
+							External renderers
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/repo-indexer/" >
+							
+							Repository indexer
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/third-party-tools/" >
+							
+							Third Party Tools
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/logging-configuration/" >
+							
+							Logging Configuration
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/migrations-interfaces/" >
+							
+							Migrations Interfaces
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/search-engines-indexation/" >
+							
+							Search Engines Indexation
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				features
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/comparison/" >
+							
+							Comparison
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/authentication/" >
+							
+							Authentication
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/localization/" >
+							
+							Localization
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/webhooks/" class="is-active">
+							
+							Webhooks
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+	</ul>
+</aside>
+
+
+	
+
+
+
+			</div>
+			<div class="column is-three-quarters">
+				<div class="content">
+					<h1 id="webhooks">Webhooks</h1>
+<p>Gitea supports web hooks for repository events. This can be configured in the settings
+page <code>/:username/:reponame/settings/hooks</code> by a repository admin. Webhooks can also be configured on a per-organization and whole system basis.
+All event pushes are POST requests. The methods currently supported are:</p>
+<ul>
+<li>Gitea (can also be a GET request)</li>
+<li>Gogs</li>
+<li>Slack</li>
+<li>Discord</li>
+<li>Dingtalk</li>
+<li>Telegram</li>
+<li>Microsoft Teams</li>
+<li>Feishu</li>
+</ul>
+<h3 id="event-information">Event information</h3>
+<p>The following is an example of event information that will be sent by Gitea to
+a Payload URL:</p>
+<pre><code>X-GitHub-Delivery: f6266f16-1bf3-46a5-9ea4-602e06ead473
+X-GitHub-Event: push
+X-Gogs-Delivery: f6266f16-1bf3-46a5-9ea4-602e06ead473
+X-Gogs-Event: push
+X-Gitea-Delivery: f6266f16-1bf3-46a5-9ea4-602e06ead473
+X-Gitea-Event: push
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;secret&#34;</span>: <span style="color:#e6db74">&#34;3gEsCfjlV2ugRwgpU#w1*WaW*wa4NXgGmpCfkbG3&#34;</span>,
+  <span style="color:#f92672">&#34;ref&#34;</span>: <span style="color:#e6db74">&#34;refs/heads/develop&#34;</span>,
+  <span style="color:#f92672">&#34;before&#34;</span>: <span style="color:#e6db74">&#34;28e1879d029cb852e4844d9c718537df08844e03&#34;</span>,
+  <span style="color:#f92672">&#34;after&#34;</span>: <span style="color:#e6db74">&#34;bffeb74224043ba2feb48d137756c8a9331c449a&#34;</span>,
+  <span style="color:#f92672">&#34;compare_url&#34;</span>: <span style="color:#e6db74">&#34;http://localhost:3000/gitea/webhooks/compare/28e1879d029cb852e4844d9c718537df08844e03...bffeb74224043ba2feb48d137756c8a9331c449a&#34;</span>,
+  <span style="color:#f92672">&#34;commits&#34;</span>: [
+    {
+      <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;bffeb74224043ba2feb48d137756c8a9331c449a&#34;</span>,
+      <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Webhooks Yay!&#34;</span>,
+      <span style="color:#f92672">&#34;url&#34;</span>: <span style="color:#e6db74">&#34;http://localhost:3000/gitea/webhooks/commit/bffeb74224043ba2feb48d137756c8a9331c449a&#34;</span>,
+      <span style="color:#f92672">&#34;author&#34;</span>: {
+        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Gitea&#34;</span>,
+        <span style="color:#f92672">&#34;email&#34;</span>: <span style="color:#e6db74">&#34;someone@gitea.io&#34;</span>,
+        <span style="color:#f92672">&#34;username&#34;</span>: <span style="color:#e6db74">&#34;gitea&#34;</span>
+      },
+      <span style="color:#f92672">&#34;committer&#34;</span>: {
+        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Gitea&#34;</span>,
+        <span style="color:#f92672">&#34;email&#34;</span>: <span style="color:#e6db74">&#34;someone@gitea.io&#34;</span>,
+        <span style="color:#f92672">&#34;username&#34;</span>: <span style="color:#e6db74">&#34;gitea&#34;</span>
+      },
+      <span style="color:#f92672">&#34;timestamp&#34;</span>: <span style="color:#e6db74">&#34;2017-03-13T13:52:11-04:00&#34;</span>
+    }
+  ],
+  <span style="color:#f92672">&#34;repository&#34;</span>: {
+    <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">140</span>,
+    <span style="color:#f92672">&#34;owner&#34;</span>: {
+      <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>,
+      <span style="color:#f92672">&#34;login&#34;</span>: <span style="color:#e6db74">&#34;gitea&#34;</span>,
+      <span style="color:#f92672">&#34;full_name&#34;</span>: <span style="color:#e6db74">&#34;Gitea&#34;</span>,
+      <span style="color:#f92672">&#34;email&#34;</span>: <span style="color:#e6db74">&#34;someone@gitea.io&#34;</span>,
+      <span style="color:#f92672">&#34;avatar_url&#34;</span>: <span style="color:#e6db74">&#34;https://localhost:3000/avatars/1&#34;</span>,
+      <span style="color:#f92672">&#34;username&#34;</span>: <span style="color:#e6db74">&#34;gitea&#34;</span>
+    },
+    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;webhooks&#34;</span>,
+    <span style="color:#f92672">&#34;full_name&#34;</span>: <span style="color:#e6db74">&#34;gitea/webhooks&#34;</span>,
+    <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#f92672">&#34;private&#34;</span>: <span style="color:#66d9ef">false</span>,
+    <span style="color:#f92672">&#34;fork&#34;</span>: <span style="color:#66d9ef">false</span>,
+    <span style="color:#f92672">&#34;html_url&#34;</span>: <span style="color:#e6db74">&#34;http://localhost:3000/gitea/webhooks&#34;</span>,
+    <span style="color:#f92672">&#34;ssh_url&#34;</span>: <span style="color:#e6db74">&#34;ssh://gitea@localhost:2222/gitea/webhooks.git&#34;</span>,
+    <span style="color:#f92672">&#34;clone_url&#34;</span>: <span style="color:#e6db74">&#34;http://localhost:3000/gitea/webhooks.git&#34;</span>,
+    <span style="color:#f92672">&#34;website&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#f92672">&#34;stars_count&#34;</span>: <span style="color:#ae81ff">0</span>,
+    <span style="color:#f92672">&#34;forks_count&#34;</span>: <span style="color:#ae81ff">1</span>,
+    <span style="color:#f92672">&#34;watchers_count&#34;</span>: <span style="color:#ae81ff">1</span>,
+    <span style="color:#f92672">&#34;open_issues_count&#34;</span>: <span style="color:#ae81ff">7</span>,
+    <span style="color:#f92672">&#34;default_branch&#34;</span>: <span style="color:#e6db74">&#34;master&#34;</span>,
+    <span style="color:#f92672">&#34;created_at&#34;</span>: <span style="color:#e6db74">&#34;2017-02-26T04:29:06-05:00&#34;</span>,
+    <span style="color:#f92672">&#34;updated_at&#34;</span>: <span style="color:#e6db74">&#34;2017-03-13T13:51:58-04:00&#34;</span>
+  },
+  <span style="color:#f92672">&#34;pusher&#34;</span>: {
+    <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>,
+    <span style="color:#f92672">&#34;login&#34;</span>: <span style="color:#e6db74">&#34;gitea&#34;</span>,
+    <span style="color:#f92672">&#34;full_name&#34;</span>: <span style="color:#e6db74">&#34;Gitea&#34;</span>,
+    <span style="color:#f92672">&#34;email&#34;</span>: <span style="color:#e6db74">&#34;someone@gitea.io&#34;</span>,
+    <span style="color:#f92672">&#34;avatar_url&#34;</span>: <span style="color:#e6db74">&#34;https://localhost:3000/avatars/1&#34;</span>,
+    <span style="color:#f92672">&#34;username&#34;</span>: <span style="color:#e6db74">&#34;gitea&#34;</span>
+  },
+  <span style="color:#f92672">&#34;sender&#34;</span>: {
+    <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>,
+    <span style="color:#f92672">&#34;login&#34;</span>: <span style="color:#e6db74">&#34;gitea&#34;</span>,
+    <span style="color:#f92672">&#34;full_name&#34;</span>: <span style="color:#e6db74">&#34;Gitea&#34;</span>,
+    <span style="color:#f92672">&#34;email&#34;</span>: <span style="color:#e6db74">&#34;someone@gitea.io&#34;</span>,
+    <span style="color:#f92672">&#34;avatar_url&#34;</span>: <span style="color:#e6db74">&#34;https://localhost:3000/avatars/1&#34;</span>,
+    <span style="color:#f92672">&#34;username&#34;</span>: <span style="color:#e6db74">&#34;gitea&#34;</span>
+  }
+}
+</code></pre></div><h3 id="example">Example</h3>
+<p>This is an example of how to use webhooks to run a php script upon push requests to the repository.
+In your repository Settings, under Webhooks, Setup a Gitea webhook as follows:</p>
+<ul>
+<li>Target URL: <a href="http://mydomain.com/webhook.php">http://mydomain.com/webhook.php</a></li>
+<li>HTTP Method: POST</li>
+<li>POST Content Type: application/json</li>
+<li>Secret: 123</li>
+<li>Trigger On: Push Events</li>
+<li>Active: Checked</li>
+</ul>
+<p>Now on your server create the php file webhook.php</p>
+<pre><code>&lt;?php
+
+$secret_key = '123';
+
+// check for POST request
+if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+    error_log('FAILED - not POST - '. $_SERVER['REQUEST_METHOD']);
+    exit();
+}
+
+// get content type
+$content_type = isset($_SERVER['CONTENT_TYPE']) ? strtolower(trim($_SERVER['CONTENT_TYPE'])) : '';
+
+if ($content_type != 'application/json') {
+    error_log('FAILED - not application/json - '. $content_type);
+    exit();
+}
+
+// get payload
+$payload = trim(file_get_contents(&quot;php://input&quot;));
+
+if (empty($payload)) {
+    error_log('FAILED - no payload');
+    exit();
+}
+
+// get header signature
+$header_signature = isset($_SERVER['HTTP_X_GITEA_SIGNATURE']) ? $_SERVER['HTTP_X_GITEA_SIGNATURE'] : '';
+
+if (empty($header_signature)) {
+    error_log('FAILED - header signature missing');
+    exit();
+}
+
+// calculate payload signature
+$payload_signature = hash_hmac('sha256', $payload, $secret_key, false);
+
+// check payload signature against header signature
+if ($header_signature != $payload_signature) {
+    error_log('FAILED - payload signature');
+    exit();
+}
+
+// convert json to array
+$decoded = json_decode($payload, true);
+
+// check for json decode errors
+if (json_last_error() !== JSON_ERROR_NONE) {
+    error_log('FAILED - json decode - '. json_last_error());
+    exit();
+}
+
+// success, do something
+</code></pre><p>There is a Test Delivery button in the webhook settings that allows to test the configuration as well as a list of the most Recent Deliveries.</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="content has-text-centered">
+					<p>
+						Copyright &copy; 2020 <a href="https://docs.gitea.io">The Gitea Authors</a>. All rights reserved. Made with <i class="fa fa-heart" aria-hidden="true"></i> and <a href="https://gohugo.io">Hugo</a>.
+					</p>
+					<p>
+						 Sponsored by <a href="https://www.didiyun.com">DiDi Cloud</a>, <a href="http://inblockchain.com">INBlockchain</a>, <a href="https://www.packet.com">Packet</a>, <a href="https://digitalocean.com">DigitalOcean</a>, and all of our backers on <a href="https://opencollective.com/gitea">Open Collective</a>.
+					</p>
+					<p>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-cn" hreflang="zh-cn">中文(简体)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-tw" hreflang="zh-tw">中文(繁體)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/pt-br" hreflang="pt-br">Português Brasileiro</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/en-us" hreflang="en-us">English</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/nl-nl" hreflang="nl-nl">Nederlands</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/fr-fr" hreflang="fr-fr">Français</a>
+						
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+            document.addEventListener('DOMContentLoaded', function () {
+
+                
+                var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                
+                if ($navbarBurgers.length > 0) {
+
+                    
+                    $navbarBurgers.forEach(function ($el) {
+                        $el.addEventListener('click', function () {
+
+                            
+                            var target = $el.dataset.target;
+                            var $target = document.getElementById(target);
+
+                            
+                            $el.classList.toggle('is-active');
+                            $target.classList.toggle('is-active');
+
+
+                            document.getElementById('navbar-background').classList.toggle('is-active');
+
+
+                        });
+                    });
+                }
+
+				
+				
+				let svg = '  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor; vertical-align: middle" width="24" height="24" viewBox="0 0 32 32"><title>gitea</title><path d="M5.583 7.229c-2.464-0.005-5.755 1.557-5.573 5.479 0.281 6.125 6.557 6.693 9.068 6.745 0.271 1.146 3.224 5.109 5.411 5.318h9.573c5.74-0.38 10.036-17.365 6.854-17.427-5.271 0.25-8.396 0.375-11.073 0.396v5.297l-0.839-0.365-0.005-4.932c-3.073 0-5.781-0.141-10.917-0.396-0.646-0.005-1.542-0.115-2.5-0.115zM5.927 9.396h0.297c0.349 3.141 0.917 4.974 2.068 7.781-2.938-0.349-5.432-1.198-5.891-4.38-0.24-1.646 0.563-3.365 3.526-3.401zM17.339 12.479c0.198 0.005 0.406 0.042 0.594 0.13l1 0.432-0.714 1.302c-0.109 0-0.219 0.016-0.323 0.052-0.464 0.151-0.708 0.604-0.542 1.021 0.036 0.083 0.089 0.161 0.151 0.229l-1.234 2.25c-0.099 0-0.203 0.016-0.297 0.052-0.464 0.146-0.708 0.604-0.542 1.016 0.172 0.417 0.682 0.63 1.151 0.479 0.464-0.146 0.703-0.604 0.536-1.021-0.047-0.109-0.115-0.208-0.208-0.292l1.203-2.188c0.13 0.010 0.26 0 0.391-0.042 0.104-0.031 0.198-0.083 0.281-0.151 0.464 0.198 0.844 0.354 1.12 0.49 0.406 0.203 0.552 0.339 0.599 0.49 0.042 0.146-0.005 0.427-0.24 0.922-0.172 0.37-0.458 0.896-0.797 1.51-0.115 0-0.229 0.016-0.333 0.052-0.469 0.151-0.708 0.604-0.542 1.021 0.167 0.411 0.682 0.625 1.146 0.479 0.469-0.151 0.708-0.604 0.542-1.021-0.042-0.099-0.104-0.193-0.182-0.271 0.333-0.609 0.62-1.135 0.807-1.526 0.25-0.536 0.38-0.938 0.266-1.323s-0.469-0.635-0.932-0.865c-0.307-0.151-0.693-0.313-1.146-0.505 0.005-0.109-0.010-0.214-0.052-0.318s-0.109-0.198-0.193-0.281l0.703-1.281 3.901 1.682c0.703 0.307 0.995 1.057 0.651 1.682l-2.682 4.906c-0.339 0.625-1.182 0.885-1.885 0.578l-5.516-2.38c-0.703-0.307-0.995-1.057-0.656-1.682l2.682-4.906c0.234-0.432 0.708-0.688 1.208-0.708h0.083z"></path></svg>';
+				let contents = document.getElementsByClassName("content");
+				if (contents.length > 0) {
+					let content = contents[0];
+					for (let level = 1; level <= 4; level++) {
+						let elems = content.getElementsByTagName("h" + level);
+						for (let i = 0; i < elems.length; i++) {
+							let elem = elems[i];
+							if (elem.id !== "undefined" && elem.id !== "") {
+								let anchorId = elem.id + "-anchor";
+								elem.addEventListener("mouseover", () => {
+									document.getElementById(anchorId).style.display = "initial";
+								});
+								elem.addEventListener("mouseout", () => {
+									document.getElementById(anchorId).style.display = "none";
+								});
+								let anchor = document.createElement("a");
+								anchor.id = anchorId;
+								anchor.href = "#" + elem.id;
+								anchor.innerHTML = svg;
+								anchor.style.display = "none";
+								elem.appendChild(anchor);
+							}
+						}
+					}
+				}
+
+            });
+		</script>
+
+		</body>
+</html>
+

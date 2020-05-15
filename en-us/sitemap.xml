@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/faq/</loc>
+    <lastmod>2019-04-05T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/comparison/</loc>
+    <lastmod>2018-05-07T13:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/help/</loc>
+    <lastmod>2017-01-20T15:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/adding-legal-pages/</loc>
+    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/customizing-gitea/</loc>
+    <lastmod>2017-04-15T14:56:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/database-prep/</loc>
+    <lastmod>2020-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/seek-help/</loc>
+    <lastmod>2018-05-21T15:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/linux-service/</loc>
+    <lastmod>2017-07-21T12:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/install-from-binary/</loc>
+    <lastmod>2017-06-19T12:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/make/</loc>
+    <lastmod>2017-01-14T11:00:00-02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/command-line/</loc>
+    <lastmod>2017-01-01T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/windows-service/</loc>
+    <lastmod>2016-12-21T15:00:00-02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/authentication/</loc>
+    <lastmod>2016-12-01T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/hacking-on-gitea/</loc>
+    <lastmod>2016-12-01T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/installation/</loc>
+    <lastmod>2016-12-01T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/install-from-package/</loc>
+    <lastmod>2016-12-01T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/install-from-source/</loc>
+    <lastmod>2016-12-01T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/install-with-docker/</loc>
+    <lastmod>2016-12-01T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/localization/</loc>
+    <lastmod>2016-12-01T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/upgrade/</loc>
+    <lastmod>2016-12-01T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/upgrade-from-gogs/</loc>
+    <lastmod>2016-12-01T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/webhooks/</loc>
+    <lastmod>2016-12-01T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/</loc>
+    <lastmod>2016-11-08T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/backup-and-restore/</loc>
+    <lastmod>2017-01-01T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/email-setup/</loc>
+    <lastmod>2019-10-15T10:10:00+05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/pull-request/</loc>
+    <lastmod>2018-06-01T19:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/automatically-linked-references/</loc>
+    <lastmod>2019-11-21T17:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/issue-pull-request-templates/</loc>
+    <lastmod>2018-05-10T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/reverse-proxies/</loc>
+    <lastmod>2018-05-22T11:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/signing/</loc>
+    <lastmod>2019-08-17T10:20:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/specific-variables/</loc>
+    <lastmod>2017-04-08T11:34:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/config-cheat-sheet/</loc>
+    <lastmod>2016-12-26T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/search-engines-indexation/</loc>
+    <lastmod>2019-12-31T13:55:00+05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/migrations-interfaces/</loc>
+    <lastmod>2019-04-15T17:29:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/advanced/</loc>
+    <lastmod>2016-12-01T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/usage/</loc>
+    <lastmod>2016-12-27T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/cmd-embedded/</loc>
+    <lastmod>2020-01-25T21:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/api-usage/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/ci-cd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/external-renderers/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/repo-indexer/</loc>
+    <lastmod>2019-09-06T01:35:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/third-party-tools/</loc>
+    <lastmod>2018-05-22T11:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/logging-configuration/</loc>
+    <lastmod>2019-04-02T17:06:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/doc/</loc>
+    <lastmod>2020-01-25T21:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/</loc>
+    <lastmod>2016-11-08T16:00:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://ertlans.github.io/zh-cn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://ertlans.github.io/zh-tw/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://ertlans.github.io/pt-br/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl-nl"
+                href="https://ertlans.github.io/nl-nl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-fr"
+                href="https://ertlans.github.io/fr-fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://ertlans.github.io/en-us/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://ertlans.github.io/zh-cn/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://ertlans.github.io/zh-tw/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://ertlans.github.io/pt-br/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl-nl"
+                href="https://ertlans.github.io/nl-nl/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-fr"
+                href="https://ertlans.github.io/fr-fr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://ertlans.github.io/en-us/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://ertlans.github.io/en-us/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://ertlans.github.io/zh-cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="https://ertlans.github.io/zh-tw/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://ertlans.github.io/pt-br/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl-nl"
+                href="https://ertlans.github.io/nl-nl/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-fr"
+                href="https://ertlans.github.io/fr-fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://ertlans.github.io/en-us/tags/"
+                />
+  </url>
+  
+</urlset>

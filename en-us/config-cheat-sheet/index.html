@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta property="og:title" content="Config Cheat Sheet - Docs"></meta>
+ 		
+		<meta property="og:description" content="" />
+		
+		<meta property="og:type" content="article"></meta>
+		<meta property="og:url" content="https://ertlans.github.io/en-us/config-cheat-sheet/"></meta>
+		<meta property="og:image" content="https://docs.gitea.io/images/gitea.png"></meta>
+		<meta name="generator" content="Hugo 0.69.2" />
+
+		<title>Config Cheat Sheet - Docs</title>
+
+		
+		
+
+		
+
+		<link rel="canonical" href="https://ertlans.github.io/en-us/config-cheat-sheet/">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://ertlans.github.io/styles/main.css">
+
+		<link rel="shortcut icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+		<link rel="icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+	</head>
+	<body>
+
+<nav class="navbar">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ertlans.github.io/">
+				<img src="https://ertlans.github.io/images/gitea.png" alt="Docs">
+			</a>
+			<span class="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+		</div>
+		<div class="navbar-menu" id="navMenu">
+			<div class="navbar-end">
+				<span class="navbar-item logo"><img src="https://ertlans.github.io/images/gitea.png" alt="Docs"></span>
+
+	<a class="navbar-item" href="https://gitea.io/en-us/">
+		<i class="fa fa-home"></i>&nbsp;
+		Website
+	</a>
+
+	<a class="navbar-item" href="/en-us/">
+		<i class="fa fa-question"></i>&nbsp;
+		Docs
+	</a>
+
+	<a class="navbar-item" href="https://blog.gitea.io/">
+		<i class="fa fa-rss"></i>&nbsp;
+		Blog
+	</a>
+
+	<a class="navbar-item" href="https://code.gitea.io/">
+		<i class="fa fa-code"></i>&nbsp;
+		Code
+	</a>
+
+	<a class="navbar-item" href="https://crowdin.com/project/gitea">
+		<i class="fa fa-language"></i>&nbsp;
+		Translation
+	</a>
+
+	<a class="navbar-item" href="https://try.gitea.io/api/swagger">
+		<i class="fa fa-plug"></i>&nbsp;
+		API
+	</a>
+
+	<a class="navbar-item" href="https://dl.gitea.io/">
+		<i class="fa fa-download"></i>&nbsp;
+		Downloads
+	</a>
+
+	<a class="navbar-item" href="https://github.com/go-gitea/">
+		<i class="fa fa-github"></i>&nbsp;
+		GitHub
+	</a>
+
+	<a class="navbar-item" href="https://discord.gg/Gitea">
+		<i class="fa fa-comment"></i>&nbsp;
+		Discord Chat
+	</a>
+
+	<a class="navbar-item" href="https://discourse.gitea.io/">
+		<i class="fa fa-group"></i>&nbsp;
+		Forum
+	</a>
+
+
+			</div>
+		</div>
+		<div class="navbar-background" id="navbar-background"></div>
+	</div>
+</nav>
+
+<section class="section">
+	<div class="container is-centered page">
+		<div class="columns">
+			<div class="column is-one-quarter">
+				<aside class="menu">
+	
+		
+			<p class="menu-label">
+				
+				Help
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/faq/" >
+							
+							FAQ
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/seek-help/" >
+							
+							Support Options
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Installation
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/install-with-docker/" >
+							
+							With Docker
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/database-prep/" >
+							
+							Database preparation
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-binary/" >
+							
+							From binary
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-package/" >
+							
+							From package
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/linux-service/" >
+							
+							Linux service
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-source/" >
+							
+							From source
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/windows-service/" >
+							
+							Windows Service
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Upgrade
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/upgrade-from-gogs/" >
+							
+							From Gogs
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Usage
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/command-line/" >
+							
+							Command Line
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/backup-and-restore/" >
+							
+							Backup and Restore
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/email-setup/" >
+							
+							Email setup
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/pull-request/" >
+							
+							Pull Request
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/automatically-linked-references/" >
+							
+							Automatically Linked References
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/issue-pull-request-templates/" >
+							
+							Issue and Pull Request templates
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/reverse-proxies/" >
+							
+							Reverse Proxies
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Advanced
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/adding-legal-pages/" >
+							
+							Adding Legal Pages
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/customizing-gitea/" >
+							
+							Customizing Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/hacking-on-gitea/" >
+							
+							Hacking on Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/config-cheat-sheet/" class="is-active">
+							
+							Config Cheat Sheet
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/signing/" >
+							
+							GPG Commit Signatures
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/specific-variables/" >
+							
+							Specific variables
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/make/" >
+							
+							Make
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/api-usage/" >
+							
+							API Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/ci-cd/" >
+							
+							CI/CD Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/cmd-embedded/" >
+							
+							Embedded data extraction tool
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/external-renderers/" >
+							
+							External renderers
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/repo-indexer/" >
+							
+							Repository indexer
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/third-party-tools/" >
+							
+							Third Party Tools
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/logging-configuration/" >
+							
+							Logging Configuration
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/migrations-interfaces/" >
+							
+							Migrations Interfaces
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/search-engines-indexation/" >
+							
+							Search Engines Indexation
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				features
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/comparison/" >
+							
+							Comparison
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/authentication/" >
+							
+							Authentication
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/localization/" >
+							
+							Localization
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/webhooks/" >
+							
+							Webhooks
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+	</ul>
+</aside>
+
+
+
+
+			</div>
+			<div class="column is-three-quarters">
+				<div class="content">
+					<h1 id="configuration-cheat-sheet">Configuration Cheat Sheet</h1>
+<p>This is a cheat sheet for the Gitea configuration file. It contains most of the settings
+that can be configured as well as their default values.</p>
+<p>Any changes to the Gitea configuration file should be made in <code>custom/conf/app.ini</code>
+or any corresponding location. When installing from a distribution, this will
+typically be found at <code>/etc/gitea/conf/app.ini</code>.</p>
+<p>The defaults provided here are best-effort (not built automatically). They are
+accurately recorded in <a href="https://github.com/go-gitea/gitea/blob/master/custom/conf/app.ini.sample">app.ini.sample</a>
+(s/master/&lt;tag|release&gt;). Any string in the format <code>%(X)s</code> is a feature powered
+by <a href="https://github.com/go-ini/ini/#recursive-values">ini</a>, for reading values recursively.</p>
+<p>Values containing <code>#</code> or <code>;</code> must be quoted using <code>`</code> or <code>&quot;&quot;&quot;</code>.</p>
+<p><strong>Note:</strong> A full restart is required for Gitea configuration changes to take effect.</p>
+<h2 id="overall-default">Overall (<code>DEFAULT</code>)</h2>
+<ul>
+<li><code>APP_NAME</code>: <strong>Gitea: Git with a cup of tea</strong>: Application name, used in the page title.</li>
+<li><code>RUN_USER</code>: <strong>git</strong>: The user Gitea will run as. This should be a dedicated system
+(non-user) account. Setting this incorrectly will cause Gitea to not start.</li>
+<li><code>RUN_MODE</code>: <strong>dev</strong>: For performance and other purposes, change this to <code>prod</code> when
+deployed to a production environment. The installation process will set this to <code>prod</code>
+automatically. [prod, dev, test]</li>
+</ul>
+<h2 id="repository-repository">Repository (<code>repository</code>)</h2>
+<ul>
+<li><code>ROOT</code>: <strong>~/gitea-repositories/</strong>: Root path for storing all repository data. It must be
+an absolute path.</li>
+<li><code>SCRIPT_TYPE</code>: <strong>bash</strong>: The script type this server supports. Usually this is <code>bash</code>,
+but some users report that only <code>sh</code> is available.</li>
+<li><code>ANSI_CHARSET</code>: <strong>&lt;empty&gt;</strong>: The default charset for an unrecognized charset.</li>
+<li><code>FORCE_PRIVATE</code>: <strong>false</strong>: Force every new repository to be private.</li>
+<li><code>DEFAULT_PRIVATE</code>: <strong>last</strong>: Default private when creating a new repository.
+[last, private, public]</li>
+<li><code>MAX_CREATION_LIMIT</code>: <strong>-1</strong>: Global maximum creation limit of repositories per user,
+<code>-1</code> means no limit.</li>
+<li><code>PULL_REQUEST_QUEUE_LENGTH</code>: <strong>1000</strong>: Length of pull request patch test queue, make it
+as large as possible. Use caution when editing this value.</li>
+<li><code>MIRROR_QUEUE_LENGTH</code>: <strong>1000</strong>: Patch test queue length, increase if pull request patch
+testing starts hanging.</li>
+<li><code>PREFERRED_LICENSES</code>: <strong>Apache License 2.0,MIT License</strong>: Preferred Licenses to place at
+the top of the list. Name must match file name in conf/license or custom/conf/license.</li>
+<li><code>DISABLE_HTTP_GIT</code>: <strong>false</strong>: Disable the ability to interact with repositories over the
+HTTP protocol.</li>
+<li><code>USE_COMPAT_SSH_URI</code>: <strong>false</strong>: Force ssh:// clone url instead of scp-style uri when
+default SSH port is used.</li>
+<li><code>ACCESS_CONTROL_ALLOW_ORIGIN</code>: <strong>&lt;empty&gt;</strong>: Value for Access-Control-Allow-Origin header,
+default is not to present. <strong>WARNING</strong>: This maybe harmful to you website if you do not
+give it a right value.</li>
+<li><code>DEFAULT_CLOSE_ISSUES_VIA_COMMITS_IN_ANY_BRANCH</code>:  <strong>false</strong>: Close an issue if a commit on a non default branch marks it as closed.</li>
+<li><code>ENABLE_PUSH_CREATE_USER</code>:  <strong>false</strong>: Allow users to push local repositories to Gitea and have them automatically created for a user.</li>
+<li><code>ENABLE_PUSH_CREATE_ORG</code>:  <strong>false</strong>: Allow users to push local repositories to Gitea and have them automatically created for an org.</li>
+<li><code>PREFIX_ARCHIVE_FILES</code>: <strong>true</strong>: Prefix archive files by placing them in a directory named after the repository.</li>
+</ul>
+<h3 id="repository---pull-request-repositorypull-request">Repository - Pull Request (<code>repository.pull-request</code>)</h3>
+<ul>
+<li><code>WORK_IN_PROGRESS_PREFIXES</code>: <strong>WIP:,[WIP]</strong>: List of prefixes used in Pull Request
+title to mark them as Work In Progress</li>
+<li><code>CLOSE_KEYWORDS</code>: <strong>close</strong>, <strong>closes</strong>, <strong>closed</strong>, <strong>fix</strong>, <strong>fixes</strong>, <strong>fixed</strong>, <strong>resolve</strong>, <strong>resolves</strong>, <strong>resolved</strong>: List of
+keywords used in Pull Request comments to automatically close a related issue</li>
+<li><code>REOPEN_KEYWORDS</code>: <strong>reopen</strong>, <strong>reopens</strong>, <strong>reopened</strong>: List of keywords used in Pull Request comments to automatically reopen
+a related issue</li>
+<li><code>DEFAULT_MERGE_MESSAGE_COMMITS_LIMIT</code>: <strong>50</strong>: In the default merge message for squash commits include at most this many commits. Set to <code>-1</code> to include all commits</li>
+<li><code>DEFAULT_MERGE_MESSAGE_SIZE</code>: <strong>5120</strong>: In the default merge message for squash commits limit the size of the commit messages. Set to <code>-1</code> to have no limit.</li>
+<li><code>DEFAULT_MERGE_MESSAGE_ALL_AUTHORS</code>: <strong>false</strong>: In the default merge message for squash commits walk all commits to include all authors in the Co-authored-by otherwise just use those in the limited list</li>
+<li><code>DEFAULT_MERGE_MESSAGE_MAX_APPROVERS</code>: <strong>10</strong>: In default merge messages limit the number of approvers listed as <code>Reviewed-by:</code>. Set to <code>-1</code> to include all.</li>
+<li><code>DEFAULT_MERGE_MESSAGE_OFFICIAL_APPROVERS_ONLY</code>: <strong>true</strong>: In default merge messages only include approvers who are officially allowed to review.</li>
+</ul>
+<h3 id="repository---issue-repositoryissue">Repository - Issue (<code>repository.issue</code>)</h3>
+<ul>
+<li><code>LOCK_REASONS</code>: <strong>Too heated,Off-topic,Resolved,Spam</strong>: A list of reasons why a Pull Request or Issue can be locked</li>
+</ul>
+<h3 id="repository---signing-repositorysigning">Repository - Signing (<code>repository.signing</code>)</h3>
+<ul>
+<li><code>SIGNING_KEY</code>: <strong>default</strong>: [none, KEYID, default ]: Key to sign with.</li>
+<li><code>SIGNING_NAME</code> &amp; <code>SIGNING_EMAIL</code>: if a KEYID is provided as the <code>SIGNING_KEY</code>, use these as the Name and Email address of the signer. These should match publicized name and email address for the key.</li>
+<li><code>INITIAL_COMMIT</code>: <strong>always</strong>: [never, pubkey, twofa, always]: Sign initial commit.
+<ul>
+<li><code>never</code>: Never sign</li>
+<li><code>pubkey</code>: Only sign if the user has a public key</li>
+<li><code>twofa</code>: Only sign if the user is logged in with twofa</li>
+<li><code>always</code>: Always sign</li>
+<li>Options other than <code>never</code> and <code>always</code> can be combined as a comma separated list.</li>
+</ul>
+</li>
+<li><code>WIKI</code>: <strong>never</strong>: [never, pubkey, twofa, always, parentsigned]: Sign commits to wiki.</li>
+<li><code>CRUD_ACTIONS</code>: <strong>pubkey, twofa, parentsigned</strong>: [never, pubkey, twofa, parentsigned, always]: Sign CRUD actions.
+<ul>
+<li>Options as above, with the addition of:</li>
+<li><code>parentsigned</code>: Only sign if the parent commit is signed.</li>
+</ul>
+</li>
+<li><code>MERGES</code>: <strong>pubkey, twofa, basesigned, commitssigned</strong>: [never, pubkey, twofa, approved, basesigned, commitssigned, always]: Sign merges.
+<ul>
+<li><code>approved</code>: Only sign approved merges to a protected branch.</li>
+<li><code>basesigned</code>: Only sign if the parent commit in the base repo is signed.</li>
+<li><code>headsigned</code>: Only sign if the head commit in the head branch is signed.</li>
+<li><code>commitssigned</code>: Only sign if all the commits in the head branch to the merge point are signed.</li>
+</ul>
+</li>
+</ul>
+<h2 id="cors-cors">CORS (<code>cors</code>)</h2>
+<ul>
+<li><code>ENABLED</code>: <strong>false</strong>: enable cors headers (disabled by default)</li>
+<li><code>SCHEME</code>: <strong>http</strong>: scheme of allowed requests</li>
+<li><code>ALLOW_DOMAIN</code>: <strong>*</strong>: list of requesting domains that are allowed</li>
+<li><code>ALLOW_SUBDOMAIN</code>: <strong>false</strong>: allow subdomains of headers listed above to request</li>
+<li><code>METHODS</code>: <strong>GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS</strong>: list of methods allowed to request</li>
+<li><code>MAX_AGE</code>: <strong>10m</strong>: max time to cache response</li>
+<li><code>ALLOW_CREDENTIALS</code>: <strong>false</strong>: allow request with credentials</li>
+</ul>
+<h2 id="ui-ui">UI (<code>ui</code>)</h2>
+<ul>
+<li><code>EXPLORE_PAGING_NUM</code>: <strong>20</strong>: Number of repositories that are shown in one explore page.</li>
+<li><code>ISSUE_PAGING_NUM</code>: <strong>10</strong>: Number of issues that are shown in one page (for all pages that list issues).</li>
+<li><code>MEMBERS_PAGING_NUM</code>: <strong>20</strong>: Number of members that are shown in organization members.</li>
+<li><code>FEED_MAX_COMMIT_NUM</code>: <strong>5</strong>: Number of maximum commits shown in one activity feed.</li>
+<li><code>GRAPH_MAX_COMMIT_NUM</code>: <strong>100</strong>: Number of maximum commits shown in the commit graph.</li>
+<li><code>DEFAULT_THEME</code>: <strong>gitea</strong>: [gitea, arc-green]: Set the default theme for the Gitea install.</li>
+<li><code>THEMES</code>:  <strong>gitea,arc-green</strong>: All available themes. Allow users select personalized themes
+regardless of the value of <code>DEFAULT_THEME</code>.</li>
+<li><code>REACTIONS</code>: All available reactions users can choose on issues/prs and comments
+Values can be emoji alias (😄) or a unicode emoji.
+For custom reactions, add a tightly cropped square image to public/emoji/img/reaction_name.png</li>
+<li><code>DEFAULT_SHOW_FULL_NAME</code>: <strong>false</strong>: Whether the full name of the users should be shown where possible. If the full name isn&rsquo;t set, the username will be used.</li>
+<li><code>SEARCH_REPO_DESCRIPTION</code>: <strong>true</strong>: Whether to search within description at repository search on explore page.</li>
+<li><code>USE_SERVICE_WORKER</code>: <strong>true</strong>: Whether to enable a Service Worker to cache frontend assets.</li>
+</ul>
+<h3 id="ui---admin-uiadmin">UI - Admin (<code>ui.admin</code>)</h3>
+<ul>
+<li><code>USER_PAGING_NUM</code>: <strong>50</strong>: Number of users that are shown in one page.</li>
+<li><code>REPO_PAGING_NUM</code>: <strong>50</strong>: Number of repos that are shown in one page.</li>
+<li><code>NOTICE_PAGING_NUM</code>: <strong>25</strong>: Number of notices that are shown in one page.</li>
+<li><code>ORG_PAGING_NUM</code>: <strong>50</strong>: Number of organizations that are shown in one page.</li>
+</ul>
+<h3 id="ui---notification-uinotification">UI - Notification (<code>ui.notification</code>)</h3>
+<ul>
+<li><code>MIN_TIMEOUT</code>: <strong>10s</strong>: These options control how often notification is queried to update the notification count. On page load the notification count will be checked after <code>MIN_TIMEOUT</code>. The timeout will increase to <code>MAX_TIMEOUT</code> by <code>TIMEOUT_STEP</code> if the notification count is unchanged. Set MIN_TIMEOUT to 0 to turn off.</li>
+<li><code>MAX_TIMEOUT</code>: <strong>60s</strong>.</li>
+<li><code>TIMEOUT_STEP</code>: <strong>10s</strong>.</li>
+</ul>
+<h2 id="markdown-markdown">Markdown (<code>markdown</code>)</h2>
+<ul>
+<li><code>ENABLE_HARD_LINE_BREAK</code>: <strong>true</strong>: Render soft line breaks as hard line breaks, which
+means a single newline character between paragraphs will cause a line break and adding
+trailing whitespace to paragraphs is not necessary to force a line break.</li>
+<li><code>CUSTOM_URL_SCHEMES</code>: Use a comma separated list (ftp,git,svn) to indicate additional
+URL hyperlinks to be rendered in Markdown. URLs beginning in http and https are
+always displayed</li>
+</ul>
+<h2 id="server-server">Server (<code>server</code>)</h2>
+<ul>
+<li><code>PROTOCOL</code>: <strong>http</strong>: [http, https, fcgi, unix, fcgi+unix]</li>
+<li><code>DOMAIN</code>: <strong>localhost</strong>: Domain name of this server.</li>
+<li><code>ROOT_URL</code>: <strong>%(PROTOCOL)s://%(DOMAIN)s:%(HTTP_PORT)s/</strong>:
+Overwrite the automatically generated public URL.
+This is useful if the internal and the external URL don&rsquo;t match (e.g. in Docker).</li>
+<li><code>STATIC_URL_PREFIX</code>: <strong>&lt;empty&gt;</strong>:
+Overwrite this option to request static resources from a different URL.
+This includes CSS files, images, JS files and web fonts.
+Avatar images are dynamic resources and still served by gitea.
+The option can be just a different path, as in <code>/static</code>, or another domain, as in <code>https://cdn.example.com</code>.
+Requests are then made as <code>%(ROOT_URL)s/static/css/index.css</code> and <code>https://cdn.example.com/css/index.css</code> respective.
+The static files are located in the <code>public/</code> directory of the gitea source repository.</li>
+<li><code>HTTP_ADDR</code>: <strong>0.0.0.0</strong>: HTTP listen address.
+<ul>
+<li>If <code>PROTOCOL</code> is set to <code>fcgi</code>, Gitea will listen for FastCGI requests on TCP socket
+defined by <code>HTTP_ADDR</code> and <code>HTTP_PORT</code> configuration settings.</li>
+<li>If <code>PROTOCOL</code> is set to <code>unix</code> or <code>fcgi+unix</code>, this should be the name of the Unix socket file to use.</li>
+</ul>
+</li>
+<li><code>HTTP_PORT</code>: <strong>3000</strong>: HTTP listen port.
+<ul>
+<li>If <code>PROTOCOL</code> is set to <code>fcgi</code>, Gitea will listen for FastCGI requests on TCP socket
+defined by <code>HTTP_ADDR</code> and <code>HTTP_PORT</code> configuration settings.</li>
+</ul>
+</li>
+<li><code>UNIX_SOCKET_PERMISSION</code>: <strong>666</strong>: Permissions for the Unix socket.</li>
+<li><code>LOCAL_ROOT_URL</code>: <strong>%(PROTOCOL)s://%(HTTP_ADDR)s:%(HTTP_PORT)s/</strong>: Local
+(DMZ) URL for Gitea workers (such as SSH update) accessing web service. In
+most cases you do not need to change the default value. Alter it only if
+your SSH server node is not the same as HTTP node. Do not set this variable
+if <code>PROTOCOL</code> is set to <code>unix</code>.</li>
+<li><code>DISABLE_SSH</code>: <strong>false</strong>: Disable SSH feature when it&rsquo;s not available.</li>
+<li><code>START_SSH_SERVER</code>: <strong>false</strong>: When enabled, use the built-in SSH server.</li>
+<li><code>SSH_DOMAIN</code>: <strong>%(DOMAIN)s</strong>: Domain name of this server, used for displayed clone URL.</li>
+<li><code>SSH_PORT</code>: <strong>22</strong>: SSH port displayed in clone URL.</li>
+<li><code>SSH_LISTEN_HOST</code>: <strong>0.0.0.0</strong>: Listen address for the built-in SSH server.</li>
+<li><code>SSH_LISTEN_PORT</code>: <strong>%(SSH_PORT)s</strong>: Port for the built-in SSH server.</li>
+<li><code>OFFLINE_MODE</code>: <strong>false</strong>: Disables use of CDN for static files and Gravatar for profile pictures.</li>
+<li><code>DISABLE_ROUTER_LOG</code>: <strong>false</strong>: Mute printing of the router log.</li>
+<li><code>CERT_FILE</code>: <strong>https/cert.pem</strong>: Cert file path used for HTTPS. From 1.11 paths are relative to <code>CUSTOM_PATH</code>.</li>
+<li><code>KEY_FILE</code>: <strong>https/key.pem</strong>: Key file path used for HTTPS. From 1.11 paths are relative to <code>CUSTOM_PATH</code>.</li>
+<li><code>STATIC_ROOT_PATH</code>: <strong>./</strong>: Upper level of template and static files path.</li>
+<li><code>STATIC_CACHE_TIME</code>: <strong>6h</strong>: Web browser cache time for static resources on <code>custom/</code>, <code>public/</code> and all uploaded avatars.</li>
+<li><code>ENABLE_GZIP</code>: <strong>false</strong>: Enables application-level GZIP support.</li>
+<li><code>LANDING_PAGE</code>: <strong>home</strong>: Landing page for unauthenticated users [home, explore, organizations, login].</li>
+<li><code>LFS_START_SERVER</code>: <strong>false</strong>: Enables git-lfs support.</li>
+<li><code>LFS_CONTENT_PATH</code>: <strong>./data/lfs</strong>: Where to store LFS files.</li>
+<li><code>LFS_JWT_SECRET</code>: <strong>&lt;empty&gt;</strong>: LFS authentication secret, change this a unique string.</li>
+<li><code>LFS_HTTP_AUTH_EXPIRY</code>: <strong>20m</strong>: LFS authentication validity period in time.Duration, pushes taking longer than this may fail.</li>
+<li><code>LFS_MAX_FILE_SIZE</code>: <strong>0</strong>: Maximum allowed LFS file size in bytes (Set to 0 for no limit).</li>
+<li><code>LFS_LOCK_PAGING_NUM</code>: <strong>50</strong>: Maximum number of LFS Locks returned per page.</li>
+<li><code>REDIRECT_OTHER_PORT</code>: <strong>false</strong>: If true and <code>PROTOCOL</code> is https, allows redirecting http requests on <code>PORT_TO_REDIRECT</code> to the https port Gitea listens on.</li>
+<li><code>PORT_TO_REDIRECT</code>: <strong>80</strong>: Port for the http redirection service to listen on. Used when <code>REDIRECT_OTHER_PORT</code> is true.</li>
+<li><code>ENABLE_LETSENCRYPT</code>: <strong>false</strong>: If enabled you must set <code>DOMAIN</code> to valid internet facing domain (ensure DNS is set and port 80 is accessible by letsencrypt validation server).
+By using Lets Encrypt <strong>you must consent</strong> to their <a href="https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf">terms of service</a>.</li>
+<li><code>LETSENCRYPT_ACCEPTTOS</code>: <strong>false</strong>: This is an explicit check that you accept the terms of service for Let&rsquo;s Encrypt.</li>
+<li><code>LETSENCRYPT_DIRECTORY</code>: <strong>https</strong>: Directory that Letsencrypt will use to cache information such as certs and private keys.</li>
+<li><code>LETSENCRYPT_EMAIL</code>: <strong><a href="mailto:email@example.com">email@example.com</a></strong>: Email used by Letsencrypt to notify about problems with issued certificates. (No default)</li>
+<li><code>ALLOW_GRACEFUL_RESTARTS</code>: <strong>true</strong>: Perform a graceful restart on SIGHUP</li>
+<li><code>GRACEFUL_HAMMER_TIME</code>: <strong>60s</strong>: After a restart the parent process will stop accepting new connections and will allow requests to finish before stopping. Shutdown will be forced if it takes longer than this time.</li>
+<li><code>STARTUP_TIMEOUT</code>: <strong>0</strong>: Shutsdown the server if startup takes longer than the provided time. On Windows setting this sends a waithint to the SVC host to tell the SVC host startup may take some time. Please note startup is determined by the opening of the listeners - HTTP/HTTPS/SSH. Indexers may take longer to startup and can have their own timeouts.</li>
+</ul>
+<h2 id="database-database">Database (<code>database</code>)</h2>
+<ul>
+<li><code>DB_TYPE</code>: <strong>mysql</strong>: The database type in use [mysql, postgres, mssql, sqlite3].</li>
+<li><code>HOST</code>: <strong>127.0.0.1:3306</strong>: Database host address and port or absolute path for unix socket [mysql, postgres] (ex: /var/run/mysqld/mysqld.sock).</li>
+<li><code>NAME</code>: <strong>gitea</strong>: Database name.</li>
+<li><code>USER</code>: <strong>root</strong>: Database username.</li>
+<li><code>PASSWD</code>: <strong>&lt;empty&gt;</strong>: Database user password. Use `your password` for quoting if you use special characters in the password.</li>
+<li><code>SCHEMA</code>: <strong>&lt;empty&gt;</strong>: For PostgreSQL only, schema to use if different from &ldquo;public&rdquo;. The schema must exist beforehand,
+the user must have creation privileges on it, and the user search path must be set to the look into the schema first
+(e.g. <code>ALTER USER user SET SEARCH_PATH = schema_name,&quot;$user&quot;,public;</code>).</li>
+<li><code>SSL_MODE</code>: <strong>disable</strong>: SSL/TLS encryption mode for connecting to the database. This option is only applied for PostgreSQL and MySQL.
+<ul>
+<li>Valid values for MySQL:
+<ul>
+<li><code>true</code>: Enable TLS with verification of the database server certificate against its root certificate. When selecting this option make sure that the root certificate required to validate the database server certificate (e.g. the CA certificate) is on the system certificate store of both the database and Gitea servers. See your system documentation for instructions on how to add a CA certificate to the certificate store.</li>
+<li><code>false</code>: Disable TLS.</li>
+<li><code>disable</code>: Alias for <code>false</code>, for compatibility with PostgreSQL.</li>
+<li><code>skip-verify</code>: Enable TLS without database server certificate verification. Use this option if you have self-signed or invalid certificate on the database server.</li>
+<li><code>prefer</code>: Enable TLS with fallback to non-TLS connection.</li>
+</ul>
+</li>
+<li>Valid values for PostgreSQL:
+<ul>
+<li><code>disable</code>: Disable TLS.</li>
+<li><code>require</code>: Enable TLS without any verifications.</li>
+<li><code>verify-ca</code>: Enable TLS with verification of the database server certificate against its root certificate.</li>
+<li><code>verify-full</code>: Enable TLS and verify the database server name matches the given certificate in either the <code>Common Name</code> or <code>Subject Alternative Name</code> fields.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>CHARSET</code>: <strong>utf8</strong>: For MySQL only, either &ldquo;utf8&rdquo; or &ldquo;utf8mb4&rdquo;, default is &ldquo;utf8&rdquo;. NOTICE: for &ldquo;utf8mb4&rdquo; you must use MySQL InnoDB &gt; 5.6. Gitea is unable to check this.</li>
+<li><code>PATH</code>: <strong>data/gitea.db</strong>: For SQLite3 only, the database file path.</li>
+<li><code>LOG_SQL</code>: <strong>true</strong>: Log the executed SQL.</li>
+<li><code>DB_RETRIES</code>: <strong>10</strong>: How many ORM init / DB connect attempts allowed.</li>
+<li><code>DB_RETRY_BACKOFF</code>: <strong>3s</strong>: time.Duration to wait before trying another ORM init / DB connect attempt, if failure occured.</li>
+<li><code>MAX_OPEN_CONNS</code> <strong>0</strong>: Database maximum open connections - default is 0, meaning there is no limit.</li>
+<li><code>MAX_IDLE_CONNS</code> <strong>2</strong>: Max idle database connections on connnection pool, default is 2 - this will be capped to <code>MAX_OPEN_CONNS</code>.</li>
+<li><code>CONN_MAX_LIFETIME</code> <strong>0 or 3s</strong>: Sets the maximum amount of time a DB connection may be reused - default is 0, meaning there is no limit (except on MySQL where it is 3s - see #6804 &amp; #7071).</li>
+</ul>
+<p>Please see #8540 &amp; #8273 for further discussion of the appropriate values for <code>MAX_OPEN_CONNS</code>, <code>MAX_IDLE_CONNS</code> &amp; <code>CONN_MAX_LIFETIME</code> and their
+relation to port exhaustion.</p>
+<h2 id="indexer-indexer">Indexer (<code>indexer</code>)</h2>
+<ul>
+<li>
+<p><code>ISSUE_INDEXER_TYPE</code>: <strong>bleve</strong>: Issue indexer type, currently supported: <code>bleve</code>, <code>db</code> or <code>elasticsearch</code>.</p>
+</li>
+<li>
+<p><code>ISSUE_INDEXER_CONN_STR</code>: ****: Issue indexer connection string, available when ISSUE_INDEXER_TYPE is elasticsearch. i.e. http://elastic:changeme@localhost:9200</p>
+</li>
+<li>
+<p><code>ISSUE_INDEXER_NAME</code>: <strong>gitea_issues</strong>: Issue indexer name, available when ISSUE_INDEXER_TYPE is elasticsearch</p>
+</li>
+<li>
+<p><code>ISSUE_INDEXER_PATH</code>: <strong>indexers/issues.bleve</strong>: Index file used for issue search; available when ISSUE_INDEXER_TYPE is bleve and elasticsearch.</p>
+</li>
+<li>
+<p>The next 4 configuration values are deprecated and should be set in <code>queue.issue_indexer</code> however are kept for backwards compatibility:</p>
+</li>
+<li>
+<p><code>ISSUE_INDEXER_QUEUE_TYPE</code>: <strong>levelqueue</strong>: Issue indexer queue, currently supports:<code>channel</code>, <code>levelqueue</code>, <code>redis</code>.</p>
+</li>
+<li>
+<p><code>ISSUE_INDEXER_QUEUE_DIR</code>: <strong>indexers/issues.queue</strong>: When <code>ISSUE_INDEXER_QUEUE_TYPE</code> is <code>levelqueue</code>, this will be the queue will be saved path.</p>
+</li>
+<li>
+<p><code>ISSUE_INDEXER_QUEUE_CONN_STR</code>: <strong>addrs=127.0.0.1:6379 db=0</strong>: When <code>ISSUE_INDEXER_QUEUE_TYPE</code> is <code>redis</code>, this will store the redis connection string.</p>
+</li>
+<li>
+<p><code>ISSUE_INDEXER_QUEUE_BATCH_NUMBER</code>: <strong>20</strong>: Batch queue number.</p>
+</li>
+<li>
+<p><code>REPO_INDEXER_ENABLED</code>: <strong>false</strong>: Enables code search (uses a lot of disk space, about 6 times more than the repository size).</p>
+</li>
+<li>
+<p><code>REPO_INDEXER_PATH</code>: <strong>indexers/repos.bleve</strong>: Index file used for code search.</p>
+</li>
+<li>
+<p><code>REPO_INDEXER_INCLUDE</code>: <strong>empty</strong>: A comma separated list of glob patterns (see <a href="https://github.com/gobwas/glob">https://github.com/gobwas/glob</a>) to <strong>include</strong> in the index. Use <code>**.txt</code> to match any files with .txt extension. An empty list means include all files.</p>
+</li>
+<li>
+<p><code>REPO_INDEXER_EXCLUDE</code>: <strong>empty</strong>: A comma separated list of glob patterns (see <a href="https://github.com/gobwas/glob">https://github.com/gobwas/glob</a>) to <strong>exclude</strong> from the index. Files that match this list will not be indexed, even if they match in <code>REPO_INDEXER_INCLUDE</code>.</p>
+</li>
+<li>
+<p><code>REPO_INDEXER_EXCLUDE_VENDORED</code>: <strong>true</strong>: Exclude vendored files from index.</p>
+</li>
+<li>
+<p><code>UPDATE_BUFFER_LEN</code>: <strong>20</strong>: Buffer length of index request.</p>
+</li>
+<li>
+<p><code>MAX_FILE_SIZE</code>: <strong>1048576</strong>: Maximum size in bytes of files to be indexed.</p>
+</li>
+<li>
+<p><code>STARTUP_TIMEOUT</code>: <strong>30s</strong>: If the indexer takes longer than this timeout to start - fail. (This timeout will be added to the hammer time above for child processes - as bleve will not start until the previous parent is shutdown.) Set to zero to never timeout.</p>
+</li>
+</ul>
+<h2 id="queue-queue-and-queue">Queue (<code>queue</code> and <code>queue.*</code>)</h2>
+<ul>
+<li><code>TYPE</code>: <strong>persistable-channel</strong>: General queue type, currently support: <code>persistable-channel</code>, <code>channel</code>, <code>level</code>, <code>redis</code>, <code>dummy</code></li>
+<li><code>DATADIR</code>: <strong>queues/</strong>: Base DataDir for storing persistent and level queues. <code>DATADIR</code> for inidividual queues can be set in <code>queue.name</code> sections but will default to <code>DATADIR/</code><strong><code>name</code></strong>.</li>
+<li><code>LENGTH</code>: <strong>20</strong>: Maximal queue size before channel queues block</li>
+<li><code>BATCH_LENGTH</code>: <strong>20</strong>: Batch data before passing to the handler</li>
+<li><code>CONN_STR</code>: <strong>addrs=127.0.0.1:6379 db=0</strong>: Connection string for the redis queue type.</li>
+<li><code>QUEUE_NAME</code>: <strong>_queue</strong>: The suffix for default redis queue name. Individual queues will default to <strong><code>name</code></strong><code>QUEUE_NAME</code> but can be overriden in the specific <code>queue.name</code> section.</li>
+<li><code>SET_NAME</code>: <strong>_unique</strong>: The suffix that will added to the default redis
+set name for unique queues. Individual queues will default to
+<strong><code>name</code></strong><code>QUEUE_NAME</code>_<code>SET_NAME</code>_ but can be overridden in the specific
+<code>queue.name</code> section.</li>
+<li><code>WRAP_IF_NECESSARY</code>: <strong>true</strong>: Will wrap queues with a timeoutable queue if the selected queue is not ready to be created - (Only relevant for the level queue.)</li>
+<li><code>MAX_ATTEMPTS</code>: <strong>10</strong>: Maximum number of attempts to create the wrapped queue</li>
+<li><code>TIMEOUT</code>: <strong>GRACEFUL_HAMMER_TIME + 30s</strong>: Timeout the creation of the wrapped queue if it takes longer than this to create.</li>
+<li>Queues by default come with a dynamically scaling worker pool. The following settings configure this:</li>
+<li><code>WORKERS</code>: <strong>1</strong>: Number of initial workers for the queue.</li>
+<li><code>MAX_WORKERS</code>: <strong>10</strong>: Maximum number of worker go-routines for the queue.</li>
+<li><code>BLOCK_TIMEOUT</code>: <strong>1s</strong>: If the queue blocks for this time, boost the number of workers - the <code>BLOCK_TIMEOUT</code> will then be doubled before boosting again whilst the boost is ongoing.</li>
+<li><code>BOOST_TIMEOUT</code>: <strong>5m</strong>: Boost workers will timeout after this long.</li>
+<li><code>BOOST_WORKERS</code>: <strong>5</strong>: This many workers will be added to the worker pool if there is a boost.</li>
+</ul>
+<h2 id="admin-admin">Admin (<code>admin</code>)</h2>
+<ul>
+<li><code>DEFAULT_EMAIL_NOTIFICATIONS</code>: <strong>enabled</strong>: Default configuration for email notifications for users (user configurable). Options: enabled, onmention, disabled</li>
+</ul>
+<h2 id="security-security">Security (<code>security</code>)</h2>
+<ul>
+<li><code>INSTALL_LOCK</code>: <strong>false</strong>: Disallow access to the install page.</li>
+<li><code>SECRET_KEY</code>: <strong>&lt;random at every install&gt;</strong>: Global secret key. This should be changed.</li>
+<li><code>LOGIN_REMEMBER_DAYS</code>: <strong>7</strong>: Cookie lifetime, in days.</li>
+<li><code>COOKIE_USERNAME</code>: <strong>gitea_awesome</strong>: Name of the cookie used to store the current username.</li>
+<li><code>COOKIE_REMEMBER_NAME</code>: <strong>gitea_incredible</strong>: Name of cookie used to store authentication
+information.</li>
+<li><code>REVERSE_PROXY_AUTHENTICATION_USER</code>: <strong>X-WEBAUTH-USER</strong>: Header name for reverse proxy
+authentication.</li>
+<li><code>REVERSE_PROXY_AUTHENTICATION_EMAIL</code>: <strong>X-WEBAUTH-EMAIL</strong>: Header name for reverse proxy
+authentication provided email.</li>
+<li><code>DISABLE_GIT_HOOKS</code>: <strong>false</strong>: Set to <code>true</code> to prevent all users (including admin) from creating custom
+git hooks.</li>
+<li><code>ONLY_ALLOW_PUSH_IF_GITEA_ENVIRONMENT_SET</code>: <strong>true</strong>: Set to <code>false</code> to allow local users to push to gitea-repositories without setting up the Gitea environment. This is not recommended and if you want local users to push to gitea repositories you should set the environment appropriately.</li>
+<li><code>IMPORT_LOCAL_PATHS</code>: <strong>false</strong>: Set to <code>false</code> to prevent all users (including admin) from importing local path on server.</li>
+<li><code>INTERNAL_TOKEN</code>: <strong>&lt;random at every install if no uri set&gt;</strong>: Secret used to validate communication within Gitea binary.</li>
+<li><code>INTERNAL_TOKEN_URI</code>: <strong><!-- raw HTML omitted --></strong>: Instead of defining internal token in the configuration, this configuration option can be used to give Gitea a path to a file that contains the internal token (example value: <code>file:/etc/gitea/internal_token</code>)</li>
+<li><code>PASSWORD_HASH_ALGO</code>: <strong>pbkdf2</strong>: The hash algorithm to use [pbkdf2, argon2, scrypt, bcrypt].</li>
+<li><code>CSRF_COOKIE_HTTP_ONLY</code>: <strong>true</strong>: Set false to allow JavaScript to read CSRF cookie.</li>
+<li><code>PASSWORD_COMPLEXITY</code>: <strong>lower,upper,digit,spec</strong>: Comma separated list of character classes required to pass minimum complexity. If left empty or no valid values are specified, the default values will be used. Possible values are:
+<ul>
+<li>lower - use one or more lower latin characters</li>
+<li>upper - use one or more upper latin characters</li>
+<li>digit - use one or more digits</li>
+<li>spec - use one or more special characters as <code>!&quot;#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~</code></li>
+<li>off - do not check password complexity</li>
+</ul>
+</li>
+</ul>
+<h2 id="openid-openid">OpenID (<code>openid</code>)</h2>
+<ul>
+<li><code>ENABLE_OPENID_SIGNIN</code>: <strong>false</strong>: Allow authentication in via OpenID.</li>
+<li><code>ENABLE_OPENID_SIGNUP</code>: <strong>! DISABLE_REGISTRATION</strong>: Allow registering via OpenID.</li>
+<li><code>WHITELISTED_URIS</code>: <strong>&lt;empty&gt;</strong>: If non-empty, list of POSIX regex patterns matching
+OpenID URI&rsquo;s to permit.</li>
+<li><code>BLACKLISTED_URIS</code>: <strong>&lt;empty&gt;</strong>: If non-empty, list of POSIX regex patterns matching
+OpenID URI&rsquo;s to block.</li>
+</ul>
+<h2 id="service-service">Service (<code>service</code>)</h2>
+<ul>
+<li><code>ACTIVE_CODE_LIVE_MINUTES</code>: <strong>180</strong>: Time limit (min) to confirm account/email registration.</li>
+<li><code>RESET_PASSWD_CODE_LIVE_MINUTES</code>: <strong>180</strong>: Time limit (min) to confirm forgot password reset
+process.</li>
+<li><code>REGISTER_EMAIL_CONFIRM</code>: <strong>false</strong>: Enable this to ask for mail confirmation of registration.
+Requires <code>Mailer</code> to be enabled.</li>
+<li><code>DISABLE_REGISTRATION</code>: <strong>false</strong>: Disable registration, after which only admin can create
+accounts for users.</li>
+<li><code>REQUIRE_EXTERNAL_REGISTRATION_PASSWORD</code>: <strong>false</strong>: Enable this to force externally created
+accounts (via GitHub, OpenID Connect, etc) to create a password. Warning: enabling this will
+decrease security, so you should only enable it if you know what you&rsquo;re doing.</li>
+<li><code>REQUIRE_SIGNIN_VIEW</code>: <strong>false</strong>: Enable this to force users to log in to view any page or to use API.</li>
+<li><code>ENABLE_NOTIFY_MAIL</code>: <strong>false</strong>: Enable this to send e-mail to watchers of a repository when
+something happens, like creating issues. Requires <code>Mailer</code> to be enabled.</li>
+<li><code>ENABLE_BASIC_AUTHENTICATION</code>: <strong>true</strong>: Disable this to disallow authenticaton using HTTP
+BASIC and the user&rsquo;s password. Please note if you disable this you will not be able to access the
+tokens API endpoints using a password. Further, this only disables BASIC authentication using the
+password - not tokens or OAuth Basic.</li>
+<li><code>ENABLE_REVERSE_PROXY_AUTHENTICATION</code>: <strong>false</strong>: Enable this to allow reverse proxy authentication.</li>
+<li><code>ENABLE_REVERSE_PROXY_AUTO_REGISTRATION</code>: <strong>false</strong>: Enable this to allow auto-registration
+for reverse authentication.</li>
+<li><code>ENABLE_REVERSE_PROXY_EMAIL</code>: <strong>false</strong>: Enable this to allow to auto-registration with a
+provided email rather than a generated email.</li>
+<li><code>ENABLE_CAPTCHA</code>: <strong>false</strong>: Enable this to use captcha validation for registration.</li>
+<li><code>REQUIRE_EXTERNAL_REGISTRATION_CAPTCHA</code>: <strong>false</strong>: Enable this to force captcha validation
+even for External Accounts (i.e. GitHub, OpenID Connect, etc). You must <code>ENABLE_CAPTCHA</code> also.</li>
+<li><code>CAPTCHA_TYPE</code>: <strong>image</strong>: [image, recaptcha]</li>
+<li><code>RECAPTCHA_SECRET</code>: <strong>&quot;&quot;</strong>: Go to <a href="https://www.google.com/recaptcha/admin">https://www.google.com/recaptcha/admin</a> to get a secret for recaptcha.</li>
+<li><code>RECAPTCHA_SITEKEY</code>: <strong>&quot;&quot;</strong>: Go to <a href="https://www.google.com/recaptcha/admin">https://www.google.com/recaptcha/admin</a> to get a sitekey for recaptcha.</li>
+<li><code>RECAPTCHA_URL</code>: <strong><a href="https://www.google.com/recaptcha/">https://www.google.com/recaptcha/</a></strong>: Set the recaptcha url - allows the use of recaptcha net.</li>
+<li><code>DEFAULT_ENABLE_DEPENDENCIES</code>: <strong>true</strong>: Enable this to have dependencies enabled by default.</li>
+<li><code>ALLOW_CROSS_REPOSITORY_DEPENDENCIES</code> : <strong>true</strong> Enable this to allow dependencies on issues from any repository where the user is granted access.</li>
+<li><code>ENABLE_USER_HEATMAP</code>: <strong>true</strong>: Enable this to display the heatmap on users profiles.</li>
+<li><code>EMAIL_DOMAIN_WHITELIST</code>: <strong>&lt;empty&gt;</strong>: If non-empty, list of domain names that can only be used to register
+on this instance.</li>
+<li><code>SHOW_REGISTRATION_BUTTON</code>: <strong>! DISABLE_REGISTRATION</strong>: Show Registration Button</li>
+<li><code>SHOW_MILESTONES_DASHBOARD_PAGE</code>: <strong>true</strong> Enable this to show the milestones dashboard page - a view of all the user&rsquo;s milestones</li>
+<li><code>AUTO_WATCH_NEW_REPOS</code>: <strong>true</strong>: Enable this to let all organisation users watch new repos when they are created</li>
+<li><code>AUTO_WATCH_ON_CHANGES</code>: <strong>false</strong>: Enable this to make users watch a repository after their first commit to it</li>
+<li><code>DEFAULT_ORG_VISIBILITY</code>: <strong>public</strong>: Set default visibility mode for organisations, either &ldquo;public&rdquo;, &ldquo;limited&rdquo; or &ldquo;private&rdquo;.</li>
+<li><code>DEFAULT_ORG_MEMBER_VISIBLE</code>: <strong>false</strong> True will make the membership of the users visible when added to the organisation.</li>
+<li><code>ALLOW_ONLY_EXTERNAL_REGISTRATION</code>: <strong>false</strong> Set to true to force registration only using third-party services.</li>
+<li><code>NO_REPLY_ADDRESS</code>: <strong>DOMAIN</strong> Default value for the domain part of the user&rsquo;s email address in the git log if he has set KeepEmailPrivate to true.
+The user&rsquo;s email will be replaced with a concatenation of the user name in lower case, &ldquo;@&rdquo; and NO_REPLY_ADDRESS.</li>
+</ul>
+<h2 id="webhook-webhook">Webhook (<code>webhook</code>)</h2>
+<ul>
+<li><code>QUEUE_LENGTH</code>: <strong>1000</strong>: Hook task queue length. Use caution when editing this value.</li>
+<li><code>DELIVER_TIMEOUT</code>: <strong>5</strong>: Delivery timeout (sec) for shooting webhooks.</li>
+<li><code>SKIP_TLS_VERIFY</code>: <strong>false</strong>: Allow insecure certification.</li>
+<li><code>PAGING_NUM</code>: <strong>10</strong>: Number of webhook history events that are shown in one page.</li>
+<li><code>PROXY_URL</code>: ****: Proxy server URL, support http://, https//, socks://, blank will follow environment http_proxy/https_proxy</li>
+<li><code>PROXY_HOSTS</code>: ***<em>: Comma separated list of host names requiring proxy. Glob patterns (</em>) are accepted; use ** to match all hosts.</li>
+</ul>
+<h2 id="mailer-mailer">Mailer (<code>mailer</code>)</h2>
+<ul>
+<li><code>ENABLED</code>: <strong>false</strong>: Enable to use a mail service.</li>
+<li><code>DISABLE_HELO</code>: <strong>&lt;empty&gt;</strong>: Disable HELO operation.</li>
+<li><code>HELO_HOSTNAME</code>: <strong>&lt;empty&gt;</strong>: Custom hostname for HELO operation.</li>
+<li><code>HOST</code>: <strong>&lt;empty&gt;</strong>: SMTP mail host address and port (example: smtp.gitea.io:587).</li>
+<li><code>FROM</code>: <strong>&lt;empty&gt;</strong>: Mail from address, RFC 5322. This can be just an email address, or
+the &ldquo;Name&rdquo; &lt;email@example.com&gt; format.</li>
+<li><code>USER</code>: <strong>&lt;empty&gt;</strong>: Username of mailing user (usually the sender&rsquo;s e-mail address).</li>
+<li><code>PASSWD</code>: <strong>&lt;empty&gt;</strong>: Password of mailing user.  Use `your password` for quoting if you use special characters in the password.</li>
+<li><code>SKIP_VERIFY</code>: <strong>&lt;empty&gt;</strong>: Do not verify the self-signed certificates.
+<ul>
+<li><strong>Note:</strong> Gitea only supports SMTP with STARTTLS.</li>
+</ul>
+</li>
+<li><code>SUBJECT_PREFIX</code>: <strong>&lt;empty&gt;</strong>: Prefix to be placed before e-mail subject lines.</li>
+<li><code>MAILER_TYPE</code>: <strong>smtp</strong>: [smtp, sendmail, dummy]
+<ul>
+<li><strong>smtp</strong> Use SMTP to send mail</li>
+<li><strong>sendmail</strong> Use the operating system&rsquo;s <code>sendmail</code> command instead of SMTP.
+This is common on linux systems.</li>
+<li><strong>dummy</strong> Send email messages to the log as a testing phase.</li>
+<li>Note that enabling sendmail will ignore all other <code>mailer</code> settings except <code>ENABLED</code>,
+<code>FROM</code>, <code>SUBJECT_PREFIX</code> and <code>SENDMAIL_PATH</code>.</li>
+<li>Enabling dummy will ignore all settings except <code>ENABLED</code>, <code>SUBJECT_PREFIX</code> and <code>FROM</code>.</li>
+</ul>
+</li>
+<li><code>SENDMAIL_PATH</code>: <strong>sendmail</strong>: The location of sendmail on the operating system (can be
+command or full path).</li>
+<li><code>IS_TLS_ENABLED</code> :  <strong>false</strong> : Decide if SMTP connections should use TLS.</li>
+</ul>
+<h2 id="cache-cache">Cache (<code>cache</code>)</h2>
+<ul>
+<li><code>ENABLED</code>: <strong>true</strong>: Enable the cache.</li>
+<li><code>ADAPTER</code>: <strong>memory</strong>: Cache engine adapter, either <code>memory</code>, <code>redis</code>, or <code>memcache</code>.</li>
+<li><code>INTERVAL</code>: <strong>60</strong>: Garbage Collection interval (sec), for memory cache only.</li>
+<li><code>HOST</code>: <strong>&lt;empty&gt;</strong>: Connection string for <code>redis</code> and <code>memcache</code>.
+<ul>
+<li>Redis: <code>network=tcp,addr=127.0.0.1:6379,password=macaron,db=0,pool_size=100,idle_timeout=180</code></li>
+<li>Memcache: <code>127.0.0.1:9090;127.0.0.1:9091</code></li>
+</ul>
+</li>
+<li><code>ITEM_TTL</code>: <strong>16h</strong>: Time to keep items in cache if not used, Setting it to 0 disables caching.</li>
+</ul>
+<h2 id="cache---lastcommitcache-settings-cachelast_commit">Cache - LastCommitCache settings (<code>cache.last_commit</code>)</h2>
+<ul>
+<li><code>ENABLED</code>: <strong>true</strong>: Enable the cache.</li>
+<li><code>ITEM_TTL</code>: <strong>8760h</strong>: Time to keep items in cache if not used, Setting it to 0 disables caching.</li>
+<li><code>COMMITS_COUNT</code>: <strong>1000</strong>: Only enable the cache when repository&rsquo;s commits count great than.</li>
+</ul>
+<h2 id="session-session">Session (<code>session</code>)</h2>
+<ul>
+<li><code>PROVIDER</code>: <strong>memory</strong>: Session engine provider [memory, file, redis, mysql, couchbase, memcache, nodb, postgres].</li>
+<li><code>PROVIDER_CONFIG</code>: <strong>data/sessions</strong>: For file, the root path; for others, the connection string.</li>
+<li><code>COOKIE_SECURE</code>: <strong>false</strong>: Enable this to force using HTTPS for all session access.</li>
+<li><code>COOKIE_NAME</code>: <strong>i_like_gitea</strong>: The name of the cookie used for the session ID.</li>
+<li><code>GC_INTERVAL_TIME</code>: <strong>86400</strong>: GC interval in seconds.</li>
+</ul>
+<h2 id="picture-picture">Picture (<code>picture</code>)</h2>
+<ul>
+<li><code>GRAVATAR_SOURCE</code>: <strong>gravatar</strong>: Can be <code>gravatar</code>, <code>duoshuo</code> or anything like
+<code>http://cn.gravatar.com/avatar/</code>.</li>
+<li><code>DISABLE_GRAVATAR</code>: <strong>false</strong>: Enable this to use local avatars only.</li>
+<li><code>ENABLE_FEDERATED_AVATAR</code>: <strong>false</strong>: Enable support for federated avatars (see
+<a href="http://www.libravatar.org">http://www.libravatar.org</a>).</li>
+<li><code>AVATAR_UPLOAD_PATH</code>: <strong>data/avatars</strong>: Path to store user avatar image files.</li>
+<li><code>REPOSITORY_AVATAR_UPLOAD_PATH</code>: <strong>data/repo-avatars</strong>: Path to store repository avatar image files.</li>
+<li><code>REPOSITORY_AVATAR_FALLBACK</code>: <strong>none</strong>: How Gitea deals with missing repository avatars
+<ul>
+<li>none = no avatar will be displayed</li>
+<li>random = random avatar will be generated</li>
+<li>image = default image will be used (which is set in <code>REPOSITORY_AVATAR_DEFAULT_IMAGE</code>)</li>
+</ul>
+</li>
+<li><code>REPOSITORY_AVATAR_FALLBACK_IMAGE</code>: <strong>/img/repo_default.png</strong>: Image used as default repository avatar (if <code>REPOSITORY_AVATAR_FALLBACK</code> is set to image and none was uploaded)</li>
+<li><code>AVATAR_MAX_WIDTH</code>: <strong>4096</strong>: Maximum avatar image width in pixels.</li>
+<li><code>AVATAR_MAX_HEIGHT</code>: <strong>3072</strong>: Maximum avatar image height in pixels.</li>
+<li><code>AVATAR_MAX_FILE_SIZE</code>: <strong>1048576</strong> (1Mb): Maximum avatar image file size in bytes.</li>
+</ul>
+<h2 id="attachment-attachment">Attachment (<code>attachment</code>)</h2>
+<ul>
+<li><code>ENABLED</code>: <strong>true</strong>: Enable this to allow uploading attachments.</li>
+<li><code>PATH</code>: <strong>data/attachments</strong>: Path to store attachments.</li>
+<li><code>ALLOWED_TYPES</code>: <strong>see app.ini.sample</strong>: Allowed MIME types, e.g. <code>image/jpeg|image/png</code>.
+Use <code>*/*</code> for all types.</li>
+<li><code>MAX_SIZE</code>: <strong>4</strong>: Maximum size (MB).</li>
+<li><code>MAX_FILES</code>: <strong>5</strong>: Maximum number of attachments that can be uploaded at once.</li>
+</ul>
+<h2 id="log-log">Log (<code>log</code>)</h2>
+<ul>
+<li><code>ROOT_PATH</code>: <strong>&lt;empty&gt;</strong>: Root path for log files.</li>
+<li><code>MODE</code>: <strong>console</strong>: Logging mode. For multiple modes, use a comma to separate values. You can configure each mode in per mode log subsections <code>\[log.modename\]</code>. By default the file mode will log to <code>$ROOT_PATH/gitea.log</code>.</li>
+<li><code>LEVEL</code>: <strong>Info</strong>: General log level. [Trace, Debug, Info, Warn, Error, Critical, Fatal, None]</li>
+<li><code>STACKTRACE_LEVEL</code>: <strong>None</strong>: Default log level at which to log create stack traces. [Trace, Debug, Info, Warn, Error, Critical, Fatal, None]</li>
+<li><code>REDIRECT_MACARON_LOG</code>: <strong>false</strong>: Redirects the Macaron log to its own logger or the default logger.</li>
+<li><code>MACARON</code>: <strong>file</strong>: Logging mode for the macaron logger, use a comma to separate values. Configure each mode in per mode log subsections <code>\[log.modename.macaron\]</code>. By default the file mode will log to <code>$ROOT_PATH/macaron.log</code>. (If you set this to <code>,</code> it will log to default gitea logger.)</li>
+<li><code>ROUTER_LOG_LEVEL</code>: <strong>Info</strong>: The log level that the router should log at. (If you are setting the access log, its recommended to place this at Debug.)</li>
+<li><code>ROUTER</code>: <strong>console</strong>: The mode or name of the log the router should log to. (If you set this to <code>,</code> it will log to default gitea logger.)
+NB: You must <code>REDIRECT_MACARON_LOG</code> and have <code>DISABLE_ROUTER_LOG</code> set to <code>false</code> for this option to take effect. Configure each mode in per mode log subsections <code>\[log.modename.router\]</code>.</li>
+<li><code>ENABLE_ACCESS_LOG</code>: <strong>false</strong>: Creates an access.log in NCSA common log format, or as per the following template</li>
+<li><code>ACCESS</code>: <strong>file</strong>: Logging mode for the access logger, use a comma to separate values. Configure each mode in per mode log subsections <code>\[log.modename.access\]</code>. By default the file mode will log to <code>$ROOT_PATH/access.log</code>. (If you set this to <code>,</code> it will log to the default gitea logger.)</li>
+<li><code>ACCESS_LOG_TEMPLATE</code>: <strong><code>{{.Ctx.RemoteAddr}} - {{.Identity}} {{.Start.Format &quot;[02/Jan/2006:15:04:05 -0700]&quot; }} &quot;{{.Ctx.Req.Method}} {{.Ctx.Req.URL.RequestURI}} {{.Ctx.Req.Proto}}&quot; {{.ResponseWriter.Status}} {{.ResponseWriter.Size}} &quot;{{.Ctx.Req.Referer}}\&quot; \&quot;{{.Ctx.Req.UserAgent}}&quot;</code></strong>: Sets the template used to create the access log.
+<ul>
+<li>The following variables are available:</li>
+<li><code>Ctx</code>: the <code>macaron.Context</code> of the request.</li>
+<li><code>Identity</code>: the SignedUserName or <code>&quot;-&quot;</code> if not logged in.</li>
+<li><code>Start</code>: the start time of the request.</li>
+<li><code>ResponseWriter</code>: the responseWriter from the request.</li>
+<li>You must be very careful to ensure that this template does not throw errors or panics as this template runs outside of the panic/recovery script.</li>
+</ul>
+</li>
+<li><code>ENABLE_XORM_LOG</code>: <strong>true</strong>: Set whether to perform XORM logging. Please note SQL statement logging can be disabled by setting <code>LOG_SQL</code> to false in the <code>[database]</code> section.</li>
+</ul>
+<h3 id="log-subsections-logname-logname">Log subsections (<code>log.name</code>, <code>log.name.*</code>)</h3>
+<ul>
+<li><code>LEVEL</code>: <strong>log.LEVEL</strong>: Sets the log-level of this sublogger. Defaults to the <code>LEVEL</code> set in the global <code>[log]</code> section.</li>
+<li><code>STACKTRACE_LEVEL</code>: <strong>log.STACKTRACE_LEVEL</strong>: Sets the log level at which to log stack traces.</li>
+<li><code>MODE</code>: <strong>name</strong>: Sets the mode of this sublogger - Defaults to the provided subsection name. This allows you to have two different file loggers at different levels.</li>
+<li><code>EXPRESSION</code>: <strong>&quot;&quot;</strong>: A regular expression to match either the function name, file or message. Defaults to empty. Only log messages that match the expression will be saved in the logger.</li>
+<li><code>FLAGS</code>: <strong>stdflags</strong>: A comma separated string representing the log flags. Defaults to <code>stdflags</code> which represents the prefix: <code>2009/01/23 01:23:23 ...a/b/c/d.go:23:runtime.Caller() [I]: message</code>. <code>none</code> means don&rsquo;t prefix log lines. See <code>modules/log/base.go</code> for more information.</li>
+<li><code>PREFIX</code>: <strong>&quot;&quot;</strong>: An additional prefix for every log line in this logger. Defaults to empty.</li>
+<li><code>COLORIZE</code>: <strong>false</strong>: Colorize the log lines by default</li>
+</ul>
+<h3 id="console-log-mode-logconsole-logconsole-or-modeconsole">Console log mode (<code>log.console</code>, <code>log.console.*</code>, or <code>MODE=console</code>)</h3>
+<ul>
+<li>For the console logger <code>COLORIZE</code> will default to <code>true</code> if not on windows or the terminal is determined to be able to color.</li>
+<li><code>STDERR</code>: <strong>false</strong>: Use Stderr instead of Stdout.</li>
+</ul>
+<h3 id="file-log-mode-logfile-logfile-or-modefile">File log mode (<code>log.file</code>, <code>log.file.*</code> or <code>MODE=file</code>)</h3>
+<ul>
+<li><code>FILE_NAME</code>: Set the file name for this logger. Defaults as described above. If relative will be relative to the <code>ROOT_PATH</code></li>
+<li><code>LOG_ROTATE</code>: <strong>true</strong>: Rotate the log files.</li>
+<li><code>MAX_SIZE_SHIFT</code>: <strong>28</strong>: Maximum size shift of a single file, 28 represents 256Mb.</li>
+<li><code>DAILY_ROTATE</code>: <strong>true</strong>: Rotate logs daily.</li>
+<li><code>MAX_DAYS</code>: <strong>7</strong>: Delete the log file after n days</li>
+<li><code>COMPRESS</code>: <strong>true</strong>: Compress old log files by default with gzip</li>
+<li><code>COMPRESSION_LEVEL</code>: <strong>-1</strong>: Compression level</li>
+</ul>
+<h3 id="conn-log-mode-logconn-logconn-or-modeconn">Conn log mode (<code>log.conn</code>, <code>log.conn.*</code> or <code>MODE=conn</code>)</h3>
+<ul>
+<li><code>RECONNECT_ON_MSG</code>: <strong>false</strong>: Reconnect host for every single message.</li>
+<li><code>RECONNECT</code>: <strong>false</strong>: Try to reconnect when connection is lost.</li>
+<li><code>PROTOCOL</code>: <strong>tcp</strong>: Set the protocol, either &ldquo;tcp&rdquo;, &ldquo;unix&rdquo; or &ldquo;udp&rdquo;.</li>
+<li><code>ADDR</code>: <strong>:7020</strong>: Sets the address to connect to.</li>
+</ul>
+<h3 id="smtp-log-mode-logsmtp-logsmtp-or-modesmtp">SMTP log mode (<code>log.smtp</code>, <code>log.smtp.*</code> or <code>MODE=smtp</code>)</h3>
+<ul>
+<li><code>USER</code>: User email address to send from.</li>
+<li><code>PASSWD</code>: Password for the smtp server.</li>
+<li><code>HOST</code>: <strong>127.0.0.1:25</strong>: The SMTP host to connect to.</li>
+<li><code>RECEIVERS</code>: Email addresses to send to.</li>
+<li><code>SUBJECT</code>: <strong>Diagnostic message from Gitea</strong></li>
+</ul>
+<h2 id="cron-cron">Cron (<code>cron</code>)</h2>
+<ul>
+<li><code>ENABLED</code>: <strong>true</strong>: Run cron tasks periodically.</li>
+<li><code>RUN_AT_START</code>: <strong>false</strong>: Run cron tasks at application start-up.</li>
+</ul>
+<h3 id="cron---cleanup-old-repository-archives-cronarchive_cleanup">Cron - Cleanup old repository archives (<code>cron.archive_cleanup</code>)</h3>
+<ul>
+<li><code>ENABLED</code>: <strong>true</strong>: Enable service.</li>
+<li><code>RUN_AT_START</code>: <strong>true</strong>: Run tasks at start up time (if ENABLED).</li>
+<li><code>SCHEDULE</code>: <strong>@every 24h</strong>: Cron syntax for scheduling repository archive cleanup, e.g. <code>@every 1h</code>.</li>
+<li><code>OLDER_THAN</code>: <strong>24h</strong>: Archives created more than <code>OLDER_THAN</code> ago are subject to deletion, e.g. <code>12h</code>.</li>
+</ul>
+<h3 id="cron---update-mirrors-cronupdate_mirrors">Cron - Update Mirrors (<code>cron.update_mirrors</code>)</h3>
+<ul>
+<li><code>SCHEDULE</code>: <strong>@every 10m</strong>: Cron syntax for scheduling update mirrors, e.g. <code>@every 3h</code>.</li>
+</ul>
+<h3 id="cron---repository-health-check-cronrepo_health_check">Cron - Repository Health Check (<code>cron.repo_health_check</code>)</h3>
+<ul>
+<li><code>SCHEDULE</code>: <strong>@every 24h</strong>: Cron syntax for scheduling repository health check.</li>
+<li><code>TIMEOUT</code>: <strong>60s</strong>: Time duration syntax for health check execution timeout.</li>
+<li><code>ARGS</code>: <strong>&lt;empty&gt;</strong>: Arguments for command <code>git fsck</code>, e.g. <code>--unreachable --tags</code>. See more on <a href="http://git-scm.com/docs/git-fsck">http://git-scm.com/docs/git-fsck</a></li>
+</ul>
+<h3 id="cron---repository-statistics-check-croncheck_repo_stats">Cron - Repository Statistics Check (<code>cron.check_repo_stats</code>)</h3>
+<ul>
+<li><code>RUN_AT_START</code>: <strong>true</strong>: Run repository statistics check at start time.</li>
+<li><code>SCHEDULE</code>: <strong>@every 24h</strong>: Cron syntax for scheduling repository statistics check.</li>
+</ul>
+<h3 id="cron---update-migration-poster-id-cronupdate_migration_poster_id">Cron - Update Migration Poster ID (<code>cron.update_migration_poster_id</code>)</h3>
+<ul>
+<li><code>SCHEDULE</code>: <strong>@every 24h</strong> : Interval as a duration between each synchronization, it will always attempt synchronization when the instance starts.</li>
+</ul>
+<h2 id="git-git">Git (<code>git</code>)</h2>
+<ul>
+<li><code>PATH</code>: <strong>&quot;&quot;</strong>: The path of git executable. If empty, Gitea searches through the PATH environment.</li>
+<li><code>MAX_GIT_DIFF_LINES</code>: <strong>100</strong>: Max number of lines allowed of a single file in diff view.</li>
+<li><code>MAX_GIT_DIFF_LINE_CHARACTERS</code>: <strong>5000</strong>: Max character count per line highlighted in diff view.</li>
+<li><code>MAX_GIT_DIFF_FILES</code>: <strong>100</strong>: Max number of files shown in diff view.</li>
+<li><code>GC_ARGS</code>: <strong>&lt;empty&gt;</strong>: Arguments for command <code>git gc</code>, e.g. <code>--aggressive --auto</code>. See more on <a href="http://git-scm.com/docs/git-gc/">http://git-scm.com/docs/git-gc/</a></li>
+<li><code>ENABLE_AUTO_GIT_WIRE_PROTOCOL</code>: <strong>true</strong>: If use git wire protocol version 2 when git version &gt;= 2.18, default is true, set to false when you always want git wire protocol version 1</li>
+<li><code>PULL_REQUEST_PUSH_MESSAGE</code>: <strong>true</strong>: Respond to pushes to a non-default branch with a URL for creating a Pull Request (if the repository has them enabled)</li>
+<li><code>VERBOSE_PUSH</code>: <strong>true</strong>: Print status information about pushes as they are being processed.</li>
+<li><code>VERBOSE_PUSH_DELAY</code>: <strong>5s</strong>: Only print verbose information if push takes longer than this delay.</li>
+</ul>
+<h2 id="git---timeout-settings-gittimeout">Git - Timeout settings (<code>git.timeout</code>)</h2>
+<ul>
+<li><code>DEFAUlT</code>: <strong>360</strong>: Git operations default timeout seconds.</li>
+<li><code>MIGRATE</code>: <strong>600</strong>: Migrate external repositories timeout seconds.</li>
+<li><code>MIRROR</code>: <strong>300</strong>: Mirror external repositories timeout seconds.</li>
+<li><code>CLONE</code>: <strong>300</strong>: Git clone from internal repositories timeout seconds.</li>
+<li><code>PULL</code>: <strong>300</strong>: Git pull from internal repositories timeout seconds.</li>
+<li><code>GC</code>: <strong>60</strong>: Git repository GC timeout seconds.</li>
+</ul>
+<h2 id="metrics-metrics">Metrics (<code>metrics</code>)</h2>
+<ul>
+<li><code>ENABLED</code>: <strong>false</strong>: Enables /metrics endpoint for prometheus.</li>
+<li><code>TOKEN</code>: <strong>&lt;empty&gt;</strong>: You need to specify the token, if you want to include in the authorization the metrics . The same token need to be used in prometheus parameters <code>bearer_token</code> or <code>bearer_token_file</code>.</li>
+</ul>
+<h2 id="api-api">API (<code>api</code>)</h2>
+<ul>
+<li><code>ENABLE_SWAGGER</code>: <strong>true</strong>: Enables /api/swagger, /api/v1/swagger etc. endpoints. True or false; default is true.</li>
+<li><code>MAX_RESPONSE_ITEMS</code>: <strong>50</strong>: Max number of items in a page.</li>
+<li><code>DEFAULT_PAGING_NUM</code>: <strong>30</strong>: Default paging number of API.</li>
+<li><code>DEFAULT_GIT_TREES_PER_PAGE</code>: <strong>1000</strong>: Default and maximum number of items per page for git trees API.</li>
+<li><code>DEFAULT_MAX_BLOB_SIZE</code>: <strong>10485760</strong>: Default max size of a blob that can be return by the blobs API.</li>
+</ul>
+<h2 id="oauth2-oauth2">OAuth2 (<code>oauth2</code>)</h2>
+<ul>
+<li><code>ENABLE</code>: <strong>true</strong>: Enables OAuth2 provider.</li>
+<li><code>ACCESS_TOKEN_EXPIRATION_TIME</code>: <strong>3600</strong>: Lifetime of an OAuth2 access token in seconds</li>
+<li><code>REFRESH_TOKEN_EXPIRATION_TIME</code>: <strong>730</strong>: Lifetime of an OAuth2 access token in hours</li>
+<li><code>INVALIDATE_REFRESH_TOKEN</code>: <strong>false</strong>: Check if refresh token got already used</li>
+<li><code>JWT_SECRET</code>: <strong>&lt;empty&gt;</strong>: OAuth2 authentication secret for access and refresh tokens, change this a unique string.</li>
+<li><code>MAX_TOKEN_LENGTH</code>: <strong>32767</strong>: Maximum length of token/cookie to accept from OAuth2 provider</li>
+</ul>
+<h2 id="i18n-i18n">i18n (<code>i18n</code>)</h2>
+<ul>
+<li><code>LANGS</code>: <strong>en-US,zh-CN,zh-HK,zh-TW,de-DE,fr-FR,nl-NL,lv-LV,ru-RU,ja-JP,es-ES,pt-BR,pl-PL,bg-BG,it-IT,fi-FI,tr-TR,cs-CZ,sr-SP,sv-SE,ko-KR</strong>: List of locales shown in language selector</li>
+<li><code>NAMES</code>: <strong>English,简体中文,繁體中文（香港）,繁體中文（台灣）,Deutsch,français,Nederlands,latviešu,русский,日本語,español,português do Brasil,polski,български,italiano,suomi,Türkçe,čeština,српски,svenska,한국어</strong>: Visible names corresponding to the locales</li>
+</ul>
+<h3 id="i18n---datepicker-language-i18ndatelang">i18n - Datepicker Language (<code>i18n.datelang</code>)</h3>
+<p>Maps locales to the languages used by the datepicker plugin</p>
+<ul>
+<li><code>en-US</code>: <strong>en</strong></li>
+<li><code>zh-CN</code>: <strong>zh</strong></li>
+<li><code>zh-HK</code>: <strong>zh-HK</strong></li>
+<li><code>zh-TW</code>: <strong>zh-TW</strong></li>
+<li><code>de-DE</code>: <strong>de</strong></li>
+<li><code>fr-FR</code>: <strong>fr</strong></li>
+<li><code>nl-NL</code>: <strong>nl</strong></li>
+<li><code>lv-LV</code>: <strong>lv</strong></li>
+<li><code>ru-RU</code>: <strong>ru</strong></li>
+<li><code>ja-JP</code>: <strong>ja</strong></li>
+<li><code>es-ES</code>: <strong>es</strong></li>
+<li><code>pt-BR</code>: <strong>pt-BR</strong></li>
+<li><code>pl-PL</code>: <strong>pl</strong></li>
+<li><code>bg-BG</code>: <strong>bg</strong></li>
+<li><code>it-IT</code>: <strong>it</strong></li>
+<li><code>fi-FI</code>: <strong>fi</strong></li>
+<li><code>tr-TR</code>: <strong>tr</strong></li>
+<li><code>cs-CZ</code>: <strong>cs-CZ</strong></li>
+<li><code>sr-SP</code>: <strong>sr</strong></li>
+<li><code>sv-SE</code>: <strong>sv</strong></li>
+<li><code>ko-KR</code>: <strong>ko</strong></li>
+</ul>
+<h2 id="u2f-u2f">U2F (<code>U2F</code>)</h2>
+<ul>
+<li><code>APP_ID</code>: <strong><code>ROOT_URL</code></strong>: Declares the facet of the application. Requires HTTPS.</li>
+<li><code>TRUSTED_FACETS</code>: List of additional facets which are trusted. This is not support by all browsers.</li>
+</ul>
+<h2 id="markup-markup">Markup (<code>markup</code>)</h2>
+<p>Gitea can support Markup using external tools. The example below will add a markup named <code>asciidoc</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[markup.asciidoc]</span>
+<span style="color:#a6e22e">ENABLED</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">true</span>
+<span style="color:#a6e22e">FILE_EXTENSIONS</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">.adoc,.asciidoc</span>
+<span style="color:#a6e22e">RENDER_COMMAND</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;asciidoc --out-file=- -&#34;</span>
+<span style="color:#a6e22e">IS_INPUT_FILE</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">false</span>
+</code></pre></div><ul>
+<li>ENABLED: <strong>false</strong> Enable markup support; set to <strong>true</strong> to enable this renderer.</li>
+<li>FILE_EXTENSIONS: <strong>&lt;empty&gt;</strong> List of file extensions that should be rendered by an external
+command. Multiple extentions needs a comma as splitter.</li>
+<li>RENDER_COMMAND: External command to render all matching extensions.</li>
+<li>IS_INPUT_FILE: <strong>false</strong> Input is not a standard input but a file param followed <code>RENDER_COMMAND</code>.</li>
+</ul>
+<p>Two special environment variables are passed to the render command:</p>
+<ul>
+<li><code>GITEA_PREFIX_SRC</code>, which contains the current URL prefix in the <code>src</code> path tree. To be used as prefix for links.</li>
+<li><code>GITEA_PREFIX_RAW</code>, which contains the current URL prefix in the <code>raw</code> path tree. To be used as prefix for image paths.</li>
+</ul>
+<p>Gitea supports customizing the sanitization policy for rendered HTML. The example below will support KaTeX output from pandoc.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[markup.sanitizer.TeX]</span>
+<span style="color:#75715e">; Pandoc renders TeX segments as &lt;span&gt;s with the &#34;math&#34; class, optionally</span>
+<span style="color:#75715e">; with &#34;inline&#34; or &#34;display&#34; classes depending on context.</span>
+<span style="color:#a6e22e">ELEMENT</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">span</span>
+<span style="color:#a6e22e">ALLOW_ATTR</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">class</span>
+<span style="color:#a6e22e">REGEXP</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">^\s*((math(\s+|$)|inline(\s+|$)|display(\s+|$)))+</span>
+</code></pre></div><ul>
+<li><code>ELEMENT</code>: The element this policy applies to. Must be non-empty.</li>
+<li><code>ALLOW_ATTR</code>: The attribute this policy allows. Must be non-empty.</li>
+<li><code>REGEXP</code>: A regex to match the contents of the attribute against. Must be present but may be empty for unconditional whitelisting of this attribute.</li>
+</ul>
+<p>Multiple sanitisation rules can be defined by adding unique subsections, e.g. <code>[markup.sanitizer.TeX-2]</code>.</p>
+<h2 id="time-time">Time (<code>time</code>)</h2>
+<ul>
+<li><code>FORMAT</code>: Time format to diplay on UI. i.e. RFC1123 or 2006-01-02 15:04:05</li>
+<li><code>DEFAULT_UI_LOCATION</code>: Default location of time on the UI, so that we can display correct user&rsquo;s time on UI. i.e. Shanghai/Asia</li>
+</ul>
+<h2 id="task-task">Task (<code>task</code>)</h2>
+<p>Task queue configuration has been moved to <code>queue.task</code>. However, the below configuration values are kept for backwards compatibility:</p>
+<ul>
+<li><code>QUEUE_TYPE</code>: <strong>channel</strong>: Task queue type, could be <code>channel</code> or <code>redis</code>.</li>
+<li><code>QUEUE_LENGTH</code>: <strong>1000</strong>: Task queue length, available only when <code>QUEUE_TYPE</code> is <code>channel</code>.</li>
+<li><code>QUEUE_CONN_STR</code>: <strong>addrs=127.0.0.1:6379 db=0</strong>: Task queue connection string, available only when <code>QUEUE_TYPE</code> is <code>redis</code>. If redis needs a password, use <code>addrs=127.0.0.1:6379 password=123 db=0</code>.</li>
+</ul>
+<h2 id="migrations-migrations">Migrations (<code>migrations</code>)</h2>
+<ul>
+<li><code>MAX_ATTEMPTS</code>: <strong>3</strong>: Max attempts per http/https request on migrations.</li>
+<li><code>RETRY_BACKOFF</code>: <strong>3</strong>: Backoff time per http/https request retry (seconds)</li>
+</ul>
+<h2 id="other-other">Other (<code>other</code>)</h2>
+<ul>
+<li><code>SHOW_FOOTER_BRANDING</code>: <strong>false</strong>: Show Gitea branding in the footer.</li>
+<li><code>SHOW_FOOTER_VERSION</code>: <strong>true</strong>: Show Gitea version information in the footer.</li>
+<li><code>SHOW_FOOTER_TEMPLATE_LOAD_TIME</code>: <strong>true</strong>: Show time of template execution in the footer.</li>
+</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="content has-text-centered">
+					<p>
+						Copyright &copy; 2020 <a href="https://docs.gitea.io">The Gitea Authors</a>. All rights reserved. Made with <i class="fa fa-heart" aria-hidden="true"></i> and <a href="https://gohugo.io">Hugo</a>.
+					</p>
+					<p>
+						 Sponsored by <a href="https://www.didiyun.com">DiDi Cloud</a>, <a href="http://inblockchain.com">INBlockchain</a>, <a href="https://www.packet.com">Packet</a>, <a href="https://digitalocean.com">DigitalOcean</a>, and all of our backers on <a href="https://opencollective.com/gitea">Open Collective</a>.
+					</p>
+					<p>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-cn" hreflang="zh-cn">中文(简体)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-tw" hreflang="zh-tw">中文(繁體)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/pt-br" hreflang="pt-br">Português Brasileiro</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/en-us" hreflang="en-us">English</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/nl-nl" hreflang="nl-nl">Nederlands</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/fr-fr" hreflang="fr-fr">Français</a>
+						
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+            document.addEventListener('DOMContentLoaded', function () {
+
+                
+                var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                
+                if ($navbarBurgers.length > 0) {
+
+                    
+                    $navbarBurgers.forEach(function ($el) {
+                        $el.addEventListener('click', function () {
+
+                            
+                            var target = $el.dataset.target;
+                            var $target = document.getElementById(target);
+
+                            
+                            $el.classList.toggle('is-active');
+                            $target.classList.toggle('is-active');
+
+
+                            document.getElementById('navbar-background').classList.toggle('is-active');
+
+
+                        });
+                    });
+                }
+
+				
+				
+				let svg = '  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor; vertical-align: middle" width="24" height="24" viewBox="0 0 32 32"><title>gitea</title><path d="M5.583 7.229c-2.464-0.005-5.755 1.557-5.573 5.479 0.281 6.125 6.557 6.693 9.068 6.745 0.271 1.146 3.224 5.109 5.411 5.318h9.573c5.74-0.38 10.036-17.365 6.854-17.427-5.271 0.25-8.396 0.375-11.073 0.396v5.297l-0.839-0.365-0.005-4.932c-3.073 0-5.781-0.141-10.917-0.396-0.646-0.005-1.542-0.115-2.5-0.115zM5.927 9.396h0.297c0.349 3.141 0.917 4.974 2.068 7.781-2.938-0.349-5.432-1.198-5.891-4.38-0.24-1.646 0.563-3.365 3.526-3.401zM17.339 12.479c0.198 0.005 0.406 0.042 0.594 0.13l1 0.432-0.714 1.302c-0.109 0-0.219 0.016-0.323 0.052-0.464 0.151-0.708 0.604-0.542 1.021 0.036 0.083 0.089 0.161 0.151 0.229l-1.234 2.25c-0.099 0-0.203 0.016-0.297 0.052-0.464 0.146-0.708 0.604-0.542 1.016 0.172 0.417 0.682 0.63 1.151 0.479 0.464-0.146 0.703-0.604 0.536-1.021-0.047-0.109-0.115-0.208-0.208-0.292l1.203-2.188c0.13 0.010 0.26 0 0.391-0.042 0.104-0.031 0.198-0.083 0.281-0.151 0.464 0.198 0.844 0.354 1.12 0.49 0.406 0.203 0.552 0.339 0.599 0.49 0.042 0.146-0.005 0.427-0.24 0.922-0.172 0.37-0.458 0.896-0.797 1.51-0.115 0-0.229 0.016-0.333 0.052-0.469 0.151-0.708 0.604-0.542 1.021 0.167 0.411 0.682 0.625 1.146 0.479 0.469-0.151 0.708-0.604 0.542-1.021-0.042-0.099-0.104-0.193-0.182-0.271 0.333-0.609 0.62-1.135 0.807-1.526 0.25-0.536 0.38-0.938 0.266-1.323s-0.469-0.635-0.932-0.865c-0.307-0.151-0.693-0.313-1.146-0.505 0.005-0.109-0.010-0.214-0.052-0.318s-0.109-0.198-0.193-0.281l0.703-1.281 3.901 1.682c0.703 0.307 0.995 1.057 0.651 1.682l-2.682 4.906c-0.339 0.625-1.182 0.885-1.885 0.578l-5.516-2.38c-0.703-0.307-0.995-1.057-0.656-1.682l2.682-4.906c0.234-0.432 0.708-0.688 1.208-0.708h0.083z"></path></svg>';
+				let contents = document.getElementsByClassName("content");
+				if (contents.length > 0) {
+					let content = contents[0];
+					for (let level = 1; level <= 4; level++) {
+						let elems = content.getElementsByTagName("h" + level);
+						for (let i = 0; i < elems.length; i++) {
+							let elem = elems[i];
+							if (elem.id !== "undefined" && elem.id !== "") {
+								let anchorId = elem.id + "-anchor";
+								elem.addEventListener("mouseover", () => {
+									document.getElementById(anchorId).style.display = "initial";
+								});
+								elem.addEventListener("mouseout", () => {
+									document.getElementById(anchorId).style.display = "none";
+								});
+								let anchor = document.createElement("a");
+								anchor.id = anchorId;
+								anchor.href = "#" + elem.id;
+								anchor.innerHTML = svg;
+								anchor.style.display = "none";
+								elem.appendChild(anchor);
+							}
+						}
+					}
+				}
+
+            });
+		</script>
+
+		</body>
+</html>
+

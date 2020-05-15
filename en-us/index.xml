@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs</title>
+    <link>https://ertlans.github.io/en-us/</link>
+    <description>Recent content on Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Nov 2016 16:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://ertlans.github.io/en-us/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>FAQ</title>
+      <link>https://ertlans.github.io/en-us/faq/</link>
+      <pubDate>Fri, 05 Apr 2019 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/faq/</guid>
+      <description>Frequently Asked Questions This page contains some common questions and answers.
+Also see Support Options
+ Difference between 1.x and 1.x.x downloads How to migrate from Gogs/GitHub/etc. to Gitea Where does Gitea store &amp;ldquo;x&amp;rdquo; file Not seeing a clone URL or the clone URL being incorrect Custom Templates not loading or working incorrectly Active user vs login prohibited user Setting up logging What is Swagger? Adjusting your server for public/private use  Preventing spammers Only allow certain email domains Only allow/block certain OpenID providers Issue only users Restricted users Enable Fail2ban   Adding custom themes SSHD vs built-in SSH Gitea is running slow Can&amp;rsquo;t create repositories/files Translation is incorrect/how to add more translations Hooks aren&amp;rsquo;t running SSH Issues  SSH Common Errors   Missing releases after migration repository with tags LFS Issues How can I create users before starting Gitea How can I enable password reset How can a user&amp;rsquo;s password be changed Why is my markdown broken  Difference between 1.</description>
+    </item>
+    
+    <item>
+      <title>Gitea compared to other Git hosting options</title>
+      <link>https://ertlans.github.io/en-us/comparison/</link>
+      <pubDate>Mon, 07 May 2018 13:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/comparison/</guid>
+      <description>Gitea compared to other Git hosting options To help decide if Gitea is suited for your needs, here is how it compares to other Git self hosted options.
+Be warned that we don&amp;rsquo;t regularly check for feature changes in other products, so this list may be outdated. If you find anything that needs to be updated in the table below, please report it in an issue on GitHub.
+Symbols used in table:</description>
+    </item>
+    
+    <item>
+      <title>Help</title>
+      <link>https://ertlans.github.io/en-us/help/</link>
+      <pubDate>Fri, 20 Jan 2017 15:00:00 +0800</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/help/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Adding Legal Pages</title>
+      <link>https://ertlans.github.io/en-us/adding-legal-pages/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/adding-legal-pages/</guid>
+      <description>Some jurisdictions (such as EU), requires certain legal pages (e.g. Privacy Policy) to be added to website. Follow these steps to add them to your Gitea instance.
+Getting Pages Gitea source code ships with sample pages, available in contrib/legal directory. Copy them to custom/public/. For example, to add Privacy Policy:
+wget -O /path/to/custom/public/privacy.html https://raw.githubusercontent.com/go-gitea/gitea/master/contrib/legal/privacy.html.sample Now you need to edit the page to meet your requirements. In particular you must change the email addresses, web addresses and references to &amp;ldquo;Your Gitea Instance&amp;rdquo; to match your situation.</description>
+    </item>
+    
+    <item>
+      <title>Customizing Gitea</title>
+      <link>https://ertlans.github.io/en-us/customizing-gitea/</link>
+      <pubDate>Sat, 15 Apr 2017 14:56:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/customizing-gitea/</guid>
+      <description>Customizing Gitea Customizing Gitea is typically done using the CustomPath folder - by default this is the custom folder from the running directory, but may be different if your build has set this differently. This is the central place to override configuration settings, templates, etc. You can check the CustomPath using gitea help. You can also find the path on the Configuration tab in the Site Administration page. You can override the CustomPath by setting either the GITEA_CUSTOM environment variable or by using the --custom-path option on the gitea binary.</description>
+    </item>
+    
+    <item>
+      <title>Database Preparation</title>
+      <link>https://ertlans.github.io/en-us/database-prep/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/database-prep/</guid>
+      <description>You need a database to use Gitea. Gitea supports PostgreSQL, MySQL, SQLite, and MSSQL. This page will guide into preparing database. Only PostgreSQL and MySQL will be covered here since those database engines are widely-used in production.
+Database instance can be on same machine as Gitea (local database setup), or on different machine (remote database).
+Note: All steps below requires that the database engine of your choice is installed on your system.</description>
+    </item>
+    
+    <item>
+      <title>Support Options</title>
+      <link>https://ertlans.github.io/en-us/seek-help/</link>
+      <pubDate>Mon, 21 May 2018 15:00:00 +0000</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/seek-help/</guid>
+      <description>Support Options  Discord Discourse Forum  NOTE: When asking for support, it may be a good idea to have the following available so that the person helping has all the info they need:
+ Your app.ini (with any sensitive data scrubbed as necessary) The gitea.log (and any other appropriate log files for the situation)   e.g. If the error is related to the database, the xorm.log might be helpful  Any error messages you are seeing When possible, try to replicate the issue on try.</description>
+    </item>
+    
+    <item>
+      <title>Run as service in Linux</title>
+      <link>https://ertlans.github.io/en-us/linux-service/</link>
+      <pubDate>Fri, 21 Jul 2017 12:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/linux-service/</guid>
+      <description>Run Gitea as Linux service You can run Gitea as service, using either systemd or supervisor. The steps below tested on Ubuntu 16.04, but those should work on any Linux distributions (with little modification).
+Using systemd Copy the sample gitea.service to /etc/systemd/system/gitea.service, then edit the file with your favorite editor.
+Uncomment any service that needs to be enabled on this host, such as MySQL.
+Change the user, home directory, and other required startup values.</description>
+    </item>
+    
+    <item>
+      <title>Installation from binary</title>
+      <link>https://ertlans.github.io/en-us/install-from-binary/</link>
+      <pubDate>Mon, 19 Jun 2017 12:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/install-from-binary/</guid>
+      <description>Installation from binary All downloads come with SQLite, MySQL and PostgreSQL support, and are built with embedded assets. This can be different for older releases. Choose the file matching the destination platform from the downloads page, copy the URL and replace the URL within the commands below:
+wget -O gitea https://dl.gitea.io/gitea/1.11.4/gitea-1.11.4-linux-amd64 chmod +x gitea Verify GPG signature Gitea signs all binaries with a GPG key to prevent against unwanted modification of binaries.</description>
+    </item>
+    
+    <item>
+      <title>Make</title>
+      <link>https://ertlans.github.io/en-us/make/</link>
+      <pubDate>Sat, 14 Jan 2017 11:00:00 -0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/make/</guid>
+      <description>Make Gitea makes heavy use of Make to automate tasks and improve development. This guide covers how to install Make.
+On Linux Install with the package manager.
+On Ubuntu/Debian:
+sudo apt-get install make On Fedora/RHEL/CentOS:
+sudo yum install make On Windows One of these three distributions of Make will run on Windows:
+ Single binary build. Copy somewhere and add to PATH.  32-bits version 64-bits version   MinGW includes a build.</description>
+    </item>
+    
+    <item>
+      <title>Usage: Command Line</title>
+      <link>https://ertlans.github.io/en-us/command-line/</link>
+      <pubDate>Sun, 01 Jan 2017 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/command-line/</guid>
+      <description>Command Line Usage gitea [global options] command [command or global options] [arguments...]
+Global options All global options can be placed at the command level.
+ --help, -h: Show help text and exit. Optional. --version, -v: Show version and exit. Optional. (example: Gitea version 1.1.0+218-g7b907ed built with: bindata, sqlite). --custom-path path, -C path: Location of the Gitea custom folder. Optional. (default: AppWorkPath/custom or $GITEA_CUSTOM). --config path, -c path: Gitea configuration file path.</description>
+    </item>
+    
+    <item>
+      <title>Register as a Windows Service</title>
+      <link>https://ertlans.github.io/en-us/windows-service/</link>
+      <pubDate>Wed, 21 Dec 2016 15:00:00 -0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/windows-service/</guid>
+      <description>Prerequisites The following changes are made in C:\gitea\custom\conf\app.ini:
+RUN_USER = COMPUTERNAME$ Sets Gitea to run as the local system user.
+COMPUTERNAME is whatever the response is from echo %COMPUTERNAME% on the command line. If the response is USER-PC then RUN_USER = USER-PC$
+Use absolute paths If you use sqlite3, change the PATH to include the full path:
+[database] PATH = c:/gitea/data/gitea.db Register as a Windows Service To register Gitea as a Windows service, open a command prompt (cmd) as an Administrator, then run the following command:</description>
+    </item>
+    
+    <item>
+      <title>Authentication</title>
+      <link>https://ertlans.github.io/en-us/authentication/</link>
+      <pubDate>Thu, 01 Dec 2016 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/authentication/</guid>
+      <description>Authentication LDAP (Lightweight Directory Access Protocol) Both the LDAP via BindDN and the simple auth LDAP share the following fields:
+  Authorization Name (required)
+ A name to assign to the new method of authorization.    Host (required)
+ The address where the LDAP server can be reached. Example: mydomain.com    Port (required)
+ The port to use when connecting to the server. Example: 389 for LDAP or 636 for LDAP SSL    Enable TLS Encryption (optional)</description>
+    </item>
+    
+    <item>
+      <title>Hacking on Gitea</title>
+      <link>https://ertlans.github.io/en-us/hacking-on-gitea/</link>
+      <pubDate>Thu, 01 Dec 2016 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/hacking-on-gitea/</guid>
+      <description>Hacking on Gitea Installing go and setting the GOPATH You should install go and set up your go environment correctly. In particular, it is recommended to set the $GOPATH environment variable and to add the go bin directory or directories ${GOPATH//://bin:}/bin to the $PATH. See the Go wiki entry for GOPATH.
+Next, install Node.js with npm which is required to build the JavaScript and CSS files. The minimum supported Node.js version is 10 and the latest LTS version is recommended.</description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>https://ertlans.github.io/en-us/installation/</link>
+      <pubDate>Thu, 01 Dec 2016 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/installation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Installation from package</title>
+      <link>https://ertlans.github.io/en-us/install-from-package/</link>
+      <pubDate>Thu, 01 Dec 2016 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/install-from-package/</guid>
+      <description>Installation from package Debian Although there is a package of Gitea in Debian&amp;rsquo;s contrib, it is not supported directly by us.
+Unfortunately, the package is not maintained anymore and broken because of missing sources. Please follow the deployment from binary guide instead.
+Should the packages get updated and fixed, we will provide up-to-date installation instructions here.
+Windows There are no published packages for Windows. This page will change when packages are published, in the form of MSI installers or via Chocolatey.</description>
+    </item>
+    
+    <item>
+      <title>Installation from source</title>
+      <link>https://ertlans.github.io/en-us/install-from-source/</link>
+      <pubDate>Thu, 01 Dec 2016 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/install-from-source/</guid>
+      <description>Installation from source You should install go and set up your go environment correctly. In particular, it is recommended to set the $GOPATH environment variable and to add the go bin directory or directories ${GOPATH//://bin:}/bin to the $PATH. See the Go wiki entry for GOPATH.
+Next, install Node.js with npm which is required to build the JavaScript and CSS files. The minimum supported Node.js version is 10 and the latest LTS version is recommended.</description>
+    </item>
+    
+    <item>
+      <title>Installation with Docker</title>
+      <link>https://ertlans.github.io/en-us/install-with-docker/</link>
+      <pubDate>Thu, 01 Dec 2016 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/install-with-docker/</guid>
+      <description>Installation with Docker Gitea provides automatically updated Docker images within its Docker Hub organization. It is possible to always use the latest stable tag or to use another service that handles updating Docker images.
+This reference setup guides users through the setup based on docker-compose, but the installation of docker-compose is out of scope of this documentation. To install docker-compose itself, follow the official install instructions.
+Basics The most simple setup just creates a volume and a network and starts the gitea/gitea:latest image as a service.</description>
+    </item>
+    
+    <item>
+      <title>Localization</title>
+      <link>https://ertlans.github.io/en-us/localization/</link>
+      <pubDate>Thu, 01 Dec 2016 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/localization/</guid>
+      <description>Localization TBD </description>
+    </item>
+    
+    <item>
+      <title>Upgrade</title>
+      <link>https://ertlans.github.io/en-us/upgrade/</link>
+      <pubDate>Thu, 01 Dec 2016 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/upgrade/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Upgrade from Gogs</title>
+      <link>https://ertlans.github.io/en-us/upgrade-from-gogs/</link>
+      <pubDate>Thu, 01 Dec 2016 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/upgrade-from-gogs/</guid>
+      <description>Upgrade from Gogs Gogs, version 0.9.146 and older, can be easily migrated to Gitea.
+There are some basic steps to follow. On a Linux system run as the Gogs user:
+ Create a Gogs backup with gogs backup. This creates gogs-backup-[timestamp].zip file containing all important Gogs data. You would need it if you wanted to move to the gogs back later. Download the file matching the destination platform from the downloads page.</description>
+    </item>
+    
+    <item>
+      <title>Webhooks</title>
+      <link>https://ertlans.github.io/en-us/webhooks/</link>
+      <pubDate>Thu, 01 Dec 2016 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/webhooks/</guid>
+      <description>Webhooks Gitea supports web hooks for repository events. This can be configured in the settings page /:username/:reponame/settings/hooks by a repository admin. Webhooks can also be configured on a per-organization and whole system basis. All event pushes are POST requests. The methods currently supported are:
+ Gitea (can also be a GET request) Gogs Slack Discord Dingtalk Telegram Microsoft Teams Feishu  Event information The following is an example of event information that will be sent by Gitea to a Payload URL:</description>
+    </item>
+    
+    <item>
+      <title>Documentation</title>
+      <link>https://ertlans.github.io/en-us/</link>
+      <pubDate>Tue, 08 Nov 2016 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/</guid>
+      <description>What is Gitea? Gitea is a painless self-hosted Git service. It is similar to GitHub, Bitbucket, and GitLab. Gitea is a fork of Gogs. See the Gitea Announcement blog post to read about the justification for a fork.
+Purpose The goal of this project is to provide the easiest, fastest, and most painless way of setting up a self-hosted Git service. With Go, this can be done with an independent binary distribution across all platforms and architectures that Go supports.</description>
+    </item>
+    
+    <item>
+      <title>Usage: Backup and Restore</title>
+      <link>https://ertlans.github.io/en-us/backup-and-restore/</link>
+      <pubDate>Sun, 01 Jan 2017 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/backup-and-restore/</guid>
+      <description>Backup and Restore Gitea currently has a dump command that will save the installation to a zip file. This file can be unpacked and used to restore an instance.
+Backup Command (dump) Switch to the user running Gitea: su git. Run ./gitea dump -c /path/to/app.ini in the Gitea installation directory. There should be some output similar to the following:
+2016/12/27 22:32:09 Creating tmp work dir: /tmp/gitea-dump-417443001 2016/12/27 22:32:09 Dumping local repositories.</description>
+    </item>
+    
+    <item>
+      <title>Usage: Email setup</title>
+      <link>https://ertlans.github.io/en-us/email-setup/</link>
+      <pubDate>Tue, 15 Oct 2019 10:10:00 +0500</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/email-setup/</guid>
+      <description>Email setup To use Gitea&amp;rsquo;s built-in Email support, update the app.ini config file [mailer] section:
+Sendmail version Use the operating system’s sendmail command instead of SMTP. This is common on Linux servers.
+Note: For use in the official Gitea Docker image, please configure with the SMTP version.
+[mailer] ENABLED = true FROM = gitea@mydomain.com MAILER_TYPE = sendmail SENDMAIL_PATH = /usr/sbin/sendmail SMTP version [mailer] ENABLED = true FROM = gitea@mydomain.com MAILER_TYPE = smtp HOST = mail.</description>
+    </item>
+    
+    <item>
+      <title>Usage: Pull Request</title>
+      <link>https://ertlans.github.io/en-us/pull-request/</link>
+      <pubDate>Fri, 01 Jun 2018 19:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/pull-request/</guid>
+      <description>Pull Request &amp;ldquo;Work In Progress&amp;rdquo; pull requests Marking a pull request as being a work in progress will prevent that pull request from being accidentally merged. To mark a pull request as being a work in progress, you must prefix its title by WIP: or [WIP] (case insensitive). Those values are configurable in your app.ini file :
+[repository.pull-request] WORK_IN_PROGRESS_PREFIXES=WIP:,[WIP] The first value of the list will be used in helpers.</description>
+    </item>
+    
+    <item>
+      <title>Usage: Automatically Linked References</title>
+      <link>https://ertlans.github.io/en-us/automatically-linked-references/</link>
+      <pubDate>Thu, 21 Nov 2019 17:00:00 -0300</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/automatically-linked-references/</guid>
+      <description>Automatically Linked References in Issues, Pull Requests and Commit Messages When an issue, pull request or comment is posted, the text description is parsed in search for references. These references will be shown as links in the Issue View and, in some cases, produce certain actions.
+Likewise, commit messages are parsed when they are listed, and actions are can be triggered when they are pushed to the main branch.
+To prevent the creation of unintended references, there are certain rules for them to be recognized.</description>
+    </item>
+    
+    <item>
+      <title>Usage: Issue and Pull Request templates</title>
+      <link>https://ertlans.github.io/en-us/issue-pull-request-templates/</link>
+      <pubDate>Thu, 10 May 2018 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/issue-pull-request-templates/</guid>
+      <description>Issue and Pull Request Templates Some projects have a standard list of questions that users need to answer when creating an issue or pull request. Gitea supports adding templates to the main branch of the repository so that they can autopopulate the form when users are creating issues and pull requests. This will cut down on the initial back and forth of getting some clarifying details.
+Possible file names for issue templates:</description>
+    </item>
+    
+    <item>
+      <title>Usage: Reverse Proxies</title>
+      <link>https://ertlans.github.io/en-us/reverse-proxies/</link>
+      <pubDate>Tue, 22 May 2018 11:00:00 +0000</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/reverse-proxies/</guid>
+      <description>Using Nginx as a reverse proxy If you want Nginx to serve your Gitea instance, add the following server section to the http section of nginx.conf:
+server { listen 80; server_name git.example.com; location / { proxy_pass http://localhost:3000; } } Using Nginx with a sub-path as a reverse proxy In case you already have a site, and you want Gitea to share the domain name, you can setup Nginx to serve Gitea under a sub-path by adding the following server section inside the http section of nginx.</description>
+    </item>
+    
+    <item>
+      <title>GPG Commit Signatures</title>
+      <link>https://ertlans.github.io/en-us/signing/</link>
+      <pubDate>Sat, 17 Aug 2019 10:20:00 +0100</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/signing/</guid>
+      <description>GPG Commit Signatures Gitea will verify GPG commit signatures in the provided tree by checking if the commits are signed by a key within the gitea database, or if the commit matches the default key for git.
+Keys are not checked to determine if they have expired or revoked. Keys are also not checked with keyservers.
+A commit will be marked with a grey unlocked icon if no key can be found to verify it.</description>
+    </item>
+    
+    <item>
+      <title>Specific variables</title>
+      <link>https://ertlans.github.io/en-us/specific-variables/</link>
+      <pubDate>Sat, 08 Apr 2017 11:34:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/specific-variables/</guid>
+      <description>Specific variables This is an inventory of Gitea environment variables. They change Gitea behaviour.
+Initialize them before Gitea command to be effective, for example:
+GITEA_CUSTOM=/home/gitea/custom ./gitea web From Go language As Gitea is written in Go, it uses some Go variables, such as:
+ GOOS GOARCH GOPATH  For documentation about each of the variables available, refer to the official Go documentation.
+Gitea files  GITEA_WORK_DIR: Absolute path of working directory.</description>
+    </item>
+    
+    <item>
+      <title>Config Cheat Sheet</title>
+      <link>https://ertlans.github.io/en-us/config-cheat-sheet/</link>
+      <pubDate>Mon, 26 Dec 2016 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/config-cheat-sheet/</guid>
+      <description>Configuration Cheat Sheet This is a cheat sheet for the Gitea configuration file. It contains most of the settings that can be configured as well as their default values.
+Any changes to the Gitea configuration file should be made in custom/conf/app.ini or any corresponding location. When installing from a distribution, this will typically be found at /etc/gitea/conf/app.ini.
+The defaults provided here are best-effort (not built automatically). They are accurately recorded in app.</description>
+    </item>
+    
+    <item>
+      <title>Advanced: Search Engines Indexation</title>
+      <link>https://ertlans.github.io/en-us/search-engines-indexation/</link>
+      <pubDate>Tue, 31 Dec 2019 13:55:00 +0500</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/search-engines-indexation/</guid>
+      <description>Search engines indexation of your Gitea installation By default your Gitea installation will be indexed by search engines. If you don&amp;rsquo;t want your repository to be visible for search engines read further.
+Block search engines indexation using robots.txt To make Gitea serve a custom robots.txt (default: empty 404) for top level installations, create a file called robots.txt in the custom folder or CustomPath
+Examples on how to configure the robots.txt can be found at https://moz.</description>
+    </item>
+    
+    <item>
+      <title>Advanced: Migrations Interfaces</title>
+      <link>https://ertlans.github.io/en-us/migrations-interfaces/</link>
+      <pubDate>Mon, 15 Apr 2019 17:29:00 +0800</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/migrations-interfaces/</guid>
+      <description>Migration Features The new migration features were introduced in Gitea 1.9.0. It defines two interfaces to support migrating repositories data from other git host platforms to gitea or, in the future migrating gitea data to other git host platforms. Currently, only the migrations from github via APIv3 to Gitea is implemented.
+First of all, Gitea defines some standard objects in packages modules/migrations/base. They are Repository, Milestone, Release, Label, Issue, Comment, PullRequest, Reaction, Review, ReviewComment.</description>
+    </item>
+    
+    <item>
+      <title>Advanced</title>
+      <link>https://ertlans.github.io/en-us/advanced/</link>
+      <pubDate>Thu, 01 Dec 2016 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/advanced/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Usage</title>
+      <link>https://ertlans.github.io/en-us/usage/</link>
+      <pubDate>Tue, 27 Dec 2016 16:00:00 +0200</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/usage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Embedded data extraction tool</title>
+      <link>https://ertlans.github.io/en-us/cmd-embedded/</link>
+      <pubDate>Sat, 25 Jan 2020 21:00:00 -0300</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/cmd-embedded/</guid>
+      <description>Embedded data extraction tool Gitea&amp;rsquo;s executable contains all the resources required to run: templates, images, style-sheets and translations. Any of them can be overridden by placing a replacement in a matching path inside the custom directory (see Customizing Gitea).
+To obtain a copy of the embedded resources ready for editing, the embedded command from the CLI can be used from the OS shell interface.
+NOTE: The embedded data extraction tool is included in Gitea versions 1.</description>
+    </item>
+    
+    <item>
+      <title>API Usage</title>
+      <link>https://ertlans.github.io/en-us/api-usage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/api-usage/</guid>
+      <description>Gitea API Usage Enabling/configuring API access By default, ENABLE_SWAGGER is true, and MAX_RESPONSE_ITEMS is set to 50. See Config Cheat Sheet for more information.
+Authentication via the API Gitea supports these methods of API authentication:
+ HTTP basic authentication token=... parameter in URL query string access_token=... parameter in URL query string Authorization: token ... header in HTTP headers  All of these methods accept the same API key token type. You can better understand this by looking at the code &amp;ndash; as of this writing, Gitea parses queries and headers to find the token in modules/auth/auth.</description>
+    </item>
+    
+    <item>
+      <title>CI/CD Usage</title>
+      <link>https://ertlans.github.io/en-us/ci-cd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/ci-cd/</guid>
+      <description>Gitea and CI/CD NOTE: These tools are not endorsed by Gitea. They are listed here for convenience only.
+Hey! This page may be out of date or even removed in the future! 😱 Instead, check out awesome-gitea!
+Listing CI/CD solutions that have integration with Gitea. Following list is not complete, the purpose is to give a starting point to integrate a CI/CD process with your Gitea instance.
+ Drone with Gitea documentation Jenkins with Gitea plugin Agola Buildkite with Gitea connector AppVeyor with built-in Gitea support Buildbot with Gitea plugin  Others CI/CD solutions that can partially be integrated with Gitea:</description>
+    </item>
+    
+    <item>
+      <title>External renderers</title>
+      <link>https://ertlans.github.io/en-us/external-renderers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/external-renderers/</guid>
+      <description>Custom files rendering configuration Gitea supports custom file renderings (i.e., Jupyter notebooks, asciidoc, etc.) through external binaries, it is just a matter of:
+ installing external binaries add some configuration to your app.ini file restart your Gitea instance  This supports rendering of whole files. If you want to render code blocks in markdown you would need to do something with javascript. See some examples on the Customizing Gitea page.</description>
+    </item>
+    
+    <item>
+      <title>Repository indexer</title>
+      <link>https://ertlans.github.io/en-us/repo-indexer/</link>
+      <pubDate>Fri, 06 Sep 2019 01:35:00 -0300</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/repo-indexer/</guid>
+      <description>Repository indexer Setting up the repository indexer Gitea can search through the files of the repositories by enabling this function in your app.ini:
+[indexer] ; ... REPO_INDEXER_ENABLED = true REPO_INDEXER_PATH = indexers/repos.bleve UPDATE_BUFFER_LEN = 20 MAX_FILE_SIZE = 1048576 REPO_INDEXER_INCLUDE = REPO_INDEXER_EXCLUDE = resources/bin/** Please bear in mind that indexing the contents can consume a lot of system resources, especially when the index is created for the first time or globally updated (e.</description>
+    </item>
+    
+    <item>
+      <title>Advanced: Third Party Tools</title>
+      <link>https://ertlans.github.io/en-us/third-party-tools/</link>
+      <pubDate>Tue, 22 May 2018 11:00:00 +0000</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/third-party-tools/</guid>
+      <description>List of third-party tools NOTE: These tools are not endorsed by Gitea. They are listed here for convenience only.
+Hey! This page may be out of date or even removed in the future! 😱 Instead, check out awesome-gitea!
+Continuous Integration Check our CI/CD page
+Internationalization  Weblate  Migrating  Installation script for Gitea GitHub Migrator  Mobile  GitNex for Android  Editor Extensions  Gitea Extension for Visual Studio  Download from Visual Studio Marketplace    Project Management  YouTrack by JetBrains  </description>
+    </item>
+    
+    <item>
+      <title>Advanced: Logging Configuration</title>
+      <link>https://ertlans.github.io/en-us/logging-configuration/</link>
+      <pubDate>Tue, 02 Apr 2019 17:06:00 +0100</pubDate>
+      
+      <guid>https://ertlans.github.io/en-us/logging-configuration/</guid>
+      <description>Logging Configuration The logging framework has been revamped in Gitea 1.9.0.
+Log Groups The fundamental thing to be aware of in Gitea is that there are several log groups:
+ The &amp;ldquo;Default&amp;rdquo; logger The Macaron logger The Router logger The Access logger The XORM logger  There is also the go log logger.
+The go log logger Go provides its own extremely basic logger in the log package, however, this is not sufficient for our purposes as it does not provide a way of logging at multiple levels, nor does it provide a good way of controlling where these logs are logged except through setting of a writer.</description>
+    </item>
+    
+  </channel>
+</rss>

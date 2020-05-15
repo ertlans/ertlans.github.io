@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta property="og:title" content="Authentication - Docs"></meta>
+ 		
+		<meta property="og:description" content="" />
+		
+		<meta property="og:type" content="article"></meta>
+		<meta property="og:url" content="https://ertlans.github.io/en-us/authentication/"></meta>
+		<meta property="og:image" content="https://docs.gitea.io/images/gitea.png"></meta>
+		<meta name="generator" content="Hugo 0.69.2" />
+
+		<title>Authentication - Docs</title>
+
+		
+		
+
+		
+
+		<link rel="canonical" href="https://ertlans.github.io/en-us/authentication/">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://ertlans.github.io/styles/main.css">
+
+		<link rel="shortcut icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+		<link rel="icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+	</head>
+	<body>
+
+<nav class="navbar">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ertlans.github.io/">
+				<img src="https://ertlans.github.io/images/gitea.png" alt="Docs">
+			</a>
+			<span class="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+		</div>
+		<div class="navbar-menu" id="navMenu">
+			<div class="navbar-end">
+				<span class="navbar-item logo"><img src="https://ertlans.github.io/images/gitea.png" alt="Docs"></span>
+
+	<a class="navbar-item" href="https://gitea.io/en-us/">
+		<i class="fa fa-home"></i>&nbsp;
+		Website
+	</a>
+
+	<a class="navbar-item" href="/en-us/">
+		<i class="fa fa-question"></i>&nbsp;
+		Docs
+	</a>
+
+	<a class="navbar-item" href="https://blog.gitea.io/">
+		<i class="fa fa-rss"></i>&nbsp;
+		Blog
+	</a>
+
+	<a class="navbar-item" href="https://code.gitea.io/">
+		<i class="fa fa-code"></i>&nbsp;
+		Code
+	</a>
+
+	<a class="navbar-item" href="https://crowdin.com/project/gitea">
+		<i class="fa fa-language"></i>&nbsp;
+		Translation
+	</a>
+
+	<a class="navbar-item" href="https://try.gitea.io/api/swagger">
+		<i class="fa fa-plug"></i>&nbsp;
+		API
+	</a>
+
+	<a class="navbar-item" href="https://dl.gitea.io/">
+		<i class="fa fa-download"></i>&nbsp;
+		Downloads
+	</a>
+
+	<a class="navbar-item" href="https://github.com/go-gitea/">
+		<i class="fa fa-github"></i>&nbsp;
+		GitHub
+	</a>
+
+	<a class="navbar-item" href="https://discord.gg/Gitea">
+		<i class="fa fa-comment"></i>&nbsp;
+		Discord Chat
+	</a>
+
+	<a class="navbar-item" href="https://discourse.gitea.io/">
+		<i class="fa fa-group"></i>&nbsp;
+		Forum
+	</a>
+
+
+			</div>
+		</div>
+		<div class="navbar-background" id="navbar-background"></div>
+	</div>
+</nav>
+
+<section class="section">
+	<div class="container is-centered page">
+		<div class="columns">
+			<div class="column is-one-quarter">
+				<aside class="menu">
+	
+		
+			<p class="menu-label">
+				
+				Help
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/faq/" >
+							
+							FAQ
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/seek-help/" >
+							
+							Support Options
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Installation
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/install-with-docker/" >
+							
+							With Docker
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/database-prep/" >
+							
+							Database preparation
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-binary/" >
+							
+							From binary
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-package/" >
+							
+							From package
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/linux-service/" >
+							
+							Linux service
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-source/" >
+							
+							From source
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/windows-service/" >
+							
+							Windows Service
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Upgrade
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/upgrade-from-gogs/" >
+							
+							From Gogs
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Usage
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/command-line/" >
+							
+							Command Line
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/backup-and-restore/" >
+							
+							Backup and Restore
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/email-setup/" >
+							
+							Email setup
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/pull-request/" >
+							
+							Pull Request
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/automatically-linked-references/" >
+							
+							Automatically Linked References
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/issue-pull-request-templates/" >
+							
+							Issue and Pull Request templates
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/reverse-proxies/" >
+							
+							Reverse Proxies
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Advanced
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/adding-legal-pages/" >
+							
+							Adding Legal Pages
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/customizing-gitea/" >
+							
+							Customizing Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/hacking-on-gitea/" >
+							
+							Hacking on Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/config-cheat-sheet/" >
+							
+							Config Cheat Sheet
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/signing/" >
+							
+							GPG Commit Signatures
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/specific-variables/" >
+							
+							Specific variables
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/make/" >
+							
+							Make
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/api-usage/" >
+							
+							API Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/ci-cd/" >
+							
+							CI/CD Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/cmd-embedded/" >
+							
+							Embedded data extraction tool
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/external-renderers/" >
+							
+							External renderers
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/repo-indexer/" >
+							
+							Repository indexer
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/third-party-tools/" >
+							
+							Third Party Tools
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/logging-configuration/" >
+							
+							Logging Configuration
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/migrations-interfaces/" >
+							
+							Migrations Interfaces
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/search-engines-indexation/" >
+							
+							Search Engines Indexation
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				features
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/comparison/" >
+							
+							Comparison
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/authentication/" class="is-active">
+							
+							Authentication
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/localization/" >
+							
+							Localization
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/webhooks/" >
+							
+							Webhooks
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+	</ul>
+</aside>
+
+
+	
+
+
+
+			</div>
+			<div class="column is-three-quarters">
+				<div class="content">
+					<h1 id="authentication">Authentication</h1>
+<h2 id="ldap-lightweight-directory-access-protocol">LDAP (Lightweight Directory Access Protocol)</h2>
+<p>Both the LDAP via BindDN and the simple auth LDAP share the following fields:</p>
+<ul>
+<li>
+<p>Authorization Name <strong>(required)</strong></p>
+<ul>
+<li>A name to assign to the new method of authorization.</li>
+</ul>
+</li>
+<li>
+<p>Host <strong>(required)</strong></p>
+<ul>
+<li>The address where the LDAP server can be reached.</li>
+<li>Example: <code>mydomain.com</code></li>
+</ul>
+</li>
+<li>
+<p>Port <strong>(required)</strong></p>
+<ul>
+<li>The port to use when connecting to the server.</li>
+<li>Example: <code>389</code> for LDAP or <code>636</code> for LDAP SSL</li>
+</ul>
+</li>
+<li>
+<p>Enable TLS Encryption (optional)</p>
+<ul>
+<li>Whether to use TLS when connecting to the LDAP server.</li>
+</ul>
+</li>
+<li>
+<p>Admin Filter (optional)</p>
+<ul>
+<li>An LDAP filter specifying if a user should be given administrator
+privileges. If a user account passes the filter, the user will be
+privileged as an administrator.</li>
+<li>Example: <code>(objectClass=adminAccount)</code></li>
+<li>Example for Microsoft Active Directory (AD): <code>(memberOf=CN=admin-group,OU=example,DC=example,DC=org)</code></li>
+</ul>
+</li>
+<li>
+<p>Username attribute (optional)</p>
+<ul>
+<li>The attribute of the user&rsquo;s LDAP record containing the user name. Given
+attribute value will be used for new Gitea account user name after first
+successful sign-in. Leave empty to use login name given on sign-in form.</li>
+<li>This is useful when supplied login name is matched against multiple
+attributes, but only single specific attribute should be used for Gitea
+account name, see &ldquo;User Filter&rdquo;.</li>
+<li>Example: <code>uid</code></li>
+<li>Example for Microsoft Active Directory (AD): <code>sAMAccountName</code></li>
+</ul>
+</li>
+<li>
+<p>First name attribute (optional)</p>
+<ul>
+<li>The attribute of the user&rsquo;s LDAP record containing the user&rsquo;s first name.
+This will be used to populate their account information.</li>
+<li>Example: <code>givenName</code></li>
+</ul>
+</li>
+<li>
+<p>Surname attribute (optional)</p>
+<ul>
+<li>The attribute of the user&rsquo;s LDAP record containing the user&rsquo;s surname.
+This will be used to populate their account information.</li>
+<li>Example: <code>sn</code></li>
+</ul>
+</li>
+<li>
+<p>E-mail attribute <strong>(required)</strong></p>
+<ul>
+<li>The attribute of the user&rsquo;s LDAP record containing the user&rsquo;s email
+address. This will be used to populate their account information.</li>
+<li>Example: <code>mail</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>LDAP via BindDN</strong> adds the following fields:</p>
+<ul>
+<li>
+<p>Bind DN (optional)</p>
+<ul>
+<li>The DN to bind to the LDAP server with when searching for the user. This
+may be left blank to perform an anonymous search.</li>
+<li>Example: <code>cn=Search,dc=mydomain,dc=com</code></li>
+</ul>
+</li>
+<li>
+<p>Bind Password (optional)</p>
+<ul>
+<li>The password for the Bind DN specified above, if any. <em>Note: The password
+is stored in plaintext at the server. As such, ensure that the Bind DN
+has as few privileges as possible.</em></li>
+</ul>
+</li>
+<li>
+<p>User Search Base <strong>(required)</strong></p>
+<ul>
+<li>The LDAP base at which user accounts will be searched for.</li>
+<li>Example: <code>ou=Users,dc=mydomain,dc=com</code></li>
+</ul>
+</li>
+<li>
+<p>User Filter <strong>(required)</strong></p>
+<ul>
+<li>An LDAP filter declaring how to find the user record that is attempting to
+authenticate. The <code>%s</code> matching parameter will be substituted with login
+name given on sign-in form.</li>
+<li>Example: <code>(&amp;(objectClass=posixAccount)(uid=%s))</code></li>
+<li>Example for Microsoft Active Directory (AD): <code>(&amp;(objectCategory=Person)(memberOf=CN=user-group,OU=example,DC=example,DC=org)(sAMAccountName=%s)(!(UserAccountControl:1.2.840.113556.1.4.803:=2)))</code></li>
+<li>To substitute more than once, <code>%[1]s</code> should be used instead, e.g. when
+matching supplied login name against multiple attributes such as user
+identifier, email or even phone number.</li>
+<li>Example: <code>(&amp;(objectClass=Person)(|(uid=%[1]s)(mail=%[1]s)(mobile=%[1]s)))</code></li>
+</ul>
+</li>
+<li>
+<p>Enable user synchronization</p>
+<ul>
+<li>This option enables a periodic task that synchronizes the Gitea users with
+the LDAP server. The default period is every 24 hours but that can be
+changed in the app.ini file.  See the <em>cron.sync_external_users</em> section in
+the <a href="https://github.com/go-gitea/gitea/blob/master/custom/conf/app.ini.sample">sample
+app.ini</a>
+for detailed comments about that section.  The <em>User Search Base</em> and <em>User
+Filter</em> settings described above will limit which users can use Gitea and
+which users will be synchronized.  When initially run the task will create
+all LDAP users that match the given settings so take care if working with
+large Enterprise LDAP directories.</li>
+</ul>
+</li>
+</ul>
+<p><strong>LDAP using simple auth</strong> adds the following fields:</p>
+<ul>
+<li>
+<p>User DN <strong>(required)</strong></p>
+<ul>
+<li>A template to use as the user&rsquo;s DN. The <code>%s</code> matching parameter will be
+substituted with login name given on sign-in form.</li>
+<li>Example: <code>cn=%s,ou=Users,dc=mydomain,dc=com</code></li>
+<li>Example: <code>uid=%s,ou=Users,dc=mydomain,dc=com</code></li>
+</ul>
+</li>
+<li>
+<p>User Search Base  (optional)</p>
+<ul>
+<li>The LDAP base at which user accounts will be searched for.</li>
+<li>Example: <code>ou=Users,dc=mydomain,dc=com</code></li>
+</ul>
+</li>
+<li>
+<p>User Filter <strong>(required)</strong></p>
+<ul>
+<li>An LDAP filter declaring when a user should be allowed to log in. The <code>%s</code>
+matching parameter will be substituted with login name given on sign-in
+form.</li>
+<li>Example: <code>(&amp;(objectClass=posixAccount)(cn=%s))</code></li>
+<li>Example: <code>(&amp;(objectClass=posixAccount)(uid=%s))</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Verify group membership in LDAP</strong> uses the following fields:</p>
+<ul>
+<li>
+<p>Group Search Base (optional)</p>
+<ul>
+<li>The LDAP DN used for groups.</li>
+<li>Example: <code>ou=group,dc=mydomain,dc=com</code></li>
+</ul>
+</li>
+<li>
+<p>Group Name Filter (optional)</p>
+<ul>
+<li>An LDAP filter declaring how to find valid groups in the above DN.</li>
+<li>Example: <code>(|(cn=gitea_users)(cn=admins))</code></li>
+</ul>
+</li>
+<li>
+<p>User Attribute in Group (optional)</p>
+<ul>
+<li>Which user LDAP attribute is listed in the group.</li>
+<li>Example: <code>uid</code></li>
+</ul>
+</li>
+<li>
+<p>Group Attribute for User (optional)</p>
+<ul>
+<li>Which group LDAP attribute contains an array above user attribute names.</li>
+<li>Example: <code>memberUid</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="pam-pluggable-authentication-module">PAM (Pluggable Authentication Module)</h2>
+<p>To configure PAM, set the &lsquo;PAM Service Name&rsquo; to a filename in <code>/etc/pam.d/</code>. To
+work with normal Linux passwords, the user running Gitea must have read access
+to <code>/etc/shadow</code>.</p>
+<h2 id="smtp-simple-mail-transfer-protocol">SMTP (Simple Mail Transfer Protocol)</h2>
+<p>This option allows Gitea to log in to an SMTP host as a Gitea user. To
+configure this, set the fields below:</p>
+<ul>
+<li>
+<p>Authentication Name <strong>(required)</strong></p>
+<ul>
+<li>A name to assign to the new method of authorization.</li>
+</ul>
+</li>
+<li>
+<p>SMTP Authentication Type <strong>(required)</strong></p>
+<ul>
+<li>Type of authentication to use to connect to SMTP host, PLAIN or LOGIN.</li>
+</ul>
+</li>
+<li>
+<p>Host <strong>(required)</strong></p>
+<ul>
+<li>The address where the SMTP host can be reached.</li>
+<li>Example: <code>smtp.mydomain.com</code></li>
+</ul>
+</li>
+<li>
+<p>Port <strong>(required)</strong></p>
+<ul>
+<li>The port to use when connecting to the server.</li>
+<li>Example: <code>587</code></li>
+</ul>
+</li>
+<li>
+<p>Allowed Domains</p>
+<ul>
+<li>Restrict what domains can log in if using a public SMTP host or SMTP host
+with multiple domains.</li>
+<li>Example: <code>gitea.io,mydomain.com,mydomain2.com</code></li>
+</ul>
+</li>
+<li>
+<p>Enable TLS Encryption</p>
+<ul>
+<li>Enable TLS encryption on authentication.</li>
+</ul>
+</li>
+<li>
+<p>Skip TLS Verify</p>
+<ul>
+<li>Disable TLS verify on authentication.</li>
+</ul>
+</li>
+<li>
+<p>This authentication is activate</p>
+<ul>
+<li>Enable or disable this auth.</li>
+</ul>
+</li>
+</ul>
+<h2 id="freeipa">FreeIPA</h2>
+<ul>
+<li>
+<p>In order to log in to Gitea using FreeIPA credentials, a bind account needs to
+be created for Gitea:</p>
+</li>
+<li>
+<p>On the FreeIPA server, create a <code>gitea.ldif</code> file, replacing <code>dc=example,dc=com</code>
+with your DN, and provide an appropriately secure password:</p>
+</li>
+</ul>
+<pre><code>  dn: uid=gitea,cn=sysaccounts,cn=etc,dc=example,dc=com
+  changetype: add
+  objectclass: account
+  objectclass: simplesecurityobject
+  uid: gitea
+  userPassword: secure password
+  passwordExpirationTime: 20380119031407Z
+  nsIdleTimeout: 0
+</code></pre><ul>
+<li>Import the LDIF (change localhost to an IPA server if needed). A prompt for
+Directory Manager password will be presented:</li>
+</ul>
+<pre><code>  ldapmodify -h localhost -p 389 -x -D \
+  &quot;cn=Directory Manager&quot; -W -f gitea.ldif
+</code></pre><ul>
+<li>Add an IPA group for gitea_users :</li>
+</ul>
+<pre><code>  ipa group-add --desc=&quot;Gitea Users&quot; gitea_users
+</code></pre><ul>
+<li>
+<p>Note: For errors about IPA credentials, run <code>kinit admin</code> and provide the
+domain admin account password.</p>
+</li>
+<li>
+<p>Log in to Gitea as an Administrator and click on &ldquo;Authentication&rdquo; under Admin Panel.
+Then click <code>Add New Source</code> and fill in the details, changing all where appropriate.</p>
+</li>
+</ul>
+<h2 id="spnego-with-sspi-kerberosntlm-for-windows-only">SPNEGO with SSPI (Kerberos/NTLM, for Windows only)</h2>
+<p>Gitea supports SPNEGO single sign-on authentication (the scheme defined by RFC4559) for the web part of the server via the Security Support Provider Interface (SSPI) built in Windows. SSPI works only in Windows environments - when both the server and the clients are running Windows.</p>
+<p>Before activating SSPI single sign-on authentication (SSO) you have to prepare your environment:</p>
+<ul>
+<li>
+<p>Create a separate user account in active directory, under which the <code>gitea.exe</code> process will be running (eg. <code>user</code> under domain <code>domain.local</code>):</p>
+</li>
+<li>
+<p>Create a service principal name for the host where <code>gitea.exe</code> is running with class <code>HTTP</code>:</p>
+<ul>
+<li>Start <code>Command Prompt</code> or <code>PowerShell</code> as a priviledged domain user (eg. Domain Administrator)</li>
+<li>Run the command below, replacing <code>host.domain.local</code> with the fully qualified domain name (FQDN) of the server where the web application will be running, and <code>domain\user</code> with the name of the account created in the previous step:</li>
+</ul>
+<pre><code>  setspn -A HTTP/host.domain.local domain\user
+</code></pre></li>
+<li>
+<p>Sign in (<em>sign out if you were already signed in</em>) with the user created</p>
+</li>
+<li>
+<p>Make sure that <code>ROOT_URL</code> in the <code>[server]</code> section of <code>custom/conf/app.ini</code> is the fully qualified domain name of the server where the web application will be running - the same you used when creating the service principal name (eg. <code>host.domain.local</code>)</p>
+</li>
+<li>
+<p>Start the web server (<code>gitea.exe web</code>)</p>
+</li>
+<li>
+<p>Enable SSPI authentication by adding an <code>SPNEGO with SSPI</code> authentication source in <code>Site Administration -&gt; Authentication Sources</code></p>
+</li>
+<li>
+<p>Sign in to a client computer in the same domain with any domain user (client computer, different from the server running <code>gitea.exe</code>)</p>
+</li>
+<li>
+<p>If you are using Chrome, Edge or Internet Explorer, add the URL of the web app to the Local intranet sites (<code>Internet Options -&gt; Security -&gt; Local intranet -&gt; Sites</code>)</p>
+</li>
+<li>
+<p>Start Chrome, Edge or Internet Explorer and navigate to the FQDN URL of gitea (eg. <code>http://host.domain.local:3000</code>)</p>
+</li>
+<li>
+<p>Click the <code>Sign In</code> button on the dashboard and choose SSPI to be automatically logged in with the same user that is currently logged on to the computer</p>
+</li>
+<li>
+<p>If it does not work, make sure that:</p>
+<ul>
+<li>You are not running the web browser on the same server where gitea is running. You should be running the web browser on a domain joined computer (client) that is different from the server. If both the client and server are runnning on the same computer NTLM will be prefered over Kerberos.</li>
+<li>There is only one <code>HTTP/...</code> SPN for the host</li>
+<li>The SPN contains only the hostname, without the port</li>
+<li>You have added the URL of the web app to the <code>Local intranet zone</code></li>
+<li>The clocks of the server and client should not differ with more than 5 minutes (depends on group policy)</li>
+<li><code>Integrated Windows Authentication</code> should be enabled in Internet Explorer (under <code>Advanced settings</code>)</li>
+</ul>
+</li>
+</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="content has-text-centered">
+					<p>
+						Copyright &copy; 2020 <a href="https://docs.gitea.io">The Gitea Authors</a>. All rights reserved. Made with <i class="fa fa-heart" aria-hidden="true"></i> and <a href="https://gohugo.io">Hugo</a>.
+					</p>
+					<p>
+						 Sponsored by <a href="https://www.didiyun.com">DiDi Cloud</a>, <a href="http://inblockchain.com">INBlockchain</a>, <a href="https://www.packet.com">Packet</a>, <a href="https://digitalocean.com">DigitalOcean</a>, and all of our backers on <a href="https://opencollective.com/gitea">Open Collective</a>.
+					</p>
+					<p>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-cn" hreflang="zh-cn">中文(简体)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-tw" hreflang="zh-tw">中文(繁體)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/pt-br" hreflang="pt-br">Português Brasileiro</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/en-us" hreflang="en-us">English</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/nl-nl" hreflang="nl-nl">Nederlands</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/fr-fr" hreflang="fr-fr">Français</a>
+						
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+            document.addEventListener('DOMContentLoaded', function () {
+
+                
+                var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                
+                if ($navbarBurgers.length > 0) {
+
+                    
+                    $navbarBurgers.forEach(function ($el) {
+                        $el.addEventListener('click', function () {
+
+                            
+                            var target = $el.dataset.target;
+                            var $target = document.getElementById(target);
+
+                            
+                            $el.classList.toggle('is-active');
+                            $target.classList.toggle('is-active');
+
+
+                            document.getElementById('navbar-background').classList.toggle('is-active');
+
+
+                        });
+                    });
+                }
+
+				
+				
+				let svg = '  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor; vertical-align: middle" width="24" height="24" viewBox="0 0 32 32"><title>gitea</title><path d="M5.583 7.229c-2.464-0.005-5.755 1.557-5.573 5.479 0.281 6.125 6.557 6.693 9.068 6.745 0.271 1.146 3.224 5.109 5.411 5.318h9.573c5.74-0.38 10.036-17.365 6.854-17.427-5.271 0.25-8.396 0.375-11.073 0.396v5.297l-0.839-0.365-0.005-4.932c-3.073 0-5.781-0.141-10.917-0.396-0.646-0.005-1.542-0.115-2.5-0.115zM5.927 9.396h0.297c0.349 3.141 0.917 4.974 2.068 7.781-2.938-0.349-5.432-1.198-5.891-4.38-0.24-1.646 0.563-3.365 3.526-3.401zM17.339 12.479c0.198 0.005 0.406 0.042 0.594 0.13l1 0.432-0.714 1.302c-0.109 0-0.219 0.016-0.323 0.052-0.464 0.151-0.708 0.604-0.542 1.021 0.036 0.083 0.089 0.161 0.151 0.229l-1.234 2.25c-0.099 0-0.203 0.016-0.297 0.052-0.464 0.146-0.708 0.604-0.542 1.016 0.172 0.417 0.682 0.63 1.151 0.479 0.464-0.146 0.703-0.604 0.536-1.021-0.047-0.109-0.115-0.208-0.208-0.292l1.203-2.188c0.13 0.010 0.26 0 0.391-0.042 0.104-0.031 0.198-0.083 0.281-0.151 0.464 0.198 0.844 0.354 1.12 0.49 0.406 0.203 0.552 0.339 0.599 0.49 0.042 0.146-0.005 0.427-0.24 0.922-0.172 0.37-0.458 0.896-0.797 1.51-0.115 0-0.229 0.016-0.333 0.052-0.469 0.151-0.708 0.604-0.542 1.021 0.167 0.411 0.682 0.625 1.146 0.479 0.469-0.151 0.708-0.604 0.542-1.021-0.042-0.099-0.104-0.193-0.182-0.271 0.333-0.609 0.62-1.135 0.807-1.526 0.25-0.536 0.38-0.938 0.266-1.323s-0.469-0.635-0.932-0.865c-0.307-0.151-0.693-0.313-1.146-0.505 0.005-0.109-0.010-0.214-0.052-0.318s-0.109-0.198-0.193-0.281l0.703-1.281 3.901 1.682c0.703 0.307 0.995 1.057 0.651 1.682l-2.682 4.906c-0.339 0.625-1.182 0.885-1.885 0.578l-5.516-2.38c-0.703-0.307-0.995-1.057-0.656-1.682l2.682-4.906c0.234-0.432 0.708-0.688 1.208-0.708h0.083z"></path></svg>';
+				let contents = document.getElementsByClassName("content");
+				if (contents.length > 0) {
+					let content = contents[0];
+					for (let level = 1; level <= 4; level++) {
+						let elems = content.getElementsByTagName("h" + level);
+						for (let i = 0; i < elems.length; i++) {
+							let elem = elems[i];
+							if (elem.id !== "undefined" && elem.id !== "") {
+								let anchorId = elem.id + "-anchor";
+								elem.addEventListener("mouseover", () => {
+									document.getElementById(anchorId).style.display = "initial";
+								});
+								elem.addEventListener("mouseout", () => {
+									document.getElementById(anchorId).style.display = "none";
+								});
+								let anchor = document.createElement("a");
+								anchor.id = anchorId;
+								anchor.href = "#" + elem.id;
+								anchor.innerHTML = svg;
+								anchor.style.display = "none";
+								elem.appendChild(anchor);
+							}
+						}
+					}
+				}
+
+            });
+		</script>
+
+		</body>
+</html>
+

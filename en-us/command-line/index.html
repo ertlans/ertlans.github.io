@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta property="og:title" content="Usage: Command Line - Docs"></meta>
+ 		
+		<meta property="og:description" content="" />
+		
+		<meta property="og:type" content="article"></meta>
+		<meta property="og:url" content="https://ertlans.github.io/en-us/command-line/"></meta>
+		<meta property="og:image" content="https://docs.gitea.io/images/gitea.png"></meta>
+		<meta name="generator" content="Hugo 0.69.2" />
+
+		<title>Usage: Command Line - Docs</title>
+
+		
+		
+
+		
+
+		<link rel="canonical" href="https://ertlans.github.io/en-us/command-line/">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://ertlans.github.io/styles/main.css">
+
+		<link rel="shortcut icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+		<link rel="icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+	</head>
+	<body>
+
+<nav class="navbar">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ertlans.github.io/">
+				<img src="https://ertlans.github.io/images/gitea.png" alt="Docs">
+			</a>
+			<span class="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+		</div>
+		<div class="navbar-menu" id="navMenu">
+			<div class="navbar-end">
+				<span class="navbar-item logo"><img src="https://ertlans.github.io/images/gitea.png" alt="Docs"></span>
+
+	<a class="navbar-item" href="https://gitea.io/en-us/">
+		<i class="fa fa-home"></i>&nbsp;
+		Website
+	</a>
+
+	<a class="navbar-item" href="/en-us/">
+		<i class="fa fa-question"></i>&nbsp;
+		Docs
+	</a>
+
+	<a class="navbar-item" href="https://blog.gitea.io/">
+		<i class="fa fa-rss"></i>&nbsp;
+		Blog
+	</a>
+
+	<a class="navbar-item" href="https://code.gitea.io/">
+		<i class="fa fa-code"></i>&nbsp;
+		Code
+	</a>
+
+	<a class="navbar-item" href="https://crowdin.com/project/gitea">
+		<i class="fa fa-language"></i>&nbsp;
+		Translation
+	</a>
+
+	<a class="navbar-item" href="https://try.gitea.io/api/swagger">
+		<i class="fa fa-plug"></i>&nbsp;
+		API
+	</a>
+
+	<a class="navbar-item" href="https://dl.gitea.io/">
+		<i class="fa fa-download"></i>&nbsp;
+		Downloads
+	</a>
+
+	<a class="navbar-item" href="https://github.com/go-gitea/">
+		<i class="fa fa-github"></i>&nbsp;
+		GitHub
+	</a>
+
+	<a class="navbar-item" href="https://discord.gg/Gitea">
+		<i class="fa fa-comment"></i>&nbsp;
+		Discord Chat
+	</a>
+
+	<a class="navbar-item" href="https://discourse.gitea.io/">
+		<i class="fa fa-group"></i>&nbsp;
+		Forum
+	</a>
+
+
+			</div>
+		</div>
+		<div class="navbar-background" id="navbar-background"></div>
+	</div>
+</nav>
+
+<section class="section">
+	<div class="container is-centered page">
+		<div class="columns">
+			<div class="column is-one-quarter">
+				<aside class="menu">
+	
+		
+			<p class="menu-label">
+				
+				Help
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/faq/" >
+							
+							FAQ
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/seek-help/" >
+							
+							Support Options
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Installation
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/install-with-docker/" >
+							
+							With Docker
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/database-prep/" >
+							
+							Database preparation
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-binary/" >
+							
+							From binary
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-package/" >
+							
+							From package
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/linux-service/" >
+							
+							Linux service
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-source/" >
+							
+							From source
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/windows-service/" >
+							
+							Windows Service
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Upgrade
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/upgrade-from-gogs/" >
+							
+							From Gogs
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Usage
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/command-line/" class="is-active">
+							
+							Command Line
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/backup-and-restore/" >
+							
+							Backup and Restore
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/email-setup/" >
+							
+							Email setup
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/pull-request/" >
+							
+							Pull Request
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/automatically-linked-references/" >
+							
+							Automatically Linked References
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/issue-pull-request-templates/" >
+							
+							Issue and Pull Request templates
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/reverse-proxies/" >
+							
+							Reverse Proxies
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Advanced
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/adding-legal-pages/" >
+							
+							Adding Legal Pages
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/customizing-gitea/" >
+							
+							Customizing Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/hacking-on-gitea/" >
+							
+							Hacking on Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/config-cheat-sheet/" >
+							
+							Config Cheat Sheet
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/signing/" >
+							
+							GPG Commit Signatures
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/specific-variables/" >
+							
+							Specific variables
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/make/" >
+							
+							Make
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/api-usage/" >
+							
+							API Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/ci-cd/" >
+							
+							CI/CD Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/cmd-embedded/" >
+							
+							Embedded data extraction tool
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/external-renderers/" >
+							
+							External renderers
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/repo-indexer/" >
+							
+							Repository indexer
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/third-party-tools/" >
+							
+							Third Party Tools
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/logging-configuration/" >
+							
+							Logging Configuration
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/migrations-interfaces/" >
+							
+							Migrations Interfaces
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/search-engines-indexation/" >
+							
+							Search Engines Indexation
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				features
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/comparison/" >
+							
+							Comparison
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/authentication/" >
+							
+							Authentication
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/localization/" >
+							
+							Localization
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/webhooks/" >
+							
+							Webhooks
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+	</ul>
+</aside>
+
+
+	
+
+
+
+			</div>
+			<div class="column is-three-quarters">
+				<div class="content">
+					<h2 id="command-line">Command Line</h2>
+<h3 id="usage">Usage</h3>
+<p><code>gitea [global options] command [command or global options] [arguments...]</code></p>
+<h3 id="global-options">Global options</h3>
+<p>All global options can be placed at the command level.</p>
+<ul>
+<li><code>--help</code>, <code>-h</code>: Show help text and exit. Optional.</li>
+<li><code>--version</code>, <code>-v</code>: Show version and exit. Optional. (example: <code>Gitea version 1.1.0+218-g7b907ed built with: bindata, sqlite</code>).</li>
+<li><code>--custom-path path</code>, <code>-C path</code>: Location of the Gitea custom folder. Optional. (default: <code>AppWorkPath</code>/custom or <code>$GITEA_CUSTOM</code>).</li>
+<li><code>--config path</code>, <code>-c path</code>: Gitea configuration file path. Optional. (default: <code>custom</code>/conf/app.ini).</li>
+<li><code>--work-path path</code>, <code>-w path</code>: Gitea <code>AppWorkPath</code>. Optional. (default: LOCATION_OF_GITEA_BINARY or <code>$GITEA_WORK_DIR</code>)</li>
+</ul>
+<p>NB: The defaults custom-path, config and work-path can also be
+changed at build time (if preferred).</p>
+<h3 id="commands">Commands</h3>
+<h4 id="web">web</h4>
+<p>Starts the server:</p>
+<ul>
+<li>Options:
+<ul>
+<li><code>--port number</code>, <code>-p number</code>: Port number. Optional. (default: 3000). Overrides configuration file.</li>
+<li><code>--pid path</code>, <code>-P path</code>: Pidfile path. Optional.</li>
+</ul>
+</li>
+<li>Examples:
+<ul>
+<li><code>gitea web</code></li>
+<li><code>gitea web --port 80</code></li>
+<li><code>gitea web --config /etc/gitea.ini --pid /var/run/gitea.pid</code></li>
+</ul>
+</li>
+<li>Notes:
+<ul>
+<li>Gitea should not be run as root. To bind to a port below 1024, you can use setcap on
+Linux: <code>sudo setcap 'cap_net_bind_service=+ep' /path/to/gitea</code>. This will need to be
+redone every time you update Gitea.</li>
+</ul>
+</li>
+</ul>
+<h4 id="admin">admin</h4>
+<p>Admin operations:</p>
+<ul>
+<li>Commands:
+<ul>
+<li><code>create-user</code>
+<ul>
+<li>Options:
+<ul>
+<li><code>--name value</code>: Username. Required. As of gitea 1.9.0, use the <code>--username</code> flag instead.</li>
+<li><code>--username value</code>: Username. Required. New in gitea 1.9.0.</li>
+<li><code>--password value</code>: Password. Required.</li>
+<li><code>--email value</code>: Email. Required.</li>
+<li><code>--admin</code>: If provided, this makes the user an admin. Optional.</li>
+<li><code>--access-token</code>: If provided, an access token will be created for the user. Optional. (default: false).</li>
+<li><code>--must-change-password</code>: If provided, the created user will be required to choose a newer password after
+the initial login. Optional. (default: true).</li>
+<li><code>--random-password</code>: If provided, a randomly generated password will be used as the password of
+the created user. The value of <code>--password</code> will be discarded. Optional.</li>
+<li><code>--random-password-length</code>: If provided, it will be used to configure the length of the randomly
+generated password. Optional. (default: 12)</li>
+</ul>
+</li>
+<li>Examples:
+<ul>
+<li><code>gitea admin create-user --username myname --password asecurepassword --email me@example.com</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>change-password</code>
+<ul>
+<li>Options:
+<ul>
+<li><code>--username value</code>, <code>-u value</code>: Username. Required.</li>
+<li><code>--password value</code>, <code>-p value</code>: New password. Required.</li>
+</ul>
+</li>
+<li>Examples:
+<ul>
+<li><code>gitea admin change-password --username myname --password asecurepassword</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>regenerate</code>
+<ul>
+<li>Options:
+<ul>
+<li><code>hooks</code>: Regenerate git-hooks for all repositories</li>
+<li><code>keys</code>: Regenerate authorized_keys file</li>
+</ul>
+</li>
+<li>Examples:
+<ul>
+<li><code>gitea admin regenerate hooks</code></li>
+<li><code>gitea admin regenerate keys</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>auth</code>:
+<ul>
+<li><code>list</code>:
+<ul>
+<li>Description: lists all external authentication sources that exist</li>
+<li>Examples:
+<ul>
+<li><code>gitea admin auth list</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>delete</code>:
+<ul>
+<li>Options:
+<ul>
+<li><code>--id</code>: ID of source to be deleted. Required.</li>
+</ul>
+</li>
+<li>Examples:
+<ul>
+<li><code>gitea admin auth delete --id 1</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>add-oauth</code>:
+<ul>
+<li>Options:
+<ul>
+<li><code>--name</code>: Application Name.</li>
+<li><code>--provider</code>: OAuth2 Provider.</li>
+<li><code>--key</code>: Client ID (Key).</li>
+<li><code>--secret</code>: Client Secret.</li>
+<li><code>--auto-discover-url</code>: OpenID Connect Auto Discovery URL (only required when using OpenID Connect as provider).</li>
+<li><code>--use-custom-urls</code>: Use custom URLs for GitLab/GitHub OAuth endpoints.</li>
+<li><code>--custom-auth-url</code>: Use a custom Authorization URL (option for GitLab/GitHub).</li>
+<li><code>--custom-token-url</code>: Use a custom Token URL (option for GitLab/GitHub).</li>
+<li><code>--custom-profile-url</code>: Use a custom Profile URL (option for GitLab/GitHub).</li>
+<li><code>--custom-email-url</code>: Use a custom Email URL (option for GitHub).</li>
+</ul>
+</li>
+<li>Examples:
+<ul>
+<li><code>gitea admin auth add-oauth --name external-github --provider github --key OBTAIN_FROM_SOURCE --secret OBTAIN_FROM_SOURCE</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>update-oauth</code>:
+<ul>
+<li>Options:
+<ul>
+<li><code>--id</code>: ID of source to be updated. Required.</li>
+<li><code>--name</code>: Application Name.</li>
+<li><code>--provider</code>: OAuth2 Provider.</li>
+<li><code>--key</code>: Client ID (Key).</li>
+<li><code>--secret</code>: Client Secret.</li>
+<li><code>--auto-discover-url</code>: OpenID Connect Auto Discovery URL (only required when using OpenID Connect as provider).</li>
+<li><code>--use-custom-urls</code>: Use custom URLs for GitLab/GitHub OAuth endpoints.</li>
+<li><code>--custom-auth-url</code>: Use a custom Authorization URL (option for GitLab/GitHub).</li>
+<li><code>--custom-token-url</code>: Use a custom Token URL (option for GitLab/GitHub).</li>
+<li><code>--custom-profile-url</code>: Use a custom Profile URL (option for GitLab/GitHub).</li>
+<li><code>--custom-email-url</code>: Use a custom Email URL (option for GitHub).</li>
+</ul>
+</li>
+<li>Examples:
+<ul>
+<li><code>gitea admin auth update-oauth --id 1 --name external-github-updated</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>add-ldap</code>: Add new LDAP (via Bind DN) authentication source
+<ul>
+<li>Options:
+<ul>
+<li><code>--name value</code>: Authentication name. Required.</li>
+<li><code>--not-active</code>: Deactivate the authentication source.</li>
+<li><code>--security-protocol value</code>: Security protocol name. Required.</li>
+<li><code>--skip-tls-verify</code>: Disable TLS verification.</li>
+<li><code>--host value</code>: The address where the LDAP server can be reached. Required.</li>
+<li><code>--port value</code>: The port to use when connecting to the LDAP server. Required.</li>
+<li><code>--user-search-base value</code>: The LDAP base at which user accounts will be searched for. Required.</li>
+<li><code>--user-filter value</code>: An LDAP filter declaring how to find the user record that is attempting to authenticate. Required.</li>
+<li><code>--admin-filter value</code>: An LDAP filter specifying if a user should be given administrator privileges.</li>
+<li><code>--restricted-filter value</code>: An LDAP filter specifying if a user should be given restricted status.</li>
+<li><code>--username-attribute value</code>: The attribute of the user’s LDAP record containing the user name.</li>
+<li><code>--firstname-attribute value</code>: The attribute of the user’s LDAP record containing the user’s first name.</li>
+<li><code>--surname-attribute value</code>: The attribute of the user’s LDAP record containing the user’s surname.</li>
+<li><code>--email-attribute value</code>: The attribute of the user’s LDAP record containing the user’s email address. Required.</li>
+<li><code>--public-ssh-key-attribute value</code>: The attribute of the user’s LDAP record containing the user’s public ssh key.</li>
+<li><code>--bind-dn value</code>: The DN to bind to the LDAP server with when searching for the user.</li>
+<li><code>--bind-password value</code>: The password for the Bind DN, if any.</li>
+<li><code>--attributes-in-bind</code>: Fetch attributes in bind DN context.</li>
+<li><code>--synchronize-users</code>: Enable user synchronization.</li>
+<li><code>--page-size value</code>: Search page size.</li>
+</ul>
+</li>
+<li>Examples:
+<ul>
+<li><code>gitea admin auth add-ldap --name ldap --security-protocol unencrypted --host mydomain.org --port 389 --user-search-base &quot;ou=Users,dc=mydomain,dc=org&quot; --user-filter &quot;(&amp;(objectClass=posixAccount)(uid=%s))&quot; --email-attribute mail</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>update-ldap</code>: Update existing LDAP (via Bind DN) authentication source
+<ul>
+<li>Options:
+<ul>
+<li><code>--id value</code>: ID of authentication source. Required.</li>
+<li><code>--name value</code>: Authentication name.</li>
+<li><code>--not-active</code>: Deactivate the authentication source.</li>
+<li><code>--security-protocol value</code>: Security protocol name.</li>
+<li><code>--skip-tls-verify</code>: Disable TLS verification.</li>
+<li><code>--host value</code>: The address where the LDAP server can be reached.</li>
+<li><code>--port value</code>: The port to use when connecting to the LDAP server.</li>
+<li><code>--user-search-base value</code>: The LDAP base at which user accounts will be searched for.</li>
+<li><code>--user-filter value</code>: An LDAP filter declaring how to find the user record that is attempting to authenticate.</li>
+<li><code>--admin-filter value</code>: An LDAP filter specifying if a user should be given administrator privileges.</li>
+<li><code>--restricted-filter value</code>: An LDAP filter specifying if a user should be given restricted status.</li>
+<li><code>--username-attribute value</code>: The attribute of the user’s LDAP record containing the user name.</li>
+<li><code>--firstname-attribute value</code>: The attribute of the user’s LDAP record containing the user’s first name.</li>
+<li><code>--surname-attribute value</code>: The attribute of the user’s LDAP record containing the user’s surname.</li>
+<li><code>--email-attribute value</code>: The attribute of the user’s LDAP record containing the user’s email address.</li>
+<li><code>--public-ssh-key-attribute value</code>: The attribute of the user’s LDAP record containing the user’s public ssh key.</li>
+<li><code>--bind-dn value</code>: The DN to bind to the LDAP server with when searching for the user.</li>
+<li><code>--bind-password value</code>: The password for the Bind DN, if any.</li>
+<li><code>--attributes-in-bind</code>: Fetch attributes in bind DN context.</li>
+<li><code>--synchronize-users</code>: Enable user synchronization.</li>
+<li><code>--page-size value</code>: Search page size.</li>
+</ul>
+</li>
+<li>Examples:
+<ul>
+<li><code>gitea admin auth update-ldap --id 1 --name &quot;my ldap auth source&quot;</code></li>
+<li><code>gitea admin auth update-ldap --id 1 --username-attribute uid --firstname-attribute givenName --surname-attribute sn</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>add-ldap-simple</code>: Add new LDAP (simple auth) authentication source
+<ul>
+<li>Options:
+<ul>
+<li><code>--name value</code>: Authentication name. Required.</li>
+<li><code>--not-active</code>: Deactivate the authentication source.</li>
+<li><code>--security-protocol value</code>: Security protocol name. Required.</li>
+<li><code>--skip-tls-verify</code>: Disable TLS verification.</li>
+<li><code>--host value</code>: The address where the LDAP server can be reached. Required.</li>
+<li><code>--port value</code>: The port to use when connecting to the LDAP server. Required.</li>
+<li><code>--user-search-base value</code>: The LDAP base at which user accounts will be searched for.</li>
+<li><code>--user-filter value</code>: An LDAP filter declaring how to find the user record that is attempting to authenticate. Required.</li>
+<li><code>--admin-filter value</code>: An LDAP filter specifying if a user should be given administrator privileges.</li>
+<li><code>--restricted-filter value</code>: An LDAP filter specifying if a user should be given restricted status.</li>
+<li><code>--username-attribute value</code>: The attribute of the user’s LDAP record containing the user name.</li>
+<li><code>--firstname-attribute value</code>: The attribute of the user’s LDAP record containing the user’s first name.</li>
+<li><code>--surname-attribute value</code>: The attribute of the user’s LDAP record containing the user’s surname.</li>
+<li><code>--email-attribute value</code>: The attribute of the user’s LDAP record containing the user’s email address. Required.</li>
+<li><code>--public-ssh-key-attribute value</code>: The attribute of the user’s LDAP record containing the user’s public ssh key.</li>
+<li><code>--user-dn value</code>: The user’s DN. Required.</li>
+</ul>
+</li>
+<li>Examples:
+<ul>
+<li><code>gitea admin auth add-ldap-simple --name ldap --security-protocol unencrypted --host mydomain.org --port 389 --user-dn &quot;cn=%s,ou=Users,dc=mydomain,dc=org&quot; --user-filter &quot;(&amp;(objectClass=posixAccount)(cn=%s))&quot; --email-attribute mail</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>update-ldap-simple</code>: Update existing LDAP (simple auth) authentication source
+<ul>
+<li>Options:
+<ul>
+<li><code>--id value</code>: ID of authentication source. Required.</li>
+<li><code>--name value</code>: Authentication name.</li>
+<li><code>--not-active</code>: Deactivate the authentication source.</li>
+<li><code>--security-protocol value</code>: Security protocol name.</li>
+<li><code>--skip-tls-verify</code>: Disable TLS verification.</li>
+<li><code>--host value</code>: The address where the LDAP server can be reached.</li>
+<li><code>--port value</code>: The port to use when connecting to the LDAP server.</li>
+<li><code>--user-search-base value</code>: The LDAP base at which user accounts will be searched for.</li>
+<li><code>--user-filter value</code>: An LDAP filter declaring how to find the user record that is attempting to authenticate.</li>
+<li><code>--admin-filter value</code>: An LDAP filter specifying if a user should be given administrator privileges.</li>
+<li><code>--restricted-filter value</code>: An LDAP filter specifying if a user should be given restricted status.</li>
+<li><code>--username-attribute value</code>: The attribute of the user’s LDAP record containing the user name.</li>
+<li><code>--firstname-attribute value</code>: The attribute of the user’s LDAP record containing the user’s first name.</li>
+<li><code>--surname-attribute value</code>: The attribute of the user’s LDAP record containing the user’s surname.</li>
+<li><code>--email-attribute value</code>: The attribute of the user’s LDAP record containing the user’s email address.</li>
+<li><code>--public-ssh-key-attribute value</code>: The attribute of the user’s LDAP record containing the user’s public ssh key.</li>
+<li><code>--user-dn value</code>: The user’s DN.</li>
+</ul>
+</li>
+<li>Examples:
+<ul>
+<li><code>gitea admin auth update-ldap-simple --id 1 --name &quot;my ldap auth source&quot;</code></li>
+<li><code>gitea admin auth update-ldap-simple --id 1 --username-attribute uid --firstname-attribute givenName --surname-attribute sn</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="cert">cert</h4>
+<p>Generates a self-signed SSL certificate. Outputs to <code>cert.pem</code> and <code>key.pem</code> in the current
+directory and will overwrite any existing files.</p>
+<ul>
+<li>Options:
+<ul>
+<li><code>--host value</code>: Comma seperated hostnames and ips which this certificate is valid for.
+Wildcards are supported. Required.</li>
+<li><code>--ecdsa-curve value</code>: ECDSA curve to use to generate a key. Optional. Valid options
+are P224, P256, P384, P521.</li>
+<li><code>--rsa-bits value</code>: Size of RSA key to generate. Optional. Ignored if &ndash;ecdsa-curve is
+set. (default: 2048).</li>
+<li><code>--start-date value</code>: Creation date. Optional. (format: <code>Jan 1 15:04:05 2011</code>).</li>
+<li><code>--duration value</code>: Duration which the certificate is valid for. Optional. (default: 8760h0m0s)</li>
+<li><code>--ca</code>: If provided, this cert generates it&rsquo;s own certificate authority. Optional.</li>
+</ul>
+</li>
+<li>Examples:
+<ul>
+<li><code>gitea cert --host git.example.com,example.com,www.example.com --ca</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="dump">dump</h4>
+<p>Dumps all files and databases into a zip file. Outputs into a file like <code>gitea-dump-1482906742.zip</code>
+in the current directory.</p>
+<ul>
+<li>Options:
+<ul>
+<li><code>--file name</code>, <code>-f name</code>: Name of the dump file with will be created. Optional. (default: gitea-dump-[timestamp].zip).</li>
+<li><code>--tempdir path</code>, <code>-t path</code>: Path to the temporary directory used. Optional. (default: /tmp).</li>
+<li><code>--skip-repository</code>, <code>-R</code>: Skip the repository dumping. Optional.</li>
+<li><code>--database</code>, <code>-d</code>: Specify the database SQL syntax. Optional.</li>
+<li><code>--verbose</code>, <code>-V</code>: If provided, shows additional details. Optional.</li>
+</ul>
+</li>
+<li>Examples:
+<ul>
+<li><code>gitea dump</code></li>
+<li><code>gitea dump --verbose</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="generate">generate</h4>
+<p>Generates random values and tokens for usage in configuration file. Useful for generating values
+for automatic deployments.</p>
+<ul>
+<li>Commands:
+<ul>
+<li><code>secret</code>:
+<ul>
+<li>Options:
+<ul>
+<li><code>INTERNAL_TOKEN</code>: Token used for an internal API call authentication.</li>
+<li><code>JWT_SECRET</code>: LFS &amp; OAUTH2 JWT authentication secret (LFS_JWT_SECRET is aliased to this option for backwards compatibility).</li>
+<li><code>SECRET_KEY</code>: Global secret key.</li>
+</ul>
+</li>
+<li>Examples:
+<ul>
+<li><code>gitea generate secret INTERNAL_TOKEN</code></li>
+<li><code>gitea generate secret JWT_SECRET</code></li>
+<li><code>gitea generate secret SECRET_KEY</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="keys">keys</h4>
+<p>Provides an SSHD AuthorizedKeysCommand. Needs to be configured in the sshd config file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#a6e22e">...</span>
+<span style="color:#75715e"># The value of -e and the AuthorizedKeysCommandUser should match the</span>
+<span style="color:#75715e"># username running gitea</span>
+<span style="color:#a6e22e">AuthorizedKeysCommandUser git</span>
+<span style="color:#a6e22e">AuthorizedKeysCommand /path/to/gitea keys -e git -u %u -t %t -k %k</span>
+</code></pre></div><p>The command will return the appropriate authorized_keys line for the
+provided key. You should also set the value
+<code>SSH_CREATE_AUTHORIZED_KEYS_FILE=false</code> in the <code>[server]</code> section of
+<code>app.ini</code>.</p>
+<p>NB: opensshd requires the gitea program to be owned by root and not
+writable by group or others. The program must be specified by an absolute
+path.
+NB: Gitea must be running for this command to succeed.</p>
+<h4 id="migrate">migrate</h4>
+<p>Migrates the database. This command can be used to run other commands before starting the server for the first time.<br>
+This command is idempotent.</p>
+<h4 id="convert">convert</h4>
+<p>Converts an existing MySQL database from utf8 to utf8mb4.</p>
+<h4 id="doctor">doctor</h4>
+<p>Diagnose the problems of current gitea instance according the given configuration.
+Currently there are a check list below:</p>
+<ul>
+<li>Check if OpenSSH authorized_keys file id correct
+When your gitea instance support OpenSSH, your gitea instance binary path will be written to <code>authorized_keys</code>
+when there is any public key added or changed on your gitea instance.
+Sometimes if you moved or renamed your gitea binary when upgrade and you haven&rsquo;t run <code>Update the '.ssh/authorized_keys' file with Gitea SSH keys. (Not needed for the built-in SSH server.)</code> on your Admin Panel. Then all pull/push via SSH will not be work.
+This check will help you to check if it works well.</li>
+</ul>
+<p>For contributors, if you want to add more checks, you can wrie ad new function like <code>func(ctx *cli.Context) ([]string, error)</code> and
+append it to <code>doctor.go</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">checklist</span> = []<span style="color:#a6e22e">check</span>{
+	{
+		<span style="color:#a6e22e">title</span>: <span style="color:#e6db74">&#34;Check if OpenSSH authorized_keys file id correct&#34;</span>,
+		<span style="color:#a6e22e">f</span>:     <span style="color:#a6e22e">runDoctorLocationMoved</span>,
+    },
+    <span style="color:#75715e">// more checks please append here
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>This function will receive a command line context and return a list of details about the problems or error.</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="content has-text-centered">
+					<p>
+						Copyright &copy; 2020 <a href="https://docs.gitea.io">The Gitea Authors</a>. All rights reserved. Made with <i class="fa fa-heart" aria-hidden="true"></i> and <a href="https://gohugo.io">Hugo</a>.
+					</p>
+					<p>
+						 Sponsored by <a href="https://www.didiyun.com">DiDi Cloud</a>, <a href="http://inblockchain.com">INBlockchain</a>, <a href="https://www.packet.com">Packet</a>, <a href="https://digitalocean.com">DigitalOcean</a>, and all of our backers on <a href="https://opencollective.com/gitea">Open Collective</a>.
+					</p>
+					<p>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-cn" hreflang="zh-cn">中文(简体)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-tw" hreflang="zh-tw">中文(繁體)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/pt-br" hreflang="pt-br">Português Brasileiro</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/en-us" hreflang="en-us">English</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/nl-nl" hreflang="nl-nl">Nederlands</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/fr-fr" hreflang="fr-fr">Français</a>
+						
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+            document.addEventListener('DOMContentLoaded', function () {
+
+                
+                var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                
+                if ($navbarBurgers.length > 0) {
+
+                    
+                    $navbarBurgers.forEach(function ($el) {
+                        $el.addEventListener('click', function () {
+
+                            
+                            var target = $el.dataset.target;
+                            var $target = document.getElementById(target);
+
+                            
+                            $el.classList.toggle('is-active');
+                            $target.classList.toggle('is-active');
+
+
+                            document.getElementById('navbar-background').classList.toggle('is-active');
+
+
+                        });
+                    });
+                }
+
+				
+				
+				let svg = '  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor; vertical-align: middle" width="24" height="24" viewBox="0 0 32 32"><title>gitea</title><path d="M5.583 7.229c-2.464-0.005-5.755 1.557-5.573 5.479 0.281 6.125 6.557 6.693 9.068 6.745 0.271 1.146 3.224 5.109 5.411 5.318h9.573c5.74-0.38 10.036-17.365 6.854-17.427-5.271 0.25-8.396 0.375-11.073 0.396v5.297l-0.839-0.365-0.005-4.932c-3.073 0-5.781-0.141-10.917-0.396-0.646-0.005-1.542-0.115-2.5-0.115zM5.927 9.396h0.297c0.349 3.141 0.917 4.974 2.068 7.781-2.938-0.349-5.432-1.198-5.891-4.38-0.24-1.646 0.563-3.365 3.526-3.401zM17.339 12.479c0.198 0.005 0.406 0.042 0.594 0.13l1 0.432-0.714 1.302c-0.109 0-0.219 0.016-0.323 0.052-0.464 0.151-0.708 0.604-0.542 1.021 0.036 0.083 0.089 0.161 0.151 0.229l-1.234 2.25c-0.099 0-0.203 0.016-0.297 0.052-0.464 0.146-0.708 0.604-0.542 1.016 0.172 0.417 0.682 0.63 1.151 0.479 0.464-0.146 0.703-0.604 0.536-1.021-0.047-0.109-0.115-0.208-0.208-0.292l1.203-2.188c0.13 0.010 0.26 0 0.391-0.042 0.104-0.031 0.198-0.083 0.281-0.151 0.464 0.198 0.844 0.354 1.12 0.49 0.406 0.203 0.552 0.339 0.599 0.49 0.042 0.146-0.005 0.427-0.24 0.922-0.172 0.37-0.458 0.896-0.797 1.51-0.115 0-0.229 0.016-0.333 0.052-0.469 0.151-0.708 0.604-0.542 1.021 0.167 0.411 0.682 0.625 1.146 0.479 0.469-0.151 0.708-0.604 0.542-1.021-0.042-0.099-0.104-0.193-0.182-0.271 0.333-0.609 0.62-1.135 0.807-1.526 0.25-0.536 0.38-0.938 0.266-1.323s-0.469-0.635-0.932-0.865c-0.307-0.151-0.693-0.313-1.146-0.505 0.005-0.109-0.010-0.214-0.052-0.318s-0.109-0.198-0.193-0.281l0.703-1.281 3.901 1.682c0.703 0.307 0.995 1.057 0.651 1.682l-2.682 4.906c-0.339 0.625-1.182 0.885-1.885 0.578l-5.516-2.38c-0.703-0.307-0.995-1.057-0.656-1.682l2.682-4.906c0.234-0.432 0.708-0.688 1.208-0.708h0.083z"></path></svg>';
+				let contents = document.getElementsByClassName("content");
+				if (contents.length > 0) {
+					let content = contents[0];
+					for (let level = 1; level <= 4; level++) {
+						let elems = content.getElementsByTagName("h" + level);
+						for (let i = 0; i < elems.length; i++) {
+							let elem = elems[i];
+							if (elem.id !== "undefined" && elem.id !== "") {
+								let anchorId = elem.id + "-anchor";
+								elem.addEventListener("mouseover", () => {
+									document.getElementById(anchorId).style.display = "initial";
+								});
+								elem.addEventListener("mouseout", () => {
+									document.getElementById(anchorId).style.display = "none";
+								});
+								let anchor = document.createElement("a");
+								anchor.id = anchorId;
+								anchor.href = "#" + elem.id;
+								anchor.innerHTML = svg;
+								anchor.style.display = "none";
+								elem.appendChild(anchor);
+							}
+						}
+					}
+				}
+
+            });
+		</script>
+
+		</body>
+</html>
+

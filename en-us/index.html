@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta property="og:title" content="Documentation - Docs"></meta>
+ 		
+		<meta property="og:description" content="" />
+		
+		<meta property="og:type" content="article"></meta>
+		<meta property="og:url" content="https://ertlans.github.io/en-us/"></meta>
+		<meta property="og:image" content="https://docs.gitea.io/images/gitea.png"></meta>
+		<meta name="generator" content="Hugo 0.69.2" />
+
+		<title>Documentation - Docs</title>
+
+		
+		
+
+		
+
+		<link rel="canonical" href="https://ertlans.github.io/en-us/">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://ertlans.github.io/styles/main.css">
+
+		<link rel="shortcut icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+		<link rel="icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+	</head>
+	<body>
+
+<nav class="navbar">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ertlans.github.io/">
+				<img src="https://ertlans.github.io/images/gitea.png" alt="Docs">
+			</a>
+			<span class="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+		</div>
+		<div class="navbar-menu" id="navMenu">
+			<div class="navbar-end">
+				<span class="navbar-item logo"><img src="https://ertlans.github.io/images/gitea.png" alt="Docs"></span>
+
+	<a class="navbar-item" href="https://gitea.io/en-us/">
+		<i class="fa fa-home"></i>&nbsp;
+		Website
+	</a>
+
+	<a class="navbar-item" href="/en-us/">
+		<i class="fa fa-question"></i>&nbsp;
+		Docs
+	</a>
+
+	<a class="navbar-item" href="https://blog.gitea.io/">
+		<i class="fa fa-rss"></i>&nbsp;
+		Blog
+	</a>
+
+	<a class="navbar-item" href="https://code.gitea.io/">
+		<i class="fa fa-code"></i>&nbsp;
+		Code
+	</a>
+
+	<a class="navbar-item" href="https://crowdin.com/project/gitea">
+		<i class="fa fa-language"></i>&nbsp;
+		Translation
+	</a>
+
+	<a class="navbar-item" href="https://try.gitea.io/api/swagger">
+		<i class="fa fa-plug"></i>&nbsp;
+		API
+	</a>
+
+	<a class="navbar-item" href="https://dl.gitea.io/">
+		<i class="fa fa-download"></i>&nbsp;
+		Downloads
+	</a>
+
+	<a class="navbar-item" href="https://github.com/go-gitea/">
+		<i class="fa fa-github"></i>&nbsp;
+		GitHub
+	</a>
+
+	<a class="navbar-item" href="https://discord.gg/Gitea">
+		<i class="fa fa-comment"></i>&nbsp;
+		Discord Chat
+	</a>
+
+	<a class="navbar-item" href="https://discourse.gitea.io/">
+		<i class="fa fa-group"></i>&nbsp;
+		Forum
+	</a>
+
+
+			</div>
+		</div>
+		<div class="navbar-background" id="navbar-background"></div>
+	</div>
+</nav>
+
+<section class="section">
+	<div class="container is-centered page">
+		<div class="columns">
+			<div class="column is-one-quarter">
+				<aside class="menu">
+	
+		
+			<p class="menu-label">
+				
+				Help
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/faq/" >
+							
+							FAQ
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/seek-help/" >
+							
+							Support Options
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Installation
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/install-with-docker/" >
+							
+							With Docker
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/database-prep/" >
+							
+							Database preparation
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-binary/" >
+							
+							From binary
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-package/" >
+							
+							From package
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/linux-service/" >
+							
+							Linux service
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-source/" >
+							
+							From source
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/windows-service/" >
+							
+							Windows Service
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Upgrade
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/upgrade-from-gogs/" >
+							
+							From Gogs
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Usage
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/command-line/" >
+							
+							Command Line
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/backup-and-restore/" >
+							
+							Backup and Restore
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/email-setup/" >
+							
+							Email setup
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/pull-request/" >
+							
+							Pull Request
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/automatically-linked-references/" >
+							
+							Automatically Linked References
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/issue-pull-request-templates/" >
+							
+							Issue and Pull Request templates
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/reverse-proxies/" >
+							
+							Reverse Proxies
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Advanced
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/adding-legal-pages/" >
+							
+							Adding Legal Pages
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/customizing-gitea/" >
+							
+							Customizing Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/hacking-on-gitea/" >
+							
+							Hacking on Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/config-cheat-sheet/" >
+							
+							Config Cheat Sheet
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/signing/" >
+							
+							GPG Commit Signatures
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/specific-variables/" >
+							
+							Specific variables
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/make/" >
+							
+							Make
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/api-usage/" >
+							
+							API Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/ci-cd/" >
+							
+							CI/CD Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/cmd-embedded/" >
+							
+							Embedded data extraction tool
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/external-renderers/" >
+							
+							External renderers
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/repo-indexer/" >
+							
+							Repository indexer
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/third-party-tools/" >
+							
+							Third Party Tools
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/logging-configuration/" >
+							
+							Logging Configuration
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/migrations-interfaces/" >
+							
+							Migrations Interfaces
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/search-engines-indexation/" >
+							
+							Search Engines Indexation
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				features
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/comparison/" >
+							
+							Comparison
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/authentication/" >
+							
+							Authentication
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/localization/" >
+							
+							Localization
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/webhooks/" >
+							
+							Webhooks
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+	</ul>
+</aside>
+
+
+	
+
+
+
+			</div>
+			<div class="column">
+				<div class=" content">
+					<h1 id="what-is-gitea">What is Gitea?</h1>
+<p>Gitea is a painless self-hosted Git service. It is similar to GitHub, Bitbucket, and GitLab.
+Gitea is a fork of <a href="http://gogs.io">Gogs</a>. See the <a href="https://blog.gitea.io/2016/12/welcome-to-gitea/">Gitea Announcement</a>
+blog post to read about the justification for a fork.</p>
+<h2 id="purpose">Purpose</h2>
+<p>The goal of this project is to provide the easiest, fastest, and most painless way of setting
+up a self-hosted Git service. With Go, this can be done with an independent binary distribution
+across all platforms and architectures that Go supports. This support includes Linux, macOS, and
+Windows, on architectures like amd64, i386, ARM, PowerPC, and others.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>User Dashboard
+<ul>
+<li>Context switcher (organization or current user)</li>
+<li>Activity timeline
+<ul>
+<li>Commits</li>
+<li>Issues</li>
+<li>Pull requests</li>
+<li>Repository creation</li>
+</ul>
+</li>
+<li>Searchable repository list</li>
+<li>List of organizations</li>
+<li>A list of mirror repositories</li>
+</ul>
+</li>
+<li>Issues dashboard
+<ul>
+<li>Context switcher (organization or current user)</li>
+<li>Filter by
+<ul>
+<li>Open</li>
+<li>Closed</li>
+<li>Your repositories</li>
+<li>Assigned issues</li>
+<li>Your issues</li>
+<li>Repository</li>
+</ul>
+</li>
+<li>Sort by
+<ul>
+<li>Oldest</li>
+<li>Last updated</li>
+<li>Number of comments</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Pull request dashboard
+<ul>
+<li>Same as issue dashboard</li>
+</ul>
+</li>
+<li>Repository types
+<ul>
+<li>Mirror</li>
+<li>Normal</li>
+<li>Migrated</li>
+</ul>
+</li>
+<li>Notifications (email and web)
+<ul>
+<li>Read</li>
+<li>Unread</li>
+<li>Pin</li>
+</ul>
+</li>
+<li>Explore page
+<ul>
+<li>Users</li>
+<li>Repos</li>
+<li>Organizations</li>
+<li>Search</li>
+</ul>
+</li>
+<li>Custom templates</li>
+<li>Override public files (logo, css, etc)</li>
+<li>CSRF and XSS protection</li>
+<li>HTTPS support</li>
+<li>Set allowed upload sizes and types</li>
+<li>Logging</li>
+<li>Configuration
+<ul>
+<li>Databases
+<ul>
+<li>MySQL</li>
+<li>PostgreSQL</li>
+<li>SQLite3</li>
+<li>MSSQL</li>
+<li>TiDB (experimental, not recommended)</li>
+</ul>
+</li>
+<li>Configuration file
+<ul>
+<li><a href="https://github.com/go-gitea/gitea/blob/master/custom/conf/app.ini.sample">app.ini</a></li>
+</ul>
+</li>
+<li>Admin panel
+<ul>
+<li>Statistics</li>
+<li>Actions
+<ul>
+<li>Delete inactive accounts</li>
+<li>Delete cached repository archives</li>
+<li>Delete repositories records which are missing their files</li>
+<li>Run garbage collection on repositories</li>
+<li>Rewrite SSH keys</li>
+<li>Resync hooks</li>
+<li>Recreate repositories which are missing</li>
+</ul>
+</li>
+<li>Server status
+<ul>
+<li>Uptime</li>
+<li>Memory</li>
+<li>Current # of goroutines</li>
+<li>And more</li>
+</ul>
+</li>
+<li>User management
+<ul>
+<li>Search</li>
+<li>Sort</li>
+<li>Last login</li>
+<li>Authentication source</li>
+<li>Maximum repositories</li>
+<li>Disable account</li>
+<li>Admin permissions</li>
+<li>Permission to create git hooks</li>
+<li>Permission to create organizations</li>
+<li>Permission to import repositories</li>
+</ul>
+</li>
+<li>Organization management
+<ul>
+<li>People</li>
+<li>Teams</li>
+<li>Avatar</li>
+<li>Hooks</li>
+</ul>
+</li>
+<li>Repository management
+<ul>
+<li>See all repository information and manage repositories</li>
+</ul>
+</li>
+<li>Authentication sources
+<ul>
+<li>OAuth</li>
+<li>PAM</li>
+<li>LDAP</li>
+<li>SMTP</li>
+</ul>
+</li>
+<li>Configuration viewer
+<ul>
+<li>Everything in config file</li>
+</ul>
+</li>
+<li>System notices
+<ul>
+<li>When somthing unexpected happens</li>
+</ul>
+</li>
+<li>Monitoring
+<ul>
+<li>Current processes</li>
+<li>Cron jobs
+<ul>
+<li>Update mirrors</li>
+<li>Repository health check</li>
+<li>Check repository statistics</li>
+<li>Clean up old archives</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Environment variables</li>
+<li>Command line options</li>
+</ul>
+</li>
+<li>Multi-language support (<a href="https://github.com/go-gitea/gitea/tree/master/options/locale">21 languages</a>)</li>
+<li>Mail service
+<ul>
+<li>Notifications</li>
+<li>Registration confirmation</li>
+<li>Password reset</li>
+</ul>
+</li>
+<li>Reverse proxy support
+<ul>
+<li>Includes subpaths</li>
+</ul>
+</li>
+<li>Users
+<ul>
+<li>Profile
+<ul>
+<li>Name</li>
+<li>Username</li>
+<li>Email</li>
+<li>Website</li>
+<li>Join date</li>
+<li>Followers and following</li>
+<li>Organizations</li>
+<li>Repositories</li>
+<li>Activity</li>
+<li>Starred repositories</li>
+</ul>
+</li>
+<li>Settings
+<ul>
+<li>Same as profile and more below</li>
+<li>Keep email private</li>
+<li>Avatar
+<ul>
+<li>Gravatar</li>
+<li>Libravatar</li>
+<li>Custom</li>
+</ul>
+</li>
+<li>Password</li>
+<li>Mutiple email addresses</li>
+<li>SSH Keys</li>
+<li>Connected applications</li>
+<li>Two factor authentication</li>
+<li>Linked OAuth2 sources</li>
+<li>Delete account</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Repositories
+<ul>
+<li>Clone with SSH/HTTP/HTTPS</li>
+<li>Git LFS</li>
+<li>Watch, Star, Fork</li>
+<li>View watchers, stars, and forks</li>
+<li>Code
+<ul>
+<li>Branch browser</li>
+<li>Web based file upload and creation</li>
+<li>Clone urls</li>
+<li>Download
+<ul>
+<li>ZIP</li>
+<li>TAR.GZ</li>
+</ul>
+</li>
+<li>Web based editor
+<ul>
+<li>Markdown editor</li>
+<li>Plain text editor
+<ul>
+<li>Syntax highlighting</li>
+</ul>
+</li>
+<li>Diff preview</li>
+<li>Preview</li>
+<li>Choose where to commit to</li>
+</ul>
+</li>
+<li>View file history</li>
+<li>Delete file</li>
+<li>View raw</li>
+</ul>
+</li>
+<li>Issues
+<ul>
+<li>Issue templates</li>
+<li>Milestones</li>
+<li>Labels</li>
+<li>Assign issues</li>
+<li>Track time</li>
+<li>Reactions</li>
+<li>Filter
+<ul>
+<li>Open</li>
+<li>Closed</li>
+<li>Assigned person</li>
+<li>Created by you</li>
+<li>Mentioning you</li>
+</ul>
+</li>
+<li>Sort
+<ul>
+<li>Oldest</li>
+<li>Last updated</li>
+<li>Number of comments</li>
+</ul>
+</li>
+<li>Search</li>
+<li>Comments</li>
+<li>Attachments</li>
+</ul>
+</li>
+<li>Pull requests
+<ul>
+<li>Same features as issues</li>
+</ul>
+</li>
+<li>Commits
+<ul>
+<li>Commit graph</li>
+<li>Commits by branch</li>
+<li>Search</li>
+<li>Search in all branches</li>
+<li>View diff</li>
+<li>View SHA</li>
+<li>View author</li>
+<li>Browse files in commit</li>
+</ul>
+</li>
+<li>Releases
+<ul>
+<li>Attachments</li>
+<li>Title</li>
+<li>Content</li>
+<li>Delete</li>
+<li>Mark as pre-release</li>
+<li>Choose branch</li>
+</ul>
+</li>
+<li>Wiki
+<ul>
+<li>Import</li>
+<li>Markdown editor</li>
+</ul>
+</li>
+<li>Settings
+<ul>
+<li>Options
+<ul>
+<li>Name</li>
+<li>Description</li>
+<li>Private/Public</li>
+<li>Website</li>
+<li>Wiki
+<ul>
+<li>Enabled/disabled</li>
+<li>Internal/external</li>
+</ul>
+</li>
+<li>Issues
+<ul>
+<li>Enabled/disabled</li>
+<li>Internal/external</li>
+<li>External supports url rewriting for better integration</li>
+</ul>
+</li>
+<li>Enable/disable pull requests</li>
+<li>Transfer repository</li>
+<li>Delete wiki</li>
+<li>Delete repository</li>
+</ul>
+</li>
+<li>Collaboration
+<ul>
+<li>Read/write/admin</li>
+</ul>
+</li>
+<li>Branches
+<ul>
+<li>Default branch</li>
+<li>Branch protection</li>
+</ul>
+</li>
+<li>Webhooks</li>
+<li>Git hooks</li>
+<li>Deploy keys</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="system-requirements">System Requirements</h2>
+<ul>
+<li>A Raspberry Pi 3 is powerful enough to run Gitea for small workloads.</li>
+<li>2 CPU cores and 1GB RAM is typically sufficient for small teams/projects.</li>
+<li>Gitea should be run with a dedicated non-root system account on UNIX-type systems.
+<ul>
+<li>Note: Gitea manages the <code>~/.ssh/authorized_keys</code> file. Running Gitea as a regular user could break that user&rsquo;s ability to log in.</li>
+</ul>
+</li>
+<li><a href="https://git-scm.com/">Git</a> version 1.7.2 or later is required. Version 1.9.0 or later is recommended. Also please note:
+<ul>
+<li>Git <a href="https://git-lfs.github.com/">large file storage</a> will be available if enabled when git &gt;= 2.1.2.</li>
+<li>Git commit-graph rendering will be enabled automatically when git &gt;= 2.18.</li>
+</ul>
+</li>
+</ul>
+<h2 id="browser-support">Browser Support</h2>
+<ul>
+<li>Please see <a href="https://github.com/Semantic-Org/Semantic-UI#browser-support">Semantic UI</a> for specific versions of supported browsers.</li>
+</ul>
+<h2 id="components">Components</h2>
+<ul>
+<li>Web framework: <a href="http://go-macaron.com/">Macaron</a></li>
+<li>ORM: <a href="https://github.com/go-xorm/xorm">XORM</a></li>
+<li>UI components:
+<ul>
+<li><a href="http://semantic-ui.com/">Semantic UI</a></li>
+<li><a href="https://octicons.github.com/">GitHub Octicons</a></li>
+<li><a href="http://fontawesome.io/">Font Awesome</a></li>
+<li><a href="http://www.dropzonejs.com/">DropzoneJS</a></li>
+<li><a href="https://highlightjs.org/">Highlight</a></li>
+<li><a href="https://zenorocha.github.io/clipboard.js/">Clipboard</a></li>
+<li><a href="https://codemirror.net/">CodeMirror</a></li>
+<li><a href="https://github.com/xdan/datetimepicker">jQuery Date Time Picker</a></li>
+<li><a href="https://github.com/claviska/jquery-minicolors">jQuery MiniColors</a></li>
+</ul>
+</li>
+<li>Database drivers:
+<ul>
+<li><a href="https://github.com/go-sql-driver/mysql">github.com/go-sql-driver/mysql</a></li>
+<li><a href="https://github.com/lib/pq">github.com/lib/pq</a></li>
+<li><a href="https://github.com/mattn/go-sqlite3">github.com/mattn/go-sqlite3</a></li>
+<li><a href="https://github.com/pingcap/tidb">github.com/pingcap/tidb</a></li>
+<li><a href="https://github.com/denisenkom/go-mssqldb">github.com/denisenkom/go-mssqldb</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="software-and-service-support">Software and Service Support</h2>
+<ul>
+<li><a href="https://github.com/drone/drone">Drone</a> (CI)</li>
+</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="content has-text-centered">
+					<p>
+						Copyright &copy; 2020 <a href="https://docs.gitea.io">The Gitea Authors</a>. All rights reserved. Made with <i class="fa fa-heart" aria-hidden="true"></i> and <a href="https://gohugo.io">Hugo</a>.
+					</p>
+					<p>
+						 Sponsored by <a href="https://www.didiyun.com">DiDi Cloud</a>, <a href="http://inblockchain.com">INBlockchain</a>, <a href="https://www.packet.com">Packet</a>, <a href="https://digitalocean.com">DigitalOcean</a>, and all of our backers on <a href="https://opencollective.com/gitea">Open Collective</a>.
+					</p>
+					<p>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-cn" hreflang="zh-cn">中文(简体)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-tw" hreflang="zh-tw">中文(繁體)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/pt-br" hreflang="pt-br">Português Brasileiro</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/en-us" hreflang="en-us">English</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/nl-nl" hreflang="nl-nl">Nederlands</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/fr-fr" hreflang="fr-fr">Français</a>
+						
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+            document.addEventListener('DOMContentLoaded', function () {
+
+                
+                var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                
+                if ($navbarBurgers.length > 0) {
+
+                    
+                    $navbarBurgers.forEach(function ($el) {
+                        $el.addEventListener('click', function () {
+
+                            
+                            var target = $el.dataset.target;
+                            var $target = document.getElementById(target);
+
+                            
+                            $el.classList.toggle('is-active');
+                            $target.classList.toggle('is-active');
+
+
+                            document.getElementById('navbar-background').classList.toggle('is-active');
+
+
+                        });
+                    });
+                }
+
+				
+				
+				let svg = '  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor; vertical-align: middle" width="24" height="24" viewBox="0 0 32 32"><title>gitea</title><path d="M5.583 7.229c-2.464-0.005-5.755 1.557-5.573 5.479 0.281 6.125 6.557 6.693 9.068 6.745 0.271 1.146 3.224 5.109 5.411 5.318h9.573c5.74-0.38 10.036-17.365 6.854-17.427-5.271 0.25-8.396 0.375-11.073 0.396v5.297l-0.839-0.365-0.005-4.932c-3.073 0-5.781-0.141-10.917-0.396-0.646-0.005-1.542-0.115-2.5-0.115zM5.927 9.396h0.297c0.349 3.141 0.917 4.974 2.068 7.781-2.938-0.349-5.432-1.198-5.891-4.38-0.24-1.646 0.563-3.365 3.526-3.401zM17.339 12.479c0.198 0.005 0.406 0.042 0.594 0.13l1 0.432-0.714 1.302c-0.109 0-0.219 0.016-0.323 0.052-0.464 0.151-0.708 0.604-0.542 1.021 0.036 0.083 0.089 0.161 0.151 0.229l-1.234 2.25c-0.099 0-0.203 0.016-0.297 0.052-0.464 0.146-0.708 0.604-0.542 1.016 0.172 0.417 0.682 0.63 1.151 0.479 0.464-0.146 0.703-0.604 0.536-1.021-0.047-0.109-0.115-0.208-0.208-0.292l1.203-2.188c0.13 0.010 0.26 0 0.391-0.042 0.104-0.031 0.198-0.083 0.281-0.151 0.464 0.198 0.844 0.354 1.12 0.49 0.406 0.203 0.552 0.339 0.599 0.49 0.042 0.146-0.005 0.427-0.24 0.922-0.172 0.37-0.458 0.896-0.797 1.51-0.115 0-0.229 0.016-0.333 0.052-0.469 0.151-0.708 0.604-0.542 1.021 0.167 0.411 0.682 0.625 1.146 0.479 0.469-0.151 0.708-0.604 0.542-1.021-0.042-0.099-0.104-0.193-0.182-0.271 0.333-0.609 0.62-1.135 0.807-1.526 0.25-0.536 0.38-0.938 0.266-1.323s-0.469-0.635-0.932-0.865c-0.307-0.151-0.693-0.313-1.146-0.505 0.005-0.109-0.010-0.214-0.052-0.318s-0.109-0.198-0.193-0.281l0.703-1.281 3.901 1.682c0.703 0.307 0.995 1.057 0.651 1.682l-2.682 4.906c-0.339 0.625-1.182 0.885-1.885 0.578l-5.516-2.38c-0.703-0.307-0.995-1.057-0.656-1.682l2.682-4.906c0.234-0.432 0.708-0.688 1.208-0.708h0.083z"></path></svg>';
+				let contents = document.getElementsByClassName("content");
+				if (contents.length > 0) {
+					let content = contents[0];
+					for (let level = 1; level <= 4; level++) {
+						let elems = content.getElementsByTagName("h" + level);
+						for (let i = 0; i < elems.length; i++) {
+							let elem = elems[i];
+							if (elem.id !== "undefined" && elem.id !== "") {
+								let anchorId = elem.id + "-anchor";
+								elem.addEventListener("mouseover", () => {
+									document.getElementById(anchorId).style.display = "initial";
+								});
+								elem.addEventListener("mouseout", () => {
+									document.getElementById(anchorId).style.display = "none";
+								});
+								let anchor = document.createElement("a");
+								anchor.id = anchorId;
+								anchor.href = "#" + elem.id;
+								anchor.innerHTML = svg;
+								anchor.style.display = "none";
+								elem.appendChild(anchor);
+							}
+						}
+					}
+				}
+
+            });
+		</script>
+
+		</body>
+</html>
+

@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta property="og:title" content="Installation with Docker - Docs"></meta>
+ 		
+		<meta property="og:description" content="" />
+		
+		<meta property="og:type" content="article"></meta>
+		<meta property="og:url" content="https://ertlans.github.io/en-us/install-with-docker/"></meta>
+		<meta property="og:image" content="https://docs.gitea.io/images/gitea.png"></meta>
+		<meta name="generator" content="Hugo 0.69.2" />
+
+		<title>Installation with Docker - Docs</title>
+
+		
+		
+
+		
+
+		<link rel="canonical" href="https://ertlans.github.io/en-us/install-with-docker/">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://ertlans.github.io/styles/main.css">
+
+		<link rel="shortcut icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+		<link rel="icon" type="image/x-icon" href="https://ertlans.github.io/images/favicon.png">
+	</head>
+	<body>
+
+<nav class="navbar">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="https://ertlans.github.io/">
+				<img src="https://ertlans.github.io/images/gitea.png" alt="Docs">
+			</a>
+			<span class="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+		</div>
+		<div class="navbar-menu" id="navMenu">
+			<div class="navbar-end">
+				<span class="navbar-item logo"><img src="https://ertlans.github.io/images/gitea.png" alt="Docs"></span>
+
+	<a class="navbar-item" href="https://gitea.io/en-us/">
+		<i class="fa fa-home"></i>&nbsp;
+		Website
+	</a>
+
+	<a class="navbar-item" href="/en-us/">
+		<i class="fa fa-question"></i>&nbsp;
+		Docs
+	</a>
+
+	<a class="navbar-item" href="https://blog.gitea.io/">
+		<i class="fa fa-rss"></i>&nbsp;
+		Blog
+	</a>
+
+	<a class="navbar-item" href="https://code.gitea.io/">
+		<i class="fa fa-code"></i>&nbsp;
+		Code
+	</a>
+
+	<a class="navbar-item" href="https://crowdin.com/project/gitea">
+		<i class="fa fa-language"></i>&nbsp;
+		Translation
+	</a>
+
+	<a class="navbar-item" href="https://try.gitea.io/api/swagger">
+		<i class="fa fa-plug"></i>&nbsp;
+		API
+	</a>
+
+	<a class="navbar-item" href="https://dl.gitea.io/">
+		<i class="fa fa-download"></i>&nbsp;
+		Downloads
+	</a>
+
+	<a class="navbar-item" href="https://github.com/go-gitea/">
+		<i class="fa fa-github"></i>&nbsp;
+		GitHub
+	</a>
+
+	<a class="navbar-item" href="https://discord.gg/Gitea">
+		<i class="fa fa-comment"></i>&nbsp;
+		Discord Chat
+	</a>
+
+	<a class="navbar-item" href="https://discourse.gitea.io/">
+		<i class="fa fa-group"></i>&nbsp;
+		Forum
+	</a>
+
+
+			</div>
+		</div>
+		<div class="navbar-background" id="navbar-background"></div>
+	</div>
+</nav>
+
+<section class="section">
+	<div class="container is-centered page">
+		<div class="columns">
+			<div class="column is-one-quarter">
+				<aside class="menu">
+	
+		
+			<p class="menu-label">
+				
+				Help
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/faq/" >
+							
+							FAQ
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/seek-help/" >
+							
+							Support Options
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Installation
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/install-with-docker/" class="is-active">
+							
+							With Docker
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/database-prep/" >
+							
+							Database preparation
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-binary/" >
+							
+							From binary
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-package/" >
+							
+							From package
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/linux-service/" >
+							
+							Linux service
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/install-from-source/" >
+							
+							From source
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/windows-service/" >
+							
+							Windows Service
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Upgrade
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/upgrade-from-gogs/" >
+							
+							From Gogs
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Usage
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/command-line/" >
+							
+							Command Line
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/backup-and-restore/" >
+							
+							Backup and Restore
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/email-setup/" >
+							
+							Email setup
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/pull-request/" >
+							
+							Pull Request
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/automatically-linked-references/" >
+							
+							Automatically Linked References
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/issue-pull-request-templates/" >
+							
+							Issue and Pull Request templates
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/reverse-proxies/" >
+							
+							Reverse Proxies
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				Advanced
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/adding-legal-pages/" >
+							
+							Adding Legal Pages
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/customizing-gitea/" >
+							
+							Customizing Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/hacking-on-gitea/" >
+							
+							Hacking on Gitea
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/config-cheat-sheet/" >
+							
+							Config Cheat Sheet
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/signing/" >
+							
+							GPG Commit Signatures
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/specific-variables/" >
+							
+							Specific variables
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/make/" >
+							
+							Make
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/api-usage/" >
+							
+							API Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/ci-cd/" >
+							
+							CI/CD Usage
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/cmd-embedded/" >
+							
+							Embedded data extraction tool
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/external-renderers/" >
+							
+							External renderers
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/repo-indexer/" >
+							
+							Repository indexer
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/third-party-tools/" >
+							
+							Third Party Tools
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/logging-configuration/" >
+							
+							Logging Configuration
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/migrations-interfaces/" >
+							
+							Migrations Interfaces
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/search-engines-indexation/" >
+							
+							Search Engines Indexation
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+		
+			<p class="menu-label">
+				
+				features
+			</p>
+			<ul class="menu-list">
+				
+					<li>
+						<a href="/en-us/comparison/" >
+							
+							Comparison
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/authentication/" >
+							
+							Authentication
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/localization/" >
+							
+							Localization
+						</a>
+					</li>
+				
+					<li>
+						<a href="/en-us/webhooks/" >
+							
+							Webhooks
+						</a>
+					</li>
+				
+			</ul>
+		
+	
+	</ul>
+</aside>
+
+
+	
+
+
+
+			</div>
+			<div class="column is-three-quarters">
+				<div class="content">
+					<h1 id="installation-with-docker">Installation with Docker</h1>
+<p>Gitea provides automatically updated Docker images within its Docker Hub organization. It is
+possible to always use the latest stable tag or to use another service that handles updating
+Docker images.</p>
+<p>This reference setup guides users through the setup based on <code>docker-compose</code>, but the installation
+of <code>docker-compose</code> is out of scope of this documentation. To install <code>docker-compose</code> itself, follow
+the official <a href="https://docs.docker.com/compose/install/">install instructions</a>.</p>
+<h2 id="basics">Basics</h2>
+<p>The most simple setup just creates a volume and a network and starts the <code>gitea/gitea:latest</code>
+image as a service. Since there is no database available, one can be initialized using SQLite3.
+Create a directory like <code>gitea</code> and paste the following content into a file named <code>docker-compose.yml</code>.
+Note that the volume should be owned by the user/group with the UID/GID specified in the config file.
+If you don&rsquo;t give the volume correct permissions, the container may not start.
+Also be aware that the tag <code>:latest</code> will install the current development version.
+For a stable release you can use <code>:1</code> or specify a certain release like <code>:1.11.4</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#34;2&#34;</span>
+
+<span style="color:#66d9ef">networks</span>:
+  <span style="color:#66d9ef">gitea</span>:
+    <span style="color:#66d9ef">external</span>: <span style="color:#66d9ef">false</span>
+
+<span style="color:#66d9ef">services</span>:
+  <span style="color:#66d9ef">server</span>:
+    <span style="color:#66d9ef">image</span>: gitea/gitea:latest
+    <span style="color:#66d9ef">environment</span>:
+      - USER_UID=<span style="color:#ae81ff">1000</span>
+      - USER_GID=<span style="color:#ae81ff">1000</span>
+    <span style="color:#66d9ef">restart</span>: always
+    <span style="color:#66d9ef">networks</span>:
+      - gitea
+    <span style="color:#66d9ef">volumes</span>:
+      - ./gitea:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    <span style="color:#66d9ef">ports</span>:
+      - <span style="color:#e6db74">&#34;3000:3000&#34;</span>
+      - <span style="color:#e6db74">&#34;222:22&#34;</span>
+</code></pre></div><h2 id="custom-port">Custom port</h2>
+<p>To bind the integrated openSSH daemon and the webserver on a different port, adjust
+the port section. It&rsquo;s common to just change the host port and keep the ports within
+the container like they are.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">version: &#34;2&#34;
+
+networks:
+  gitea:
+    external: false
+
+services:
+  server:
+    image: gitea/gitea:latest
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    networks:
+      - gitea
+    volumes:
+      - ./gitea:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+<span style="color:#f92672">-      - &#34;3000:3000&#34;
+</span><span style="color:#f92672">-      - &#34;222:22&#34;
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+      - &#34;8080:3000&#34;
+</span><span style="color:#a6e22e">+      - &#34;2221:22&#34;
+</span></code></pre></div><h2 id="mysql-database">MySQL database</h2>
+<p>To start Gitea in combination with a MySQL database, apply these changes to the
+<code>docker-compose.yml</code> file created above.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">version: &#34;2&#34;
+
+networks:
+  gitea:
+    external: false
+
+services:
+  server:
+    image: gitea/gitea:latest
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+<span style="color:#a6e22e">+      - DB_TYPE=mysql
+</span><span style="color:#a6e22e">+      - DB_HOST=db:3306
+</span><span style="color:#a6e22e">+      - DB_NAME=gitea
+</span><span style="color:#a6e22e">+      - DB_USER=gitea
+</span><span style="color:#a6e22e">+      - DB_PASSWD=gitea
+</span><span style="color:#a6e22e"></span>    restart: always
+    networks:
+      - gitea
+    volumes:
+      - ./gitea:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+     ports:
+       - &#34;3000:3000&#34;
+       - &#34;222:22&#34;
+<span style="color:#a6e22e">+    depends_on:
+</span><span style="color:#a6e22e">+      - db
+</span><span style="color:#a6e22e">+
+</span><span style="color:#a6e22e">+  db:
+</span><span style="color:#a6e22e">+    image: mysql:5.7
+</span><span style="color:#a6e22e">+    restart: always
+</span><span style="color:#a6e22e">+    environment:
+</span><span style="color:#a6e22e">+      - MYSQL_ROOT_PASSWORD=gitea
+</span><span style="color:#a6e22e">+      - MYSQL_USER=gitea
+</span><span style="color:#a6e22e">+      - MYSQL_PASSWORD=gitea
+</span><span style="color:#a6e22e">+      - MYSQL_DATABASE=gitea
+</span><span style="color:#a6e22e">+    networks:
+</span><span style="color:#a6e22e">+      - gitea
+</span><span style="color:#a6e22e">+    volumes:
+</span><span style="color:#a6e22e">+      - ./mysql:/var/lib/mysql
+</span></code></pre></div><h2 id="postgresql-database">PostgreSQL database</h2>
+<p>To start Gitea in combination with a PostgreSQL database, apply these changes to
+the <code>docker-compose.yml</code> file created above.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">version: &#34;2&#34;
+
+networks:
+  gitea:
+    external: false
+
+services:
+  server:
+    image: gitea/gitea:latest
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+<span style="color:#a6e22e">+      - DB_TYPE=postgres
+</span><span style="color:#a6e22e">+      - DB_HOST=db:5432
+</span><span style="color:#a6e22e">+      - DB_NAME=gitea
+</span><span style="color:#a6e22e">+      - DB_USER=gitea
+</span><span style="color:#a6e22e">+      - DB_PASSWD=gitea
+</span><span style="color:#a6e22e"></span>    restart: always
+    networks:
+      - gitea
+    volumes:
+      - ./gitea:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - &#34;3000:3000&#34;
+      - &#34;222:22&#34;
+<span style="color:#a6e22e">+    depends_on:
+</span><span style="color:#a6e22e">+      - db
+</span><span style="color:#a6e22e">+
+</span><span style="color:#a6e22e">+  db:
+</span><span style="color:#a6e22e">+    image: postgres:9.6
+</span><span style="color:#a6e22e">+    restart: always
+</span><span style="color:#a6e22e">+    environment:
+</span><span style="color:#a6e22e">+      - POSTGRES_USER=gitea
+</span><span style="color:#a6e22e">+      - POSTGRES_PASSWORD=gitea
+</span><span style="color:#a6e22e">+      - POSTGRES_DB=gitea
+</span><span style="color:#a6e22e">+    networks:
+</span><span style="color:#a6e22e">+      - gitea
+</span><span style="color:#a6e22e">+    volumes:
+</span><span style="color:#a6e22e">+      - ./postgres:/var/lib/postgresql/data
+</span></code></pre></div><h2 id="named-volumes">Named volumes</h2>
+<p>To use named volumes instead of host volumes, define and use the named volume
+within the <code>docker-compose.yml</code> configuration. This change will automatically
+create the required volume. You don&rsquo;t need to worry about permissions with
+named volumes; Docker will deal with that automatically.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">version: &#34;2&#34;
+
+networks:
+  gitea:
+    external: false
+
+<span style="color:#a6e22e">+volumes:
+</span><span style="color:#a6e22e">+  gitea:
+</span><span style="color:#a6e22e">+    driver: local
+</span><span style="color:#a6e22e">+
+</span><span style="color:#a6e22e"></span>services:
+  server:
+    image: gitea/gitea:latest
+    restart: always
+    networks:
+      - gitea
+    volumes:
+<span style="color:#f92672">-      - ./gitea:/data
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+      - gitea:/data
+</span><span style="color:#a6e22e"></span>      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - &#34;3000:3000&#34;
+      - &#34;222:22&#34;
+</code></pre></div><p>MySQL or PostgreSQL containers will need to be created separately.</p>
+<h2 id="start">Start</h2>
+<p>To start this setup based on <code>docker-compose</code>, execute <code>docker-compose up -d</code>,
+to launch Gitea in the background. Using <code>docker-compose ps</code> will show if Gitea
+started properly. Logs can be viewed with <code>docker-compose logs</code>.</p>
+<p>To shut down the setup, execute <code>docker-compose down</code>. This will stop
+and kill the containers. The volumes will still exist.</p>
+<p>Notice: if using a non-3000 port on http, change app.ini to match
+<code>LOCAL_ROOT_URL = http://localhost:3000/</code>.</p>
+<h2 id="install">Install</h2>
+<p>After starting the Docker setup via <code>docker-compose</code>, Gitea should be available using a
+favorite browser to finalize the installation. Visit http://server-ip:3000 and follow the
+installation wizard. If the database was started with the <code>docker-compose</code> setup as
+documented above, please note that <code>db</code> must be used as the database hostname.</p>
+<h2 id="environments-variables">Environments variables</h2>
+<p>You can configure some of Gitea&rsquo;s settings via environment variables:</p>
+<p>(Default values are provided in <strong>bold</strong>)</p>
+<ul>
+<li><code>APP_NAME</code>: <strong>&ldquo;Gitea: Git with a cup of tea&rdquo;</strong>: Application name, used in the page title.</li>
+<li><code>RUN_MODE</code>: <strong>dev</strong>: For performance and other purposes, change this to <code>prod</code> when deployed to a production environment.</li>
+<li><code>SSH_DOMAIN</code>: <strong>localhost</strong>: Domain name of this server, used for the displayed clone URL in Gitea&rsquo;s UI.</li>
+<li><code>SSH_PORT</code>: <strong>22</strong>: SSH port displayed in clone URL.</li>
+<li><code>SSH_LISTEN_PORT</code>: <strong>%(SSH_PORT)s</strong>: Port for the built-in SSH server.</li>
+<li><code>DISABLE_SSH</code>: <strong>false</strong>: Disable SSH feature when it&rsquo;s not available.</li>
+<li><code>HTTP_PORT</code>: <strong>3000</strong>: HTTP listen port.</li>
+<li><code>ROOT_URL</code>: <strong>&quot;&quot;</strong>: Overwrite the automatically generated public URL. This is useful if the internal and the external URL don&rsquo;t match (e.g. in Docker).</li>
+<li><code>LFS_START_SERVER</code>: <strong>false</strong>: Enables git-lfs support.</li>
+<li><code>DB_TYPE</code>: <strong>sqlite3</strong>: The database type in use [mysql, postgres, mssql, sqlite3].</li>
+<li><code>DB_HOST</code>: <strong>localhost:3306</strong>: Database host address and port.</li>
+<li><code>DB_NAME</code>: <strong>gitea</strong>: Database name.</li>
+<li><code>DB_USER</code>: <strong>root</strong>: Database username.</li>
+<li><code>DB_PASSWD</code>: <strong>&quot;&lt;empty&gt;&rdquo;</strong>: Database user password. Use `your password` for quoting if you use special characters in the password.</li>
+<li><code>INSTALL_LOCK</code>: <strong>false</strong>: Disallow access to the install page.</li>
+<li><code>SECRET_KEY</code>: <strong>&quot;&quot;</strong>: Global secret key. This should be changed. If this has a value and <code>INSTALL_LOCK</code> is empty, <code>INSTALL_LOCK</code> will automatically set to <code>true</code>.</li>
+<li><code>DISABLE_REGISTRATION</code>: <strong>false</strong>: Disable registration, after which only admin can create accounts for users.</li>
+<li><code>REQUIRE_SIGNIN_VIEW</code>: <strong>false</strong>: Enable this to force users to log in to view any page.</li>
+<li><code>USER_UID</code>: <strong>1000</strong>: The UID (Unix user ID) of the user that runs Gitea within the container. Match this to the UID of the owner of the <code>/data</code> volume if using host volumes (this is not necessary with named volumes).</li>
+<li><code>USER_GID</code>: <strong>1000</strong>: The GID (Unix group ID) of the user that runs Gitea within the container. Match this to the GID of the owner of the <code>/data</code> volume if using host volumes (this is not necessary with named volumes).</li>
+</ul>
+<h1 id="customization">Customization</h1>
+<p>Customization files described <a href="https://docs.gitea.io/en-us/customizing-gitea/">here</a> should
+be placed in <code>/data/gitea</code> directory. If using host volumes, it&rsquo;s quite easy to access these
+files; for named volumes, this is done through another container or by direct access at
+<code>/var/lib/docker/volumes/gitea_gitea/_data</code>. The configuration file will be saved at
+<code>/data/gitea/conf/app.ini</code> after the installation.</p>
+<h1 id="upgrading">Upgrading</h1>
+<p>❗❗ <strong>Make sure you have volumed data to somewhere outside Docker container</strong> ❗❗</p>
+<p>To upgrade your installation to the latest release:</p>
+<pre><code># Edit `docker-compose.yml` to update the version, if you have one specified
+# Pull new images
+docker-compose pull
+# Start a new container, automatically removes old one
+docker-compose up -d
+</code></pre><h1 id="ssh-container-passthrough">SSH Container Passthrough</h1>
+<p>Since SSH is running inside the container, you&rsquo;ll have to pass SSH from the host to the
+container if you wish to use SSH support. If you wish to do this without running the container
+SSH on a non-standard port (or move your host port to a non-standard port), you can forward
+SSH connections destined for the container with a little extra setup.</p>
+<p>This guide assumes that you have created a user on the host called <code>git</code> which shares the same
+UID/GID as the container values <code>USER_UID</code>/<code>USER_GID</code>. You should also create the directory
+<code>/var/lib/gitea</code> on the host, owned by the <code>git</code> user and mounted in the container, e.g.</p>
+<pre><code>  services:
+    server:
+      image: gitea/gitea:latest
+      environment:
+        - USER_UID=1000
+        - USER_GID=1000
+      restart: always
+      networks:
+        - gitea
+      volumes:
+        - /var/lib/gitea:/data
+        - /etc/timezone:/etc/timezone:ro
+        - /etc/localtime:/etc/localtime:ro
+      ports:
+        - &quot;3000:3000&quot;
+        - &quot;127.0.0.1:2222:22&quot;
+</code></pre><p>You can see that we&rsquo;re also exposing the container SSH port to port 2222 on the host, and binding this
+to 127.0.0.1 to prevent it being accessible external to the host machine itself.</p>
+<p>On the <strong>host</strong>, you should create the file <code>/app/gitea/gitea</code> with the following contents and
+make it executable (<code>chmod +x /app/gitea/gitea</code>):</p>
+<pre><code>#!/bin/sh
+ssh -p 2222 -o StrictHostKeyChecking=no git@127.0.0.1 &quot;SSH_ORIGINAL_COMMAND=\&quot;$SSH_ORIGINAL_COMMAND\&quot; $0 $@&quot;
+</code></pre><p>Your <code>git</code> user needs to have an SSH key generated:</p>
+<pre><code>sudo -u git ssh-keygen -t rsa -b 4096 -C &quot;Gitea Host Key&quot;
+</code></pre><p>Still on the host, symlink the container <code>.ssh/authorized_keys</code> file to your git user <code>.ssh/authorized_keys</code>.
+This can be done on the host as the <code>/var/lib/gitea</code> directory is mounted inside the container under <code>/data</code>:</p>
+<pre><code>ln -s /var/lib/gitea/git/.ssh/authorized_keys /home/git/.ssh/authorized_keys
+</code></pre><p>Then echo the <code>git</code> user SSH key into the authorized_keys file so the host can talk to the container over SSH:</p>
+<pre><code>echo &quot;no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty $(cat /home/git/.ssh/id_rsa.pub)&quot; &gt;&gt; /var/lib/gitea/git/.ssh/authorized_keys
+</code></pre><p>Now you should be able to use Git over SSH to your container without disrupting SSH access to the host.</p>
+<p>Please note: SSH container passthrough will work only if using opensshd in container, and will not work if
+<code>AuthorizedKeysCommand</code> is used in combination with setting <code>SSH_CREATE_AUTHORIZED_KEYS_FILE=false</code> to disable
+authorized files key generation.</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="content has-text-centered">
+					<p>
+						Copyright &copy; 2020 <a href="https://docs.gitea.io">The Gitea Authors</a>. All rights reserved. Made with <i class="fa fa-heart" aria-hidden="true"></i> and <a href="https://gohugo.io">Hugo</a>.
+					</p>
+					<p>
+						 Sponsored by <a href="https://www.didiyun.com">DiDi Cloud</a>, <a href="http://inblockchain.com">INBlockchain</a>, <a href="https://www.packet.com">Packet</a>, <a href="https://digitalocean.com">DigitalOcean</a>, and all of our backers on <a href="https://opencollective.com/gitea">Open Collective</a>.
+					</p>
+					<p>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-cn" hreflang="zh-cn">中文(简体)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/zh-tw" hreflang="zh-tw">中文(繁體)</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/pt-br" hreflang="pt-br">Português Brasileiro</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/en-us" hreflang="en-us">English</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/nl-nl" hreflang="nl-nl">Nederlands</a>
+						
+						<a class="nav-link" href="https://ertlans.github.io/fr-fr" hreflang="fr-fr">Français</a>
+						
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+            document.addEventListener('DOMContentLoaded', function () {
+
+                
+                var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+                
+                if ($navbarBurgers.length > 0) {
+
+                    
+                    $navbarBurgers.forEach(function ($el) {
+                        $el.addEventListener('click', function () {
+
+                            
+                            var target = $el.dataset.target;
+                            var $target = document.getElementById(target);
+
+                            
+                            $el.classList.toggle('is-active');
+                            $target.classList.toggle('is-active');
+
+
+                            document.getElementById('navbar-background').classList.toggle('is-active');
+
+
+                        });
+                    });
+                }
+
+				
+				
+				let svg = '  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor; vertical-align: middle" width="24" height="24" viewBox="0 0 32 32"><title>gitea</title><path d="M5.583 7.229c-2.464-0.005-5.755 1.557-5.573 5.479 0.281 6.125 6.557 6.693 9.068 6.745 0.271 1.146 3.224 5.109 5.411 5.318h9.573c5.74-0.38 10.036-17.365 6.854-17.427-5.271 0.25-8.396 0.375-11.073 0.396v5.297l-0.839-0.365-0.005-4.932c-3.073 0-5.781-0.141-10.917-0.396-0.646-0.005-1.542-0.115-2.5-0.115zM5.927 9.396h0.297c0.349 3.141 0.917 4.974 2.068 7.781-2.938-0.349-5.432-1.198-5.891-4.38-0.24-1.646 0.563-3.365 3.526-3.401zM17.339 12.479c0.198 0.005 0.406 0.042 0.594 0.13l1 0.432-0.714 1.302c-0.109 0-0.219 0.016-0.323 0.052-0.464 0.151-0.708 0.604-0.542 1.021 0.036 0.083 0.089 0.161 0.151 0.229l-1.234 2.25c-0.099 0-0.203 0.016-0.297 0.052-0.464 0.146-0.708 0.604-0.542 1.016 0.172 0.417 0.682 0.63 1.151 0.479 0.464-0.146 0.703-0.604 0.536-1.021-0.047-0.109-0.115-0.208-0.208-0.292l1.203-2.188c0.13 0.010 0.26 0 0.391-0.042 0.104-0.031 0.198-0.083 0.281-0.151 0.464 0.198 0.844 0.354 1.12 0.49 0.406 0.203 0.552 0.339 0.599 0.49 0.042 0.146-0.005 0.427-0.24 0.922-0.172 0.37-0.458 0.896-0.797 1.51-0.115 0-0.229 0.016-0.333 0.052-0.469 0.151-0.708 0.604-0.542 1.021 0.167 0.411 0.682 0.625 1.146 0.479 0.469-0.151 0.708-0.604 0.542-1.021-0.042-0.099-0.104-0.193-0.182-0.271 0.333-0.609 0.62-1.135 0.807-1.526 0.25-0.536 0.38-0.938 0.266-1.323s-0.469-0.635-0.932-0.865c-0.307-0.151-0.693-0.313-1.146-0.505 0.005-0.109-0.010-0.214-0.052-0.318s-0.109-0.198-0.193-0.281l0.703-1.281 3.901 1.682c0.703 0.307 0.995 1.057 0.651 1.682l-2.682 4.906c-0.339 0.625-1.182 0.885-1.885 0.578l-5.516-2.38c-0.703-0.307-0.995-1.057-0.656-1.682l2.682-4.906c0.234-0.432 0.708-0.688 1.208-0.708h0.083z"></path></svg>';
+				let contents = document.getElementsByClassName("content");
+				if (contents.length > 0) {
+					let content = contents[0];
+					for (let level = 1; level <= 4; level++) {
+						let elems = content.getElementsByTagName("h" + level);
+						for (let i = 0; i < elems.length; i++) {
+							let elem = elems[i];
+							if (elem.id !== "undefined" && elem.id !== "") {
+								let anchorId = elem.id + "-anchor";
+								elem.addEventListener("mouseover", () => {
+									document.getElementById(anchorId).style.display = "initial";
+								});
+								elem.addEventListener("mouseout", () => {
+									document.getElementById(anchorId).style.display = "none";
+								});
+								let anchor = document.createElement("a");
+								anchor.id = anchorId;
+								anchor.href = "#" + elem.id;
+								anchor.innerHTML = svg;
+								anchor.style.display = "none";
+								elem.appendChild(anchor);
+							}
+						}
+					}
+				}
+
+            });
+		</script>
+
+		</body>
+</html>
+
