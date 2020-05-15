@@ -253,7 +253,7 @@ There are some basic steps to follow. On a Linux system run as the Gogs user:
       <pubDate>Tue, 08 Nov 2016 16:00:00 +0200</pubDate>
       
       <guid>https://ertlans.github.io/en-us/</guid>
-      <description>What is Gitea - testing? Gitea is a painless self-hosted Git service. It is similar to GitHub, Bitbucket, and GitLab. Gitea is a fork of Gogs. See the Gitea Announcement blog post to read about the justification for a fork.
+      <description>What is Gitea - testing purpose? Gitea is a painless self-hosted Git service. It is similar to GitHub, Bitbucket, and GitLab. Gitea is a fork of Gogs. See the Gitea Announcement blog post to read about the justification for a fork.
 Purpose The goal of this project is to provide the easiest, fastest, and most painless way of setting up a self-hosted Git service. With Go, this can be done with an independent binary distribution across all platforms and architectures that Go supports.</description>
     </item>
     
